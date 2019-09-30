@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "resolve": "node scripts/resolve-data.js",
+    "serve": "npm run resolve && vue-cli-service serve",
+    "build": "npm run resolve && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "buefy": "^0.8.4",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",

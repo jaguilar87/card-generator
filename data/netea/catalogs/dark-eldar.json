@@ -1,0 +1,274 @@
+{
+  "name": "Dark Eldar",
+  "resolve": ["weapons.skills", "skills"],
+  "cards": [
+    {
+      "name": "Archon",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Agonizer",
+          "range": "B2B",
+          "mw-ea": 1
+        }
+      ],
+      "skills": [
+        "$skills:character",
+        "$skills:inspiring",
+        "$skills:invulnerable-save",
+        "$skills:supreme-commander"
+      ]
+    },
+    {
+      "name": "Dracon/Succubus",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Agonizer",
+          "range": "B2B",
+          "mw-ea": 1
+        }
+      ],
+      "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
+    },
+    {
+      "name": "Haemonculus Ancient",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Arcane Terrors",
+          "range": "(15cm)",
+          "ea": 1
+        },
+        {
+          "name": "Scissor Hands",
+          "range": "B2B",
+          "ea": 1
+        }
+      ],
+      "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
+    },
+    {
+      "name": "Incubi",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "3+",
+      "ff": "6+",
+      "weapons": [
+        {
+          "name": "Tormentors",
+          "range": "(15cm)"
+        },
+        {
+          "name": "Klaives",
+          "range": "B2B",
+          "mw-ea": 1
+        }
+      ]
+    },
+    {
+      "name": "Warriors",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "6+",
+      "cc": "5+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Splinter Cannon",
+          "range": "15cm",
+          "ap": 5
+        },
+        {
+          "name": "Splinter Rifles",
+          "range": "(15cm)"
+        }
+      ]
+    },
+    {
+      "name": "Mandrakes",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "5+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Balefire",
+          "range": "(15cm)",
+          "skills": ["$weapons:first-strike"]
+        },
+        {
+          "name": "Blades",
+          "range": "B2B",
+          "skills": ["$weapons:first-strike"]
+        }
+      ],
+      "skills": [
+        "$skills:scout",
+        "$skills:invulnerable-save",
+        "$skills:teleport"
+      ]
+    },
+    {
+      "name": "Scourges",
+      "type": "Inf",
+      "speed": "35cm",
+      "armour": "5+",
+      "cc": "6+",
+      "ff": "3+",
+      "weapons": [
+        {
+          "name": "Dark Lance",
+          "range": "30cm",
+          "at": 5,
+          "skills": ["$weapons:lance"]
+        },
+        {
+          "name": "Splinter Cannon",
+          "range": "15cm",
+          "ap": 5
+        },
+        {
+          "name": "Splinter Carabines",
+          "range": "(15cm)"
+        }
+      ],
+      "skills": ["$skills:jump-pack", "$skills:teleport"]
+    },
+    {
+      "name": "Haemonculi",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "3+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Liquefier",
+          "range": "15cm",
+          "ap": 3,
+          "skills": ["$weapons:disrupt"]
+        },
+        {
+          "name": "Poison Blades",
+          "range": "B2B"
+        }
+      ],
+      "skills": ["$skills:fearless", "$skills:leader"]
+    },
+    {
+      "name": "Wracks",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "5+",
+      "cc": "3+",
+      "ff": "-",
+      "weapons": [
+        {
+          "name": "Poison Blades",
+          "range": "B2B"
+        }
+      ],
+      "skills": ["$skills:fearless"]
+    },
+    {
+      "name": "Grotesques",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "3+",
+      "cc": "4+",
+      "ff": "-",
+      "weapons": [
+        {
+          "name": "Heavy Blades",
+          "range": "B2B",
+          "ea": 1
+        }
+      ],
+      "skills": ["$skills:fearless"]
+    },
+    {
+      "name": "Talos",
+      "type": "AV",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Massive Blades",
+          "range": "B2B",
+          "mw-ea": 1
+        },
+        {
+          "name": "Paralyzer",
+          "range": "15cm",
+          "ap": 5,
+          "skills": ["$weapons:disrupt"]
+        }
+      ],
+      "skills": [
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:walker"
+      ]
+    },
+    {
+      "name": "Perditors",
+      "type": "WE",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "3+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Perditor Claws",
+          "range": "B2B",
+          "mw-ea": 1
+        },
+        {
+          "name": "Widowmaker",
+          "range": "30cm",
+          "bp": 2,
+          "skills": ["$weapons:disrupt", "$weapons:indirect"]
+        }
+      ],
+      "skills": [
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:walker"
+      ],
+      "extra": ["DC2", "Critical Hit: Destroyed"]
+    },
+    {
+      "name": "Wyches",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "6+",
+      "cc": "3+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Splinter Pistol",
+          "range": "(15cm)",
+          "skills": ["$weapons:first-strike"]
+        }
+      ],
+      "skills": ["$skills:infiltrator"]
+    }
+  ]
+}

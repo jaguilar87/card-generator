@@ -1,0 +1,471 @@
+{
+  "netea": {
+    "references": {
+      "skills": {
+        "character": {
+          "name": "Character",
+          "desc": "Must join a unit before game starts.",
+          "ref": "2.1.1"
+        },
+        "commander": {
+          "name": "Commander",
+          "desc": "Up to 3 formations may join when launching an assault.",
+          "ref": "2.1.2"
+        },
+        "fearless": {
+          "name": "Fearless",
+          "desc": "Imnune to damage from losing an assault and blast markers when broken. May chose to not withdraw.",
+          "ref": "2.1.3"
+        },
+        "infiltrators": {
+          "name": "Infiltrators",
+          "desc": "Double speed and ignore enemy zones when charging.",
+          "ref": "2.1.4"
+        },
+        "inspiring": {
+          "name": "Inspiring",
+          "desc": "+1 to assault result roll for each inspiring unit.",
+          "ref": "2.1.5"
+        },
+        "invulnerable-save": {
+          "name": "Invulnerable Save (6+)",
+          "desc": "Additional save of 6+ to each wound received.",
+          "ref": "2.1.6"
+        },
+        "jump-packs": {
+          "name": "Jump Packs",
+          "desc": "Ignore terrain and friendly units while moving.",
+          "ref": "2.1.7"
+        },
+        "leader": {
+          "name": "Leader",
+          "desc": "Remove an extra blast marker when it regroups or rallies.",
+          "ref": "2.1.8"
+        },
+        "mounted": {
+          "name": "Mounted",
+          "desc": "Counts as a vehicle for movement effects, and as infantry otherwise.",
+          "ref": "2.1.10"
+        },
+        "reinforced-armour": {
+          "name": "Reinforced Armour",
+          "desc": "Allows save rolls against MW. Re-roll non-MW save rolls.",
+          "ref": "2.1.11"
+        },
+        "scout": {
+          "name": "Scout",
+          "desc": "20cm formation coherency. 10cm zone of control.",
+          "ref": "2.1.12"
+        },
+        "skimmer": {
+          "name": "Skimmer",
+          "desc": "Ignore terrain and friendly units while moving. Can pop up over terrain (closer to the skimmer) for shooting (except on sustained fire and marshall actions). May always chose firefight in assault.",
+          "ref": "2.1.13"
+        },
+        "sniper": {
+          "name": "Sniper",
+          "desc": "Roll for snipers separately. The attacker may chose which enemy unit is hit. -1 to save throws.",
+          "ref": "2.1.14"
+        },
+        "supreme-commander": {
+          "name": "Supreme Commander",
+          "desc": "Re-roll initiative once per turn. Remove an extra blast marker when it regroups or rallies. Up to 3 formations may join when launching an assault.",
+          "ref": "2.1.15"
+        },
+        "thick-rear-armour": {
+          "name": "Thick Rear Armour",
+          "desc": "Ignore the -1 save on crossfire.",
+          "ref": "2.1.16"
+        },
+        "teleport": {
+          "name": "Teleport",
+          "desc": "Place unit in any turn before strategy roll. Roll d6 for each teleporting unit, with a 1 you receive a blast marker.",
+          "ref": "2.1.17"
+        },
+        "walker": {
+          "name": "Walker",
+          "desc": "Re-roll dangerous terrain tests.",
+          "ref": "2.1.18"
+        },
+        "slow-and-steady": {
+          "name": "Slow and Steady",
+          "desc": "They may not be used on the first two turns.",
+          "ref": "2.1.19"
+        },
+        "support-craft": {
+          "name": "Support Craft",
+          "desc": "Ignore terrain and friendly units while moving. Can be seen over terrain (closer to the support craft). Always uses firefight in assault.",
+          "ref": "2.1.20"
+        },
+        "self-planetfall": {
+          "name": "Self Planetfall",
+          "desc": "Can planetfall even if an enemy spacecraft is present.",
+          "ref": "2.1.21"
+        },
+        "expendable": {
+          "name": "Expendable",
+          "desc": "A formation does not receive a Blast marker when a unit with expendable is destroyed.",
+          "ref": "2.1.22"
+        },
+        "tunneler": {
+          "name": "Expendable",
+          "desc": "Select arrival zone before game and at which turn (opponents half needs turn 3 or more). Place units before strategy roll.",
+          "ref": "2.1.23"
+        }
+      },
+      "weapons": {
+        "disrupt": {
+          "name": "Disrupt",
+          "desc": "Cause Blast even if the hit is saved",
+          "ref": "2.2.2"
+        },
+        "first-strike": {
+          "name": "First Strike",
+          "desc": "Attack first in assault.",
+          "ref": "2.2.4"
+        },
+        "ignore-cover": {
+          "name": "Ignore Cover",
+          "desc": "Ignore cover modifiers and infantry cover saves.",
+          "ref": "2.2.5"
+        },
+        "single-shot": {
+          "name": "Single Shot",
+          "desc": "May be used once per battle.",
+          "ref": "2.2.7"
+        },
+        "slow-firing": {
+          "name": "Slow Firing",
+          "desc": "Must take one turn to reload after each use.",
+          "ref": "2.2.8"
+        },
+        "indirect": {
+          "name": "Indirect",
+          "desc": "May fire without LoS and double range (but minimum of 30cm) during sustined fire actions.",
+          "ref": "2.2.10"
+        },
+        "lance": {
+          "name": "Lance",
+          "desc": "Ignore reinforced armour"
+        }
+      }
+    },
+    "catalogs": {
+      "dark-eldar": {
+        "name": "Dark Eldar",
+        "resolve": [
+          "weapons.skills",
+          "skills"
+        ],
+        "cards": [
+          {
+            "name": "Archon",
+            "type": "Cha",
+            "speed": "n/a",
+            "armour": "n/a",
+            "cc": "n/a",
+            "ff": "n/a",
+            "weapons": [
+              {
+                "name": "Agonizer",
+                "range": "B2B",
+                "mw-ea": 1
+              }
+            ],
+            "skills": [
+              "$skills:character",
+              "$skills:inspiring",
+              "$skills:invulnerable-save",
+              "$skills:supreme-commander"
+            ]
+          },
+          {
+            "name": "Dracon/Succubus",
+            "type": "Cha",
+            "speed": "n/a",
+            "armour": "n/a",
+            "cc": "n/a",
+            "ff": "n/a",
+            "weapons": [
+              {
+                "name": "Agonizer",
+                "range": "B2B",
+                "mw-ea": 1
+              }
+            ],
+            "skills": [
+              "$skills:character",
+              "$skills:inspiring",
+              "$skills:leader"
+            ]
+          },
+          {
+            "name": "Haemonculus Ancient",
+            "type": "Cha",
+            "speed": "n/a",
+            "armour": "n/a",
+            "cc": "n/a",
+            "ff": "n/a",
+            "weapons": [
+              {
+                "name": "Arcane Terrors",
+                "range": "(15cm)",
+                "ea": 1
+              },
+              {
+                "name": "Scissor Hands",
+                "range": "B2B",
+                "ea": 1
+              }
+            ],
+            "skills": [
+              "$skills:character",
+              "$skills:inspiring",
+              "$skills:leader"
+            ]
+          },
+          {
+            "name": "Incubi",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "4+",
+            "cc": "3+",
+            "ff": "6+",
+            "weapons": [
+              {
+                "name": "Tormentors",
+                "range": "(15cm)"
+              },
+              {
+                "name": "Klaives",
+                "range": "B2B",
+                "mw-ea": 1
+              }
+            ]
+          },
+          {
+            "name": "Warriors",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "6+",
+            "cc": "5+",
+            "ff": "4+",
+            "weapons": [
+              {
+                "name": "Splinter Cannon",
+                "range": "15cm",
+                "ap": 5
+              },
+              {
+                "name": "Splinter Rifles",
+                "range": "(15cm)"
+              }
+            ]
+          },
+          {
+            "name": "Mandrakes",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "5+",
+            "cc": "4+",
+            "ff": "5+",
+            "weapons": [
+              {
+                "name": "Balefire",
+                "range": "(15cm)",
+                "skills": [
+                  "$weapons:first-strike"
+                ]
+              },
+              {
+                "name": "Blades",
+                "range": "B2B",
+                "skills": [
+                  "$weapons:first-strike"
+                ]
+              }
+            ],
+            "skills": [
+              "$skills:scout",
+              "$skills:invulnerable-save",
+              "$skills:teleport"
+            ]
+          },
+          {
+            "name": "Scourges",
+            "type": "Inf",
+            "speed": "35cm",
+            "armour": "5+",
+            "cc": "6+",
+            "ff": "3+",
+            "weapons": [
+              {
+                "name": "Dark Lance",
+                "range": "30cm",
+                "at": 5,
+                "skills": [
+                  "$weapons:lance"
+                ]
+              },
+              {
+                "name": "Splinter Cannon",
+                "range": "15cm",
+                "ap": 5
+              },
+              {
+                "name": "Splinter Carabines",
+                "range": "(15cm)"
+              }
+            ],
+            "skills": [
+              "$skills:jump-pack",
+              "$skills:teleport"
+            ]
+          },
+          {
+            "name": "Haemonculi",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "4+",
+            "cc": "3+",
+            "ff": "5+",
+            "weapons": [
+              {
+                "name": "Liquefier",
+                "range": "15cm",
+                "ap": 3,
+                "skills": [
+                  "$weapons:disrupt"
+                ]
+              },
+              {
+                "name": "Poison Blades",
+                "range": "B2B"
+              }
+            ],
+            "skills": [
+              "$skills:fearless",
+              "$skills:leader"
+            ]
+          },
+          {
+            "name": "Wracks",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "5+",
+            "cc": "3+",
+            "ff": "-",
+            "weapons": [
+              {
+                "name": "Poison Blades",
+                "range": "B2B"
+              }
+            ],
+            "skills": [
+              "$skills:fearless"
+            ]
+          },
+          {
+            "name": "Grotesques",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "3+",
+            "cc": "4+",
+            "ff": "-",
+            "weapons": [
+              {
+                "name": "Heavy Blades",
+                "range": "B2B",
+                "ea": 1
+              }
+            ],
+            "skills": [
+              "$skills:fearless"
+            ]
+          },
+          {
+            "name": "Talos",
+            "type": "AV",
+            "speed": "15cm",
+            "armour": "4+",
+            "cc": "4+",
+            "ff": "5+",
+            "weapons": [
+              {
+                "name": "Massive Blades",
+                "range": "B2B",
+                "mw-ea": 1
+              },
+              {
+                "name": "Paralyzer",
+                "range": "15cm",
+                "ap": 5,
+                "skills": [
+                  "$weapons:disrupt"
+                ]
+              }
+            ],
+            "skills": [
+              "$skills:fearless",
+              "$skills:reinforced-armour",
+              "$skills:walker"
+            ]
+          },
+          {
+            "name": "Perditors",
+            "type": "WE",
+            "speed": "15cm",
+            "armour": "4+",
+            "cc": "3+",
+            "ff": "4+",
+            "weapons": [
+              {
+                "name": "Perditor Claws",
+                "range": "B2B",
+                "mw-ea": 1
+              },
+              {
+                "name": "Widowmaker",
+                "range": "30cm",
+                "bp": 2,
+                "skills": [
+                  "$weapons:disrupt",
+                  "$weapons:indirect"
+                ]
+              }
+            ],
+            "skills": [
+              "$skills:fearless",
+              "$skills:reinforced-armour",
+              "$skills:walker"
+            ],
+            "extra": [
+              "DC2",
+              "Critical Hit: Destroyed"
+            ]
+          },
+          {
+            "name": "Wyches",
+            "type": "Inf",
+            "speed": "15cm",
+            "armour": "6+",
+            "cc": "3+",
+            "ff": "5+",
+            "weapons": [
+              {
+                "name": "Splinter Pistol",
+                "range": "(15cm)",
+                "skills": [
+                  "$weapons:first-strike"
+                ]
+              }
+            ],
+            "skills": [
+              "$skills:infiltrator"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

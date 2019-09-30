@@ -1,29 +1,64 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div class="Loading" v-if="isLoading">
+    <b-icon icon="spinner" class="fa-spin App-spinner" size="is-large" />
+  </div>
+  <div v-else-if="error" class="ErrorPage">{{error}}</div>
+  <div v-else class="App columns">
+    <Nav />
+    <main class="App-content column is-9">
+      <router-view />
+    </main>
   </div>
 </template>
 
+<script>
+import Nav from '@/layout/Nav.vue';
+
+export default {
+  computed: {
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
+    data() {
+      return this.$store.state.data;
+    },
+    error() {
+      return this.$store.state.dataError;
+    }
+  },
+  created() {
+    this.$store.dispatch('fetchData');
+  },
+  components: {
+    Nav
+  }
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+.Loading {
+  text-align: center;
+  margin: 48px;
+}
+
+.ErrorPage {
+  margin: 12px;
+}
+
+.App {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  height: 100%;
+
+  &-content {
+    margin-top: 12px;
+    height: 100%;
+  }
+
+  &-spinner {
+    margin: 0 auto;
   }
 }
 </style>
