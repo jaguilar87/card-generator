@@ -1,6 +1,10 @@
 {
   "name": "Dark Eldar",
-  "resolve": ["weapons.skills", "skills"],
+  "style": {
+    "titleBg": "#4A235A",
+    "titleText": "white"
+  },
+  "resolve": ["weapons[].skills[]", "skills[]"],
   "cards": [
     {
       "name": "Archon",
@@ -13,7 +17,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ],
       "skills": [
@@ -34,7 +38,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
@@ -75,7 +79,7 @@
         {
           "name": "Klaives",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ]
     },
@@ -135,7 +139,7 @@
           "name": "Dark Lance",
           "range": "30cm",
           "at": 5,
-          "skills": ["$weapons:lance"]
+          "skills": ["$eldar:lance"]
         },
         {
           "name": "Splinter Cannon",
@@ -212,7 +216,7 @@
         {
           "name": "Massive Blades",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         },
         {
           "name": "Paralyzer",
@@ -238,7 +242,7 @@
         {
           "name": "Perditor Claws",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         },
         {
           "name": "Widowmaker",
@@ -265,6 +269,14 @@
         {
           "name": "Splinter Pistol",
           "range": "(15cm)",
+          "skills": ["$weapons:first-strike"]
+        },
+        {
+          "name": "Wat cannon",
+          "range": "99cm",
+          "ap": 4,
+          "at": 5,
+          "aa": 5,
           "skills": ["$weapons:first-strike"]
         }
       ],

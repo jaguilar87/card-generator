@@ -3,12 +3,12 @@
     <b-menu>
       <b-menu-list
         v-for="(system, systemKey) in data"
-        v-bind:key="systemKey"
+        :key="systemKey"
         :label="systemKey.toUpperCase()"
       >
         <b-menu-item
           v-for="(catalog, catalogKey) in system.catalogs"
-          v-bind:key="catalogKey"
+          :key="catalogKey"
           :label="catalog.name"
           :to="`/${systemKey}/${catalogKey}`"
           tag="router-link"
