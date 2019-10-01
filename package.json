@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "resolve": "node scripts/resolve-data.js",
-    "serve": "npm run resolve && vue-cli-service serve",
-    "build": "npm run resolve && vue-cli-service build",
+    "compile": "node scripts/compile-data.js",
+    "serve": "npm run compile && vue-cli-service serve",
+    "build": "npm run compile && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
