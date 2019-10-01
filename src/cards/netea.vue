@@ -1,57 +1,117 @@
 <template>
   <div class="Card">
-    <div class="Card-header" :style="titleStyle">
-      <div class="Card-headerName">
-        <div class="Card-name">{{card.name}}</div>
-        <div class="Card-faction">{{catalog.name}}</div>
+    <div class="Card-side">
+      <div class="Card-header" :style="titleStyle">
+        <div class="Card-headerName">
+          <div class="Card-name">{{card.name}}</div>
+          <div class="Card-faction">{{catalog.name}}</div>
+        </div>
+        <div class="Card-type">{{card.type}}</div>
       </div>
-      <div class="Card-type">{{card.type}}</div>
+
+      <div class="Card-body">
+        <div class="Card-stats">
+          <div class="Card-stat Card-stat--header">SPD</div>
+          <div class="Card-stat">{{card.speed}}</div>
+          <div class="Card-stat Card-stat--header">ARM</div>
+          <div class="Card-stat">{{card.armour}}</div>
+          <div class="Card-stat Card-stat--header">CC</div>
+          <div class="Card-stat">{{card.cc}}</div>
+          <div class="Card-stat Card-stat--header">FF</div>
+          <div class="Card-stat">{{card.ff}}</div>
+        </div>
+        <div class="Card-summary">
+          <table class="Card-weapons table is-narrow">
+            <tr>
+              <th>Weapon</th>
+              <th>Range</th>
+              <th>Stats</th>
+            </tr>
+            <tr v-for="weapon in card.weapons" :key="weapon.name">
+              <td>{{weapon.name}}</td>
+              <td>{{weapon.range}}</td>
+              <td>{{getWeaponStats(weapon)}}</td>
+            </tr>
+          </table>
+          <div class="Card-skills-summary">
+            <strong>Skills:</strong>
+            {{getSkillsSummary(card.skills)}}
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="Card-body">
-      <div class="Card-stats">
-        <div class="Card-stat Card-stat--header">SPD</div>
-        <div class="Card-stat">{{card.speed}}</div>
-        <div class="Card-stat Card-stat--header">ARM</div>
-        <div class="Card-stat">{{card.armour}}</div>
-        <div class="Card-stat Card-stat--header">CC</div>
-        <div class="Card-stat">{{card.cc}}</div>
-        <div class="Card-stat Card-stat--header">FF</div>
-        <div class="Card-stat">{{card.ff}}</div>
+    <div class="Card-side Card-side--reverse">
+      <div class="Card-skills">
+        <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
+          <strong>{{skill.name}} [{{skill.ref}}]:</strong>
+          {{skill.desc}}
+        </p>
       </div>
-      <table class="Card-weapons table is-narrow">
-        <tr>
-          <th class="Card-weaponName">Weapon</th>
-          <th class="Card-weaponRange">Range</th>
-          <th class="Card-weaponStats">Stats</th>
-        </tr>
-        <tr v-for="weapon in card.weapons" :key="weapon.name">
-          <td>{{weapon.name}}</td>
-          <td>{{weapon.range}}</td>
-          <td>{{getWeaponStats(weapon)}}</td>
-        </tr>
-      </table>
     </div>
   </div>
 </template>
 
 <script>
 import access from 'safe-access';
+import expand from '../utils/expand';
 
 export default {
   computed: {
     titleStyle() {
+      const safeThis = access(this);
+
       return {
-        background: access(this, '$props.catalog.style.titleBg') || 'darkblue',
-        color: access(this, '$props.catalog.style.titleText') || 'white'
+        background: safeThis('$props.catalog.style.titleBg') || 'darkblue',
+        color: safeThis('$props.catalog.style.titleText') || 'white'
       };
     }
   },
   props: {
     card: Object,
-    catalog: Object
+    catalog: Object,
+    system: Object
   },
   methods: {
+    getExpandedSkills() {
+      const skills = new Set();
+
+      try {
+        for (const skill of this.$props.card.skills) {
+          skills.add(skill);
+        }
+      } catch (err) {
+        // nothing to add here
+      }
+
+      try {
+        for (const weapon of this.$props.card.weapons) {
+          if (weapon.skills) {
+            for (const skill of weapon.skills) {
+              skills.add(skill);
+            }
+          }
+        }
+      } catch (err) {
+        // nothing to add here
+      }
+
+      return Array.from(skills).map(skill =>
+        expand(this.$props.system.references, skill)
+      );
+    },
+    getSkillsSummary(skills) {
+      if (!skills || !skills.length) {
+        return '-';
+      }
+
+      const skillNames = skills.map(skill => {
+        const expanded = expand(this.$props.system.references, skill);
+        return expanded.name || expanded;
+      });
+
+      return skillNames.join(', ');
+    },
     getWeaponStats({ at, ap, aa, bp, ea, mwEa, skills }) {
       const dmg = [];
       const stats = [];
@@ -65,9 +125,18 @@ export default {
       stats.push(dmg && dmg.filter(item => item).join('/'));
 
       // Other
-      stats.push(ea && `EA+${ea}`);
-      stats.push(mwEa && `MW EA+${mwEa}`);
-      skills && stats.push(...skills);
+      stats.push(ea && `EA +${ea}`);
+      stats.push(mwEa && `MW EA +${mwEa}`);
+
+      // Skills
+      if (skills) {
+        const skillNames = skills.map(skill => {
+          const expanded = expand(this.$props.system.references, skill);
+          return expanded.name || expanded;
+        });
+
+        stats.push(...skillNames);
+      }
 
       return stats.filter(item => item).join(', ') || '-';
     }
@@ -80,13 +149,20 @@ $card-color: #000000;
 $border-color: #dcdcdc;
 
 .Card {
-  height: 44mm;
-  width: 67mm;
-  overflow: hidden;
-  border: 1px solid $card-color;
-  border-radius: 6px;
-  margin-bottom: 12px;
   font-size: 7pt;
+  margin-bottom: 12px;
+
+  &-side {
+    height: 44mm;
+    width: 67mm;
+    overflow: hidden;
+    border: 1px solid $card-color;
+    border-radius: 6px;
+
+    &--reverse {
+      transform: rotate(-180deg);
+    }
+  }
 
   &-header,
   &-body {
@@ -109,6 +185,7 @@ $border-color: #dcdcdc;
   }
 
   &-type {
+    padding-top: 6px;
     width: 20%;
     font-size: 10pt;
     text-align: right;
@@ -121,25 +198,23 @@ $border-color: #dcdcdc;
   }
 
   &-weapons {
-    width: 88%;
+    width: 100%;
     border: 0;
     margin-bottom: 0 !important;
-  }
-
-  &-weaponName {
-    width: 70px;
-  }
-  &-weaponRange {
-    width: 40px;
-  }
-  &-weaponStats {
-    width: 70px;
   }
 
   &-stats {
     width: 12%;
     display: flex;
     flex-direction: column;
+  }
+
+  &-summary {
+    width: 88%;
+  }
+
+  &-skills-summary {
+    padding: 2px;
   }
 
   &-stat {
@@ -155,6 +230,14 @@ $border-color: #dcdcdc;
 
     &:nth-child(even):not(:last-child) {
       border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &-skills {
+    padding: 5px;
+
+    p + p {
+      margin-top: 2px;
     }
   }
 }

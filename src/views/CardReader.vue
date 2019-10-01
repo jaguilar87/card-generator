@@ -1,6 +1,12 @@
 <template>
   <div class="CardReader">
-    <NetEACard v-for="card in catalog.cards" :key="card.name" :card="card" :catalog="catalog" />
+    <NetEACard
+      v-for="card in catalog.cards"
+      :key="card.name"
+      :card="card"
+      :catalog="catalog"
+      :system="system"
+    />
   </div>
 </template>
 
@@ -9,6 +15,9 @@ import NetEACard from '@/cards/netea.vue';
 
 export default {
   computed: {
+    system() {
+      return this.$store.state.data[this.$route.params.system];
+    },
     catalog() {
       const { system, catalog } = this.$route.params;
 

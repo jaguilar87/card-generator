@@ -1,5 +1,5 @@
 <template>
-  <div class="App-nav column is-3">
+  <div class="App-nav column is-2">
     <b-menu>
       <b-menu-list
         v-for="(system, systemKey) in data"
@@ -32,6 +32,7 @@ export default {
 <style>
 .App-nav {
   margin: 12px;
+  width: 200px;
   height: 100%;
   border-right: 1px solid darkgray;
 }
