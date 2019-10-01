@@ -14,7 +14,7 @@
     "desc": "Imnune to damage from losing an assault and blast markers when broken. May chose to not withdraw.",
     "ref": "2.1.3"
   },
-  "infiltrators": {
+  "infiltrator": {
     "name": "Infiltrators",
     "desc": "Double speed and ignore enemy zones when charging.",
     "ref": "2.1.4"

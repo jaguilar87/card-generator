@@ -3,9 +3,9 @@
     <b-icon icon="spinner" class="fa-spin App-spinner" size="is-large" />
   </div>
   <div v-else-if="error" class="ErrorPage">{{error}}</div>
-  <div v-else class="App columns">
+  <div v-else class="App">
     <Nav />
-    <main class="App-content column is-9">
+    <main class="App-content">
       <router-view />
     </main>
   </div>
@@ -51,10 +51,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
+  display: flex;
 
   &-content {
+    width: 100%;
     margin-top: 12px;
-    height: 100%;
   }
 
   &-spinner {

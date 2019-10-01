@@ -29,6 +29,8 @@ export default new Vuex.Store({
           commit('setLoading', false);
         })
         .catch(err => {
+          console.error(err);
+
           commit('setDataError', err);
           commit('setLoading', false);
         });

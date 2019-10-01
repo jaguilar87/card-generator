@@ -1,6 +1,9 @@
 {
   "name": "Dark Eldar",
-  "resolve": ["weapons.skills", "skills"],
+  "style": {
+    "titleBg": "#4A235A",
+    "titleText": "white"
+  },
   "cards": [
     {
       "name": "Archon",
@@ -13,7 +16,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ],
       "skills": [
@@ -34,7 +37,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
@@ -75,7 +78,7 @@
         {
           "name": "Klaives",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         }
       ]
     },
@@ -135,7 +138,7 @@
           "name": "Dark Lance",
           "range": "30cm",
           "at": 5,
-          "skills": ["$weapons:lance"]
+          "skills": ["$eldar:lance"]
         },
         {
           "name": "Splinter Cannon",
@@ -147,7 +150,7 @@
           "range": "(15cm)"
         }
       ],
-      "skills": ["$skills:jump-pack", "$skills:teleport"]
+      "skills": ["$skills:jump-packs", "$skills:teleport"]
     },
     {
       "name": "Haemonculi",
@@ -212,7 +215,7 @@
         {
           "name": "Massive Blades",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         },
         {
           "name": "Paralyzer",
@@ -238,7 +241,7 @@
         {
           "name": "Perditor Claws",
           "range": "B2B",
-          "mw-ea": 1
+          "mwEa": 1
         },
         {
           "name": "Widowmaker",

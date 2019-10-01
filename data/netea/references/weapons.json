@@ -28,9 +28,5 @@
     "name": "Indirect",
     "desc": "May fire without LoS and double range (but minimum of 30cm) during sustined fire actions.",
     "ref": "2.2.10"
-  },
-  "lance": {
-    "name": "Lance",
-    "desc": "Ignore reinforced armour"
   }
 }
