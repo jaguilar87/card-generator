@@ -1,0 +1,17 @@
+{
+  "fighter": {
+    "name": "Fighter",
+    "ref": "4.2.1",
+    "desc": "90º turn after each 30cm of movement. Can jink: gain a 4+ save forfeiting the attack."
+  },
+  "fighter-bomber": {
+    "name": "Fighter-Bomber",
+    "ref": "4.2.1",
+    "desc": "45º turn after each 30cm of movement. Can jink: gain a 4+ save forfeiting the attack."
+  },
+  "bomber": {
+    "name": "Fighter-Bomber",
+    "ref": "4.2.1",
+    "desc": "45º turn after each 30cm of movement."
+  }
+}

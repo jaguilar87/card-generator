@@ -6,5 +6,17 @@
   "fxf": {
     "name": "FxF",
     "desc": "Fixed Forward Fire Arc"
+  },
+  "rra": {
+    "name": "RrA",
+    "desc": "Rear Fire Arc"
+  },
+  "left": {
+    "name": "Left",
+    "desc": "Left Fire Arc"
+  },
+  "right": {
+    "name": "Right",
+    "desc": "Right Fire Arc"
   }
 }

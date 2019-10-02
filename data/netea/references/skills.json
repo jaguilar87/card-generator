@@ -108,5 +108,10 @@
     "name": "Expendable",
     "desc": "Select arrival zone before game and at which turn (opponents half needs turn 3 or more). Place units before strategy roll.",
     "ref": "2.1.23"
+  },
+  "planetfall": {
+    "name": "Planetfall",
+    "desc": "May planetfall.",
+    "ref": "4.4"
   }
 }

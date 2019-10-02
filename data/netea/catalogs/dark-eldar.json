@@ -16,7 +16,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mwEa": 1
+          "skills": ["MW EA+1"]
         }
       ],
       "skills": [
@@ -37,7 +37,7 @@
         {
           "name": "Agonizer",
           "range": "B2B",
-          "mwEa": 1
+          "skills": ["MW EA+1"]
         }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
@@ -53,12 +53,12 @@
         {
           "name": "Arcane Terrors",
           "range": "(15cm)",
-          "ea": 1
+          "skills": ["EA+1"]
         },
         {
           "name": "Scissor Hands",
           "range": "B2B",
-          "ea": 1
+          "skills": ["EA+1"]
         }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
@@ -78,7 +78,7 @@
         {
           "name": "Klaives",
           "range": "B2B",
-          "mwEa": 1
+          "skills": ["MW EA+1"]
         }
       ]
     },
@@ -93,7 +93,7 @@
         {
           "name": "Splinter Cannon",
           "range": "15cm",
-          "ap": 5
+          "dmg": "AP5+"
         },
         {
           "name": "Splinter Rifles",
@@ -137,13 +137,13 @@
         {
           "name": "Dark Lance",
           "range": "30cm",
-          "at": 5,
+          "dmg": "AT5+",
           "skills": ["$eldar:lance"]
         },
         {
           "name": "Splinter Cannon",
           "range": "15cm",
-          "ap": 5
+          "dmg": "AP5+"
         },
         {
           "name": "Splinter Carabines",
@@ -163,7 +163,7 @@
         {
           "name": "Liquefier",
           "range": "15cm",
-          "ap": 3,
+          "dmg": "AP3+",
           "skills": ["$weapons:disrupt"]
         },
         {
@@ -199,7 +199,7 @@
         {
           "name": "Heavy Blades",
           "range": "B2B",
-          "ea": 1
+          "skills": ["EA+1"]
         }
       ],
       "skills": ["$skills:fearless"]
@@ -215,12 +215,12 @@
         {
           "name": "Massive Blades",
           "range": "B2B",
-          "mwEa": 1
+          "skills": ["MW EA+1"]
         },
         {
           "name": "Paralyzer",
           "range": "15cm",
-          "ap": 5,
+          "dmg": "AP5+",
           "skills": ["$weapons:disrupt"]
         }
       ],
@@ -241,12 +241,12 @@
         {
           "name": "Perditor Claws",
           "range": "B2B",
-          "mwEa": 1
+          "skills": ["MW EA+1"]
         },
         {
           "name": "Widowmaker",
           "range": "30cm",
-          "bp": 2,
+          "dmg": "2BP",
           "skills": ["$weapons:disrupt", "$weapons:indirect"]
         }
       ],
@@ -289,8 +289,7 @@
         {
           "name": "Teeth and Claws",
           "range": "B2B",
-          "ea": 1,
-          "skills": ["$weapons:first-strike"]
+          "skills": ["EA+1", "$weapons:first-strike"]
         }
       ],
       "skills": ["$skills:infiltrator"]
@@ -344,7 +343,7 @@
         {
           "name": "Splinter Cannon",
           "range": "15cm",
-          "ap": 5
+          "dmg": "AP5+"
         },
         {
           "name": "Twin Splinter Rifles",
@@ -370,7 +369,7 @@
         {
           "name": "Dark Lance",
           "range": "30cm",
-          "at": 5,
+          "dmg": "AT5+",
           "skills": ["$eldar:lance"]
         }
       ],
@@ -393,14 +392,13 @@
         {
           "name": "2x Dark Lances",
           "range": "30cm",
-          "at": 5,
+          "dmg": "AT5+",
           "skills": ["$eldar:lance"]
         },
         {
           "name": "Disintegrator",
           "range": "45cm",
-          "ap": 4,
-          "at": 5
+          "dmg": "AP4+/AT5+"
         }
       ],
       "skills": ["$skills:skimmer"]
@@ -416,13 +414,13 @@
         {
           "name": "2x Dark Lances",
           "range": "30cm",
-          "at": 5,
+          "dmg": "AT5+",
           "skills": ["$eldar:lance"]
         },
         {
           "name": "2x Long Splinter Cannon",
           "range": "45cm",
-          "ap": 5,
+          "dmg": "AP5+",
           "skills": ["$facing:fwa"]
         },
         {
@@ -432,7 +430,7 @@
         {
           "name": "Desolator",
           "range": "30cm",
-          "bp": 2,
+          "dmg": "2BP",
           "skills": ["$weapons:disrupt", "$facing:fwa"]
         }
       ],
@@ -462,21 +460,19 @@
         {
           "name": "Phantom Lance",
           "range": "45cm",
-          "rof": 2,
-          "mw": 3,
-          "tk": 1,
+          "dmg": "2x MW3+ (TK 1)",
           "skills": ["$facing:fxf"]
         },
         {
           "name": "2x Long Splinter Cannon",
           "range": "45cm",
-          "ap": 5,
+          "dmg": "AP5+",
           "skills": ["$facing:fwa"]
         },
         {
           "name": "Desolator",
           "range": "30cm",
-          "bp": 2,
+          "dmg": "2BP",
           "skills": ["$weapons:disrupt", "$facing:fwa"]
         }
       ],
@@ -489,6 +485,222 @@
         "DC 3",
         "Shadowfields 2",
         "$skills:skimmer"
+      ]
+    },
+    {
+      "name": "Razorwing Fighter",
+      "type": "AC",
+      "speed": "F",
+      "armour": "4+",
+      "cc": "-",
+      "ff": "-",
+      "weapons": [
+        {
+          "name": "Twin Dark Lances",
+          "range": "30cm",
+          "dmg": "AT4+/AA5+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        },
+        {
+          "name": "Moonscythe Missiles",
+          "range": "30cm",
+          "dmg": "AP4+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        },
+        {
+          "name": "Splinter Cannon",
+          "range": "15cm",
+          "dmg": "AP5+/AA5+",
+          "skills": ["$facing:fxf"]
+        }
+      ],
+      "skills": ["$ac:fighter"]
+    },
+    {
+      "name": "Voidraven Bomber",
+      "type": "AC",
+      "speed": "F-B",
+      "armour": "4+",
+      "cc": "-",
+      "ff": "-",
+      "weapons": [
+        {
+          "name": "Void Mines",
+          "range": "15cm",
+          "dmg": "2BP",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        },
+        {
+          "name": "Twin Void Lances",
+          "range": "30cm",
+          "dmg": "AT3+/AA5+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        }
+      ],
+      "skills": ["$ac:fighter-bomber"]
+    },
+    {
+      "name": "Slavebringer Assault Boat",
+      "type": "AC/WE",
+      "speed": "B",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "2x Twin Dark Lances",
+          "range": "30cm",
+          "dmg": "AT4+/AA5+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        },
+        {
+          "name": "Turreted Splinter Cannon",
+          "range": "15cm",
+          "dmg": "AP5+/AA5+"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Destroyed. All on board units killed.",
+          "skipFromSummary": true
+        },
+        "DC 2",
+        "Shadowfields 1",
+        {
+          "name": "Transport",
+          "desc": "8 of Warrior, Incubi, Haemonculi, Hellion, Mandrakes, Grotesques, Scourge, Wrack, Warp Beasts or Wych units"
+        },
+        "$skills:planetfall"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Executioner Assault Ship",
+      "type": "AC/WE",
+      "speed": "B",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Phantom Lance",
+          "range": "45cm",
+          "dmg": "2x MW3+ (TK 1)",
+          "skills": ["$facing:fxf"]
+        },
+        {
+          "name": "Desolator",
+          "range": "30cm",
+          "dmg": "2BP",
+          "skills": ["$weapons:disrupt", "$facing:fwa"]
+        },
+        {
+          "name": "Hail of Splinters",
+          "range": "30cm",
+          "dmg": "2x AP4+/AT6+"
+        },
+        {
+          "name": "Disint. Array",
+          "range": "45cm",
+          "dmg": "2x AA4+"
+        },
+        {
+          "name": "...",
+          "range": "(15cm)",
+          "skills": ["EA +2"]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Explodes. Units at 5cm receive a hit on 5+.",
+          "skipFromSummary": true
+        },
+        "DC 4",
+        "Shadowfields 3",
+        {
+          "name": "Transport",
+          "desc": "12 of  Warrior, Incubi, Haemonculi, Hellion, Mandrakes, Grotesques, Scourge, Wrack, Warp Beasts or Wych units. And 6 of: LV, AV, Barge of Pleasure, Vessel of Pain (count each DC)."
+        },
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:self-planetfall"
+      ]
+    },
+    {
+      "name": "Torture Class Cruiser",
+      "type": "SC",
+      "speed": "-",
+      "armour": "-",
+      "cc": "-",
+      "ff": "-",
+      "weapons": [
+        {
+          "name": "Pin-point Attack",
+          "range": "-",
+          "dmg": "MW2+ (TKD3)"
+        },
+        {
+          "name": "Orbital Bombardment",
+          "range": "-",
+          "dmg": "6BP, MW"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Transport",
+          "desc": "4 of Executioner Assault Ship (count as 2) and Slavebringer Assault Boats."
+        }
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Tormentor Titan",
+      "type": "WE",
+      "speed": "35",
+      "armour": "5+",
+      "cc": "3+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "2x Phantom Lance",
+          "range": "45cm",
+          "dmg": "2x MW3+ (TK 1)"
+        },
+        {
+          "name": "Hail of Splinters",
+          "range": "30cm",
+          "dmg": "2x AP4+/AT6+"
+        },
+        {
+          "name": "...",
+          "range": "(15cm)",
+          "skills": ["EA +2"]
+        },
+        {
+          "name": "Tormentor Blades",
+          "range": "B2B",
+          "skills": ["MW EA+3 (TK1)"]
+        },
+        {
+          "name": "Splinter Missiles",
+          "range": "30cm",
+          "dmg": "2x AA5+"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Lose jump-pack ability and speed is reduced to 25cm. Additional critical hits deal 1 extra DC damage.",
+          "skipFromSummary": true
+        },
+        "DC 4",
+        "Shadowfields 6",
+        "$skills:fearless",
+        "$skills:jump-pack",
+        "$skills:reinforced-armour",
+        "$skills:walker"
       ]
     }
   ]
