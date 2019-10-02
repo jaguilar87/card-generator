@@ -1,0 +1,10 @@
+{
+  "fwa": {
+    "name": "FwA",
+    "desc": "Forward Fire Arc"
+  },
+  "fxf": {
+    "name": "FxF",
+    "desc": "Fixed Forward Fire Arc"
+  }
+}

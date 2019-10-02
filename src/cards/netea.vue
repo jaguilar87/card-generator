@@ -1,3 +1,4 @@
+
 <template>
   <div class="Card">
     <div class="Card-side">
@@ -23,12 +24,12 @@
         <div class="Card-summary">
           <table class="Card-weapons table is-narrow">
             <tr>
-              <th>Weapon</th>
+              <th class="Card-weaponName">Weapon</th>
               <th>Range</th>
               <th>Stats</th>
             </tr>
             <tr v-for="weapon in card.weapons" :key="weapon.name">
-              <td>{{weapon.name}}</td>
+              <td class="Card-weaponName">{{weapon.name}}</td>
               <td>{{weapon.range}}</td>
               <td>{{getWeaponStats(weapon)}}</td>
             </tr>
@@ -44,8 +45,13 @@
     <div class="Card-side Card-side--reverse">
       <div class="Card-skills">
         <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
-          <strong>{{skill.name}} [{{skill.ref}}]:</strong>
-          {{skill.desc}}
+          <span v-if="skill.desc">
+            <strong>
+              <span>{{skill.name}}</span>
+              <span v-if="skill.ref">&nbsp;[{{skill.ref}}]</span>:
+            </strong>
+            {{skill.desc}}
+          </span>
         </p>
       </div>
     </div>
@@ -55,6 +61,7 @@
 <script>
 import access from 'safe-access';
 import expand from '../utils/expand';
+import expandCollection from '../utils/expand-collection';
 
 export default {
   computed: {
@@ -73,46 +80,37 @@ export default {
     system: Object
   },
   methods: {
-    getExpandedSkills() {
-      const skills = new Set();
+    getExpandedSkills({ includeSkills = true, includeWeapons = true } = {}) {
+      const skills = [];
+      const safeThis = access(this);
 
-      try {
-        for (const skill of this.$props.card.skills) {
-          skills.add(skill);
-        }
-      } catch (err) {
-        // nothing to add here
+      // General Skills
+      const generalSkills = safeThis('$props.card.skills');
+
+      if (includeSkills && generalSkills) {
+        skills.push(...generalSkills);
       }
 
-      try {
+      // Weapons
+      const weapons = safeThis('$props.card.weapons');
+      if (includeWeapons && weapons) {
         for (const weapon of this.$props.card.weapons) {
           if (weapon.skills) {
-            for (const skill of weapon.skills) {
-              skills.add(skill);
-            }
+            skills.push(...weapon.skills);
           }
         }
-      } catch (err) {
-        // nothing to add here
       }
 
-      return Array.from(skills).map(skill =>
-        expand(this.$props.system.references, skill)
-      );
+      return expandCollection(safeThis('$props.system.references'), skills);
     },
-    getSkillsSummary(skills) {
-      if (!skills || !skills.length) {
-        return '-';
-      }
+    getSkillsSummary() {
+      const summ = this.getExpandedSkills({ includeWeapons: false })
+        .filter(skill => !skill.skipFromSummary)
+        .map(skill => skill.name || skill);
 
-      const skillNames = skills.map(skill => {
-        const expanded = expand(this.$props.system.references, skill);
-        return expanded.name || expanded;
-      });
-
-      return skillNames.join(', ');
+      return summ.join(', ') + '.';
     },
-    getWeaponStats({ at, ap, aa, bp, ea, mwEa, skills }) {
+    getWeaponStats({ rof, at, ap, aa, bp, bpMw, mw, tk, ea, mwEa, skills }) {
       const dmg = [];
       const stats = [];
 
@@ -120,9 +118,21 @@ export default {
       dmg.push(at && `AT${at}+`);
       dmg.push(ap && `AP${ap}+`);
       dmg.push(aa && `AA${aa}+`);
+      dmg.push(mw && `MW${mw}+`);
       dmg.push(bp && `${bp}BP`);
+      dmg.push(bpMw && `${bpMw}BP, MW`);
 
-      stats.push(dmg && dmg.filter(item => item).join('/'));
+      let dmgTotal = dmg.filter(item => item).join('/');
+
+      if (rof) {
+        dmgTotal = `${rof}x ${dmgTotal}`;
+      }
+
+      if (tk) {
+        dmgTotal += ` (TK ${tk})`;
+      }
+
+      stats.push(dmgTotal);
 
       // Other
       stats.push(ea && `EA +${ea}`);
@@ -214,7 +224,11 @@ $border-color: #dcdcdc;
   }
 
   &-skills-summary {
-    padding: 2px;
+    padding: 4px;
+  }
+
+  &-weaponName {
+    max-width: 75px;
   }
 
   &-stat {

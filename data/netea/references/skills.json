@@ -15,7 +15,7 @@
     "ref": "2.1.3"
   },
   "infiltrator": {
-    "name": "Infiltrators",
+    "name": "Infiltrator",
     "desc": "Double speed and ignore enemy zones when charging.",
     "ref": "2.1.4"
   },
@@ -29,8 +29,8 @@
     "desc": "Additional save of 6+ to each wound received.",
     "ref": "2.1.6"
   },
-  "jump-packs": {
-    "name": "Jump Packs",
+  "jump-pack": {
+    "name": "Jump Pack",
     "desc": "Ignore terrain and friendly units while moving.",
     "ref": "2.1.7"
   },
