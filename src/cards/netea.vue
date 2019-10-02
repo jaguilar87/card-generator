@@ -23,7 +23,7 @@
         </div>
         <div class="Card-summary">
           <table class="Card-weapons table is-narrow">
-            <tr>
+            <tr v-if="!card.compact">
               <th class="Card-weaponName">Weapon</th>
               <th>Range</th>
               <th>Stats</th>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="Card-side Card-side--reverse">
-      <div class="Card-skills">
+      <div :class="{'Card-skills': true, 'Card-skills--compact': card.compact}">
         <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
           <span v-if="skill.desc">
             <strong>
@@ -60,7 +60,6 @@
 
 <script>
 import access from 'safe-access';
-import expand from '../utils/expand';
 import expandCollection from '../utils/expand-collection';
 
 export default {
@@ -110,40 +109,20 @@ export default {
 
       return summ.join(', ') + '.';
     },
-    getWeaponStats({ rof, at, ap, aa, bp, bpMw, mw, tk, ea, mwEa, skills }) {
-      const dmg = [];
+    getWeaponStats({ dmg, skills }) {
       const stats = [];
 
       // Dmg
-      dmg.push(at && `AT${at}+`);
-      dmg.push(ap && `AP${ap}+`);
-      dmg.push(aa && `AA${aa}+`);
-      dmg.push(mw && `MW${mw}+`);
-      dmg.push(bp && `${bp}BP`);
-      dmg.push(bpMw && `${bpMw}BP, MW`);
-
-      let dmgTotal = dmg.filter(item => item).join('/');
-
-      if (rof) {
-        dmgTotal = `${rof}x ${dmgTotal}`;
-      }
-
-      if (tk) {
-        dmgTotal += ` (TK ${tk})`;
-      }
-
-      stats.push(dmgTotal);
-
-      // Other
-      stats.push(ea && `EA +${ea}`);
-      stats.push(mwEa && `MW EA +${mwEa}`);
+      stats.push(dmg);
 
       // Skills
       if (skills) {
-        const skillNames = skills.map(skill => {
-          const expanded = expand(this.$props.system.references, skill);
-          return expanded.name || expanded;
-        });
+        const skillNames = expandCollection(
+          this.$props.system.references,
+          skills
+        )
+          .filter(skill => !skill.skipFromSummary)
+          .map(skill => skill.name || skill);
 
         stats.push(...skillNames);
       }
@@ -252,6 +231,15 @@ $border-color: #dcdcdc;
 
     p + p {
       margin-top: 2px;
+    }
+
+    &--compact {
+      padding: 0 5px;
+      font-size: 6pt !important;
+
+      p + p {
+        margin-top: 0px;
+      }
     }
   }
 }
