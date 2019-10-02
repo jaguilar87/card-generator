@@ -72,13 +72,13 @@
       "ff": "6+",
       "weapons": [
         {
-          "name": "Tormentors",
-          "range": "(15cm)"
-        },
-        {
           "name": "Klaives",
           "range": "B2B",
           "skills": ["MW EA+1"]
+        },
+        {
+          "name": "Tormentors",
+          "range": "(15cm)"
         }
       ]
     },
@@ -121,8 +121,8 @@
         }
       ],
       "skills": [
-        "$skills:scout",
         "$skills:invulnerable-save",
+        "$skills:scout",
         "$skills:teleport"
       ]
     },
@@ -311,7 +311,7 @@
           "range": "(15cm)"
         }
       ],
-      "skills": ["$skills:infiltrator", "$skills:jump-pack"]
+      "skills": ["$skills:jump-pack", "$skills:scout"]
     },
     {
       "name": "Reaver",
@@ -330,7 +330,7 @@
           "range": "(15cm)"
         }
       ],
-      "skills": ["$skills:skimmer", "$skills:mounted"]
+      "skills": ["$skills:mounted", "$skills:skimmer"]
     },
     {
       "name": "Venom",
@@ -351,11 +351,11 @@
         }
       ],
       "skills": [
-        "$skills:skimmer",
         {
           "name": "Transport",
           "desc": "1 of Warrior, Incubi, Haemonculi, Wrack, or Wych unit"
-        }
+        },
+        "$skills:skimmer"
       ]
     },
     {
@@ -374,11 +374,11 @@
         }
       ],
       "skills": [
-        "$skills:skimmer",
         {
           "name": "Transport",
           "desc": "2 of Warrior, Incubi, Haemonculi, Wrack, or Wych units"
-        }
+        },
+        "$skills:skimmer"
       ]
     },
     {
@@ -387,7 +387,7 @@
       "speed": "35cm",
       "armour": "4+",
       "cc": "6+",
-      "ff": "6+",
+      "ff": "4+",
       "weapons": [
         {
           "name": "2x Dark Lances",
@@ -397,7 +397,7 @@
         },
         {
           "name": "Disintegrator",
-          "range": "45cm",
+          "range": "30cm",
           "dmg": "AP4+/AT5+"
         }
       ],
@@ -418,6 +418,12 @@
           "skills": ["$eldar:lance"]
         },
         {
+          "name": "Desolator",
+          "range": "30cm",
+          "dmg": "2BP",
+          "skills": ["$weapons:disrupt", "$facing:fwa"]
+        },
+        {
           "name": "2x Long Splinter Cannon",
           "range": "45cm",
           "dmg": "AP5+",
@@ -426,12 +432,6 @@
         {
           "name": "Torment Grenades ",
           "range": "(15cm)"
-        },
-        {
-          "name": "Desolator",
-          "range": "30cm",
-          "dmg": "2BP",
-          "skills": ["$weapons:disrupt", "$facing:fwa"]
         }
       ],
       "skills": [
@@ -458,10 +458,10 @@
       "ff": "4+",
       "weapons": [
         {
-          "name": "Phantom Lance",
-          "range": "45cm",
-          "dmg": "2x MW3+ (TK 1)",
-          "skills": ["$facing:fxf"]
+          "name": "Desolator",
+          "range": "30cm",
+          "dmg": "2BP",
+          "skills": ["$weapons:disrupt", "$facing:fwa"]
         },
         {
           "name": "2x Long Splinter Cannon",
@@ -470,10 +470,10 @@
           "skills": ["$facing:fwa"]
         },
         {
-          "name": "Desolator",
-          "range": "30cm",
-          "dmg": "2BP",
-          "skills": ["$weapons:disrupt", "$facing:fwa"]
+          "name": "Phantom Lance",
+          "range": "45cm",
+          "dmg": "2x MW3+ (TK 1)",
+          "skills": ["$facing:fxf"]
         }
       ],
       "skills": [
@@ -496,12 +496,6 @@
       "ff": "-",
       "weapons": [
         {
-          "name": "Twin Dark Lances",
-          "range": "30cm",
-          "dmg": "AT4+/AA5+",
-          "skills": ["$eldar:lance", "$facing:fxf"]
-        },
-        {
           "name": "Moonscythe Missiles",
           "range": "30cm",
           "dmg": "AP4+",
@@ -512,6 +506,12 @@
           "range": "15cm",
           "dmg": "AP5+/AA5+",
           "skills": ["$facing:fxf"]
+        },
+        {
+          "name": "Twin Dark Lances",
+          "range": "30cm",
+          "dmg": "AT4+/AA5+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
         }
       ],
       "skills": ["$ac:fighter"]
@@ -525,15 +525,15 @@
       "ff": "-",
       "weapons": [
         {
-          "name": "Void Mines",
-          "range": "15cm",
-          "dmg": "2BP",
-          "skills": ["$eldar:lance", "$facing:fxf"]
-        },
-        {
           "name": "Twin Void Lances",
           "range": "30cm",
           "dmg": "AT3+/AA5+",
+          "skills": ["$eldar:lance", "$facing:fxf"]
+        },
+        {
+          "name": "Void Mines",
+          "range": "15cm",
+          "dmg": "2BP",
           "skills": ["$eldar:lance", "$facing:fxf"]
         }
       ],
@@ -548,15 +548,15 @@
       "ff": "5+",
       "weapons": [
         {
+          "name": "Turreted Splinter Cannon",
+          "range": "15cm",
+          "dmg": "AP5+/AA5+"
+        },
+        {
           "name": "2x Twin Dark Lances",
           "range": "30cm",
           "dmg": "AT4+/AA5+",
           "skills": ["$eldar:lance", "$facing:fxf"]
-        },
-        {
-          "name": "Turreted Splinter Cannon",
-          "range": "15cm",
-          "dmg": "AP5+/AA5+"
         }
       ],
       "skills": [
@@ -584,21 +584,10 @@
       "ff": "4+",
       "weapons": [
         {
-          "name": "Phantom Lance",
-          "range": "45cm",
-          "dmg": "2x MW3+ (TK 1)",
-          "skills": ["$facing:fxf"]
-        },
-        {
           "name": "Desolator",
           "range": "30cm",
           "dmg": "2BP",
           "skills": ["$weapons:disrupt", "$facing:fwa"]
-        },
-        {
-          "name": "Hail of Splinters",
-          "range": "30cm",
-          "dmg": "2x AP4+/AT6+"
         },
         {
           "name": "Disint. Array",
@@ -609,6 +598,17 @@
           "name": "...",
           "range": "(15cm)",
           "skills": ["EA +2"]
+        },
+        {
+          "name": "Hail of Splinters",
+          "range": "30cm",
+          "dmg": "3x AP4+/AT6+"
+        },
+        {
+          "name": "Phantom Lance",
+          "range": "45cm",
+          "dmg": "2x MW3+ (TK 1)",
+          "skills": ["$facing:fxf"]
         }
       ],
       "skills": [
@@ -637,14 +637,14 @@
       "ff": "-",
       "weapons": [
         {
-          "name": "Pin-point Attack",
-          "range": "-",
-          "dmg": "MW2+ (TKD3)"
-        },
-        {
           "name": "Orbital Bombardment",
           "range": "-",
           "dmg": "6BP, MW"
+        },
+        {
+          "name": "Pin-point Attack",
+          "range": "-",
+          "dmg": "MW2+ (TKD3)"
         }
       ],
       "skills": [
@@ -664,14 +664,9 @@
       "ff": "4+",
       "weapons": [
         {
-          "name": "2x Phantom Lance",
-          "range": "45cm",
-          "dmg": "2x MW3+ (TK 1)"
-        },
-        {
           "name": "Hail of Splinters",
-          "range": "30cm",
-          "dmg": "2x AP4+/AT6+"
+          "range": "45cm",
+          "dmg": "3x AP4+/AT6+"
         },
         {
           "name": "...",
@@ -679,14 +674,19 @@
           "skills": ["EA +2"]
         },
         {
-          "name": "Tormentor Blades",
-          "range": "B2B",
-          "skills": ["MW EA+3 (TK1)"]
+          "name": "2x Phantom Lance",
+          "range": "45cm",
+          "dmg": "2x MW3+ (TK 1)"
         },
         {
           "name": "Splinter Missiles",
           "range": "30cm",
           "dmg": "2x AA5+"
+        },
+        {
+          "name": "Tormentor Blades",
+          "range": "B2B",
+          "skills": ["MW EA+3 (TK1)"]
         }
       ],
       "skills": [
