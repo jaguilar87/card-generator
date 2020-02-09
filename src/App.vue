@@ -2,7 +2,7 @@
   <div class="Loading" v-if="isLoading">
     <b-icon icon="spinner" class="fa-spin App-spinner" size="is-large" />
   </div>
-  <div v-else-if="error" class="ErrorPage">{{error}}</div>
+  <div v-else-if="error" class="ErrorPage">{{ error }}</div>
   <div v-else class="App">
     <Nav />
     <main class="App-content">

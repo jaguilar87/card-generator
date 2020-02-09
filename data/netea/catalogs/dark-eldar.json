@@ -4,7 +4,7 @@
     "titleBg": "#4A235A",
     "titleText": "white"
   },
-  "cards": [
+  "units": [
     {
       "name": "Archon",
       "type": "Cha",
@@ -253,7 +253,7 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Destroyed.",
+          "desc": "Destroyed",
           "skipFromSummary": true
         },
         "DC 2",
@@ -404,6 +404,7 @@
       "skills": ["$skills:skimmer"]
     },
     {
+      "compact": true,
       "name": "Barge of Pleasure",
       "type": "WE",
       "speed": "30cm",
@@ -437,7 +438,7 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Explodes. Units at 5cm receive a hit on 5+.",
+          "desc": "Explodes. Units at 5cm hit on 5+",
           "skipFromSummary": true
         },
         "DC 3",
@@ -479,7 +480,7 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Explodes. Units at 5cm receive a hit on 6+.",
+          "desc": "Explodes. Units at 5cm hit on 6+",
           "skipFromSummary": true
         },
         "DC 3",
@@ -562,7 +563,7 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Destroyed. All on board units killed.",
+          "desc": "Destroyed. All on board units killed",
           "skipFromSummary": true
         },
         "DC 2",
@@ -595,12 +596,12 @@
           "dmg": "2x AA4+"
         },
         {
-          "name": "...",
+          "name": "..",
           "range": "(15cm)",
           "skills": ["EA +2"]
         },
         {
-          "name": "Hail of Splinters",
+          "name": "Splinters",
           "range": "30cm",
           "dmg": "3x AP4+/AT6+"
         },
@@ -614,14 +615,14 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Explodes. Units at 5cm receive a hit on 5+.",
+          "desc": "Explodes. Units at 5cm hit on 5+",
           "skipFromSummary": true
         },
         "DC 4",
         "Shadowfields 3",
         {
           "name": "Transport",
-          "desc": "12 of  Warrior, Incubi, Haemonculi, Hellion, Mandrakes, Grotesques, Scourge, Wrack, Warp Beasts or Wych units. And 6 of: LV, AV, Barge of Pleasure, Vessel of Pain (count each DC)."
+          "desc": "12 of  Warrior, Incubi, Haemonculi, Hellion, Mandrakes, Grotesques, Scourge, Wrack, Warp Beasts or Wych units. And 6 of: LV, AV, Barge, Vessel (count each DC)"
         },
         "$skills:fearless",
         "$skills:reinforced-armour",
@@ -650,7 +651,7 @@
       "skills": [
         {
           "name": "Transport",
-          "desc": "4 of Executioner Assault Ship (count as 2) and Slavebringer Assault Boats."
+          "desc": "4 of Executioner Assault Ship (count as 2) and Slavebringer Assault Boats"
         }
       ]
     },
@@ -664,12 +665,12 @@
       "ff": "4+",
       "weapons": [
         {
-          "name": "Hail of Splinters",
+          "name": "Splinters",
           "range": "45cm",
           "dmg": "3x AP4+/AT6+"
         },
         {
-          "name": "...",
+          "name": "..",
           "range": "(15cm)",
           "skills": ["EA +2"]
         },
@@ -692,7 +693,7 @@
       "skills": [
         {
           "name": "Critical Hit",
-          "desc": "Lose jump-pack ability and speed is reduced to 25cm. Additional critical hits deal 1 extra DC damage.",
+          "desc": "Lose jump-pack ability and speed is reduced to 25cm. Additional critical hits deal 1 extra DC damage",
           "skipFromSummary": true
         },
         "DC 4",
@@ -702,6 +703,16 @@
         "$skills:reinforced-armour",
         "$skills:walker"
       ]
+    }
+  ],
+  "rules": [
+    {
+      "name": "Hit and run",
+      "desc": "Dark Eldar formations that select an advance or double action may choose to shoot either before or after each move, but may still only shoot once. If the formation chooses to double, the -1 to hit penalty applies even if the shoot is taken before moving. Dark Eldar formations winning an assault may consolidate up to their speed value rather than the normal 5cms."
+    },
+    {
+      "name": "Fleet of foot",
+      "desc": "Dark Eldar formations do not suffer the usual penalties when taking a march action; so may still lend support fire in assaults, help claim a crossfire bonus, and even fire flak shots."
     }
   ]
 }

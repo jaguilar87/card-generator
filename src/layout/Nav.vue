@@ -36,4 +36,10 @@ export default {
   height: 100%;
   border-right: 1px solid darkgray;
 }
+
+@media print {
+  .App-nav {
+    display: none !important;
+  }
+}
 </style>

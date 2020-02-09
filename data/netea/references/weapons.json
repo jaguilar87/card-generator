@@ -6,27 +6,27 @@
   },
   "first-strike": {
     "name": "First Strike",
-    "desc": "Attack first in assault.",
+    "desc": "Attack first in assault",
     "ref": "2.2.4"
   },
   "ignore-cover": {
     "name": "Ignore Cover",
-    "desc": "Ignore cover modifiers and infantry cover saves.",
+    "desc": "Ignore cover modifiers and infantry cover saves",
     "ref": "2.2.5"
   },
   "single-shot": {
     "name": "Single Shot",
-    "desc": "May be used once per battle.",
+    "desc": "May be used once per battle",
     "ref": "2.2.7"
   },
   "slow-firing": {
     "name": "Slow Firing",
-    "desc": "Must take one turn to reload after each use.",
+    "desc": "Must take one turn to reload after each use",
     "ref": "2.2.8"
   },
   "indirect": {
     "name": "Indirect",
-    "desc": "May fire without LoS and double range (but minimum of 30cm) during sustined fire actions.",
+    "desc": "May fire without LoS and double range (minimum of 30cm) on sustined fire actions",
     "ref": "2.2.10"
   }
 }

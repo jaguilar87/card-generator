@@ -1,9 +1,16 @@
 <template>
   <div class="CardReader">
-    <NetEACard
-      v-for="card in catalog.cards"
-      :key="card.name"
-      :card="card"
+    <NetEARuleCard
+      v-for="rule in catalog.rules"
+      :key="rule.name"
+      :card="rule"
+      :catalog="catalog"
+      :system="system"
+    />
+    <NetEAUnitCard
+      v-for="unit in catalog.units"
+      :key="unit.name"
+      :card="unit"
       :catalog="catalog"
       :system="system"
     />
@@ -11,7 +18,8 @@
 </template>
 
 <script>
-import NetEACard from '@/cards/netea.vue';
+import NetEARuleCard from '@/cards/netea/rule.vue';
+import NetEAUnitCard from '@/cards/netea/unit.vue';
 
 export default {
   computed: {
@@ -25,7 +33,8 @@ export default {
     }
   },
   components: {
-    NetEACard
+    NetEAUnitCard,
+    NetEARuleCard
   }
 };
 </script>

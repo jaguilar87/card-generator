@@ -1,27 +1,29 @@
-
 <template>
   <div class="Card">
     <div class="Card-side">
       <div class="Card-header" :style="titleStyle">
-        <div class="Card-headerName">
-          <div class="Card-name">{{card.name}}</div>
-          <div class="Card-faction">{{catalog.name}}</div>
-        </div>
-        <div class="Card-type">{{card.type}}</div>
+        <Icon class="Card-icon" :type="card.type" />
+        <div class="Card-name">{{ card.name }}</div>
+        <div class="Card-type">{{ card.type }}</div>
       </div>
 
       <div class="Card-body">
         <div class="Card-stats">
           <div class="Card-stat Card-stat--header">SPD</div>
-          <div class="Card-stat">{{card.speed}}</div>
+          <div class="Card-stat">{{ card.speed }}</div>
           <div class="Card-stat Card-stat--header">ARM</div>
-          <div class="Card-stat">{{card.armour}}</div>
+          <div class="Card-stat">{{ card.armour }}</div>
           <div class="Card-stat Card-stat--header">CC</div>
-          <div class="Card-stat">{{card.cc}}</div>
+          <div class="Card-stat">{{ card.cc }}</div>
           <div class="Card-stat Card-stat--header">FF</div>
-          <div class="Card-stat">{{card.ff}}</div>
+          <div class="Card-stat">{{ card.ff }}</div>
         </div>
-        <div class="Card-summary">
+        <div
+          :class="{
+            'Card-summary': true,
+            'Card-summary--compact': card.compact
+          }"
+        >
           <table class="Card-weapons table is-narrow">
             <tr v-if="!card.compact">
               <th class="Card-weaponName">Weapon</th>
@@ -29,28 +31,35 @@
               <th>Stats</th>
             </tr>
             <tr v-for="weapon in card.weapons" :key="weapon.name">
-              <td class="Card-weaponName">{{weapon.name}}</td>
-              <td>{{weapon.range}}</td>
-              <td>{{getWeaponStats(weapon)}}</td>
+              <td class="Card-weaponName">{{ weapon.name }}</td>
+              <td>{{ weapon.range }}</td>
+              <td>{{ getWeaponStats(weapon) }}</td>
             </tr>
           </table>
+
           <div class="Card-skills-summary">
             <strong>Skills:</strong>
-            {{getSkillsSummary(card.skills)}}
+            {{ getSkillsSummary(card.skills) }}
           </div>
         </div>
       </div>
     </div>
 
     <div class="Card-side Card-side--reverse">
-      <div :class="{'Card-skills': true, 'Card-skills--compact': card.compact}">
-        <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
+      <div
+        :class="{ 'Card-skills': true, 'Card-skills--compact': card.compact }"
+      >
+        <p
+          v-for="skill in getExpandedSkills()"
+          :key="skill.name"
+          class="Card-skill"
+        >
           <span v-if="skill.desc">
             <strong>
-              <span>{{skill.name}}</span>
-              <span v-if="skill.ref">&nbsp;[{{skill.ref}}]</span>:
+              <span>{{ skill.name }}</span>
+              <span v-if="skill.ref">&nbsp;[{{ skill.ref }}]</span>:
             </strong>
-            {{skill.desc}}
+            {{ skill.desc }}
           </span>
         </p>
       </div>
@@ -60,7 +69,8 @@
 
 <script>
 import access from 'safe-access';
-import expandCollection from '../utils/expand-collection';
+import expandCollection from '../../utils/expand-collection';
+import NeteaIcon from './icon.vue';
 
 export default {
   computed: {
@@ -129,6 +139,9 @@ export default {
 
       return stats.filter(item => item).join(', ') || '-';
     }
+  },
+  components: {
+    Icon: NeteaIcon
   }
 };
 </script>
@@ -137,13 +150,19 @@ export default {
 $card-color: #000000;
 $border-color: #dcdcdc;
 
+@media print {
+  .Card:nth-child(9n):not(:last-child) {
+    margin-bottom: 100px;
+  }
+}
+
 .Card {
   font-size: 7pt;
   margin-bottom: 12px;
 
   &-side {
-    height: 44mm;
-    width: 67mm;
+    height: 41mm;
+    width: 63mm;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;
@@ -161,20 +180,21 @@ $border-color: #dcdcdc;
   }
 
   &-header {
-    padding: 0 5px;
+    padding: 1px 5px;
     border-bottom: 1px solid $card-color;
   }
 
-  &-headerName {
-    width: 80%;
+  &-icon {
+    width: 9%;
+    padding-right: 2px;
   }
 
   &-name {
+    width: 70%;
     font-size: 10pt;
   }
 
   &-type {
-    padding-top: 6px;
     width: 20%;
     font-size: 10pt;
     text-align: right;
@@ -200,6 +220,10 @@ $border-color: #dcdcdc;
 
   &-summary {
     width: 88%;
+
+    &--compact {
+      font-size: 6pt !important;
+    }
   }
 
   &-skills-summary {
@@ -212,7 +236,7 @@ $border-color: #dcdcdc;
 
   &-stat {
     width: 100%;
-    height: 17px;
+    height: 16px;
     text-align: center;
     border-right: 1px solid $border-color;
 
