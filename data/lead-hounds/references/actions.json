@@ -1,0 +1,10 @@
+{
+  "autocannon": {
+    "name": "Autocannon",
+    "apCost": 2,
+    "range": "12\"",
+    "targetValue": "6+",
+    "suits": ["H", "D"],
+    "result": "_Enemy only._ The target takes **two hits**."
+  }
+}

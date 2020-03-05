@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Nav from '@/layout/Nav.vue';
+import Nav from '@/views/Nav.vue';
 
 export default {
   computed: {

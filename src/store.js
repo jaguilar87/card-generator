@@ -35,5 +35,13 @@ export default new Vuex.Store({
           commit('setLoading', false);
         });
     }
+  },
+  getters: {
+    resolve: state => (systemId, libraryId, referenceId) => {
+      return state.data[systemId].references[libraryId][referenceId];
+    },
+    getCatalog: state => (systemId, catalogId) => {
+      return state.data[systemId].catalogs[catalogId];
+    }
   }
 });

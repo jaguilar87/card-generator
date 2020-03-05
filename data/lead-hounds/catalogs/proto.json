@@ -1,0 +1,14 @@
+{
+  "name": "Prototype",
+  "style": {
+    "titleBg": "#4A235A",
+    "titleText": "white"
+  },
+  "cards": [
+    {
+      "actions": ["$actions:autocannon"]
+    },
+    {},
+    {}
+  ]
+}

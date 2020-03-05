@@ -24,12 +24,10 @@ import NetEAUnitCard from '@/cards/netea/unit.vue';
 export default {
   computed: {
     system() {
-      return this.$store.state.data[this.$route.params.system];
+      return this.$store.state.data[this.$route.name];
     },
     catalog() {
-      const { system, catalog } = this.$route.params;
-
-      return this.$store.state.data[system].catalogs[catalog];
+      return this.system.catalogs[this.$route.params.catalog];
     }
   },
   components: {
