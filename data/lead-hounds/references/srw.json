@@ -1,0 +1,10 @@
+{
+  "mine-response": {
+    "name": "Spite Launcher",
+    "disabledResponse": true,
+    "range": "0\"",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "Place a **50mm plain hazard (1 point of damage propulsion system)** in base contact with this mecha"
+  }
+}
