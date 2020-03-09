@@ -33,8 +33,6 @@ export default {
 
 <style lang="scss">
 .CardReader {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: table;
 }
 </style>

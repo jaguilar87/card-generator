@@ -1,0 +1,242 @@
+{
+  "name": "Satsuma Gijutsu",
+  "style": {
+    "accent": "#30254a",
+    "inverted": "#ffffff"
+  },
+  "cards": [
+    {
+      "name": "Ronin Class",
+      "type": "Torso - Neutrino",
+      "tags": ["Light Class", "Neutrino"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1-2"],
+        "cards": [2, 2],
+        "speed": [1, 0]
+      },
+      "connections": ["H", "S", "D", "C"],
+      "actions": ["$satsuma:eject-system"],
+      "disabledActions": ["$satsuma:glare"]
+    },
+    {
+      "name": "Samurai Class",
+      "type": "Torso - Neutrino",
+      "tags": ["Medium Brawler Class", "Neutrino"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2]
+      },
+      "connections": ["H", "C", "S", "D"],
+      "actions": ["$satsuma:eject-system"],
+      "rules": ["$generic:inertia-dischargers"],
+      "disabledActions": ["$satsuma:glare"]
+    },
+    {
+      "name": "Ashigaru Class",
+      "type": "Torso",
+      "tags": ["Medium Class", "Slow"],
+      "hp": 4,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2]
+      },
+      "connections": ["C", "S", "D", "H"],
+      "actions": ["$satsuma:eject-system"]
+    },
+    {
+      "name": "Daimyo Class",
+      "type": "Torso",
+      "tags": ["Heavy Class"],
+      "hp": 4,
+      "armor": 2,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2],
+        "speed": [-1, -1]
+      },
+      "connections": ["C", "H", "S", "D"],
+      "actions": ["$satsuma:eject-system", "$generic:slam"]
+    },
+    {
+      "name": "Batta",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1"],
+        "speed": [6, 4],
+        "disabledSpeed": [2]
+      }
+    },
+    {
+      "name": "Hayai",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "hp": 3,
+      "armor": 0,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [5, 4],
+        "disabledSpeed": [3]
+      }
+    },
+    {
+      "name": "Yama",
+      "type": "Propulsion",
+      "tags": ["Tipod", "Support"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2", "3"],
+        "speed": [4, 3, 2],
+        "disabledSpeed": [1]
+      },
+      "actions": ["$generic:stabilizers"]
+    },
+    {
+      "name": "Hachidori",
+      "type": "Propulsion",
+      "tags": ["Hovercraft"],
+      "hp": 4,
+      "armor": 0,
+      "stats": {
+        "damage": ["0-3"],
+        "speed": [4]
+      },
+      "rules": ["$generic:hover"]
+    },
+    {
+      "name": "Neutrino Engine",
+      "type": "Special",
+      "tags": ["Neutrino", "Reactor"],
+      "restrictions": ["Neutrino Torso"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1"],
+        "cards": [1]
+      },
+      "actions": ["$satsuma:seppuku"],
+      "disabledActions": ["$generic:overheat"]
+    },
+    {
+      "name": "Neutrino Thrusters",
+      "type": "Special",
+      "tags": ["Neutrino", "Fast", "Movement"],
+      "restrictions": ["Neutrino Torso"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1"],
+        "speed": [1]
+      },
+      "actions": ["$generic:side-dash"],
+      "disabledActions": ["$generic:overheat"]
+    },
+    {
+      "name": "Chisso Reito",
+      "type": "Special",
+      "tags": ["Refrigeration"],
+      "hp": 2,
+      "armor": 3,
+      "actions": ["$generic:vent-steam"],
+      "rules": ["$generic:cold-exhaust"]
+    },
+    {
+      "name": "Tate Hatsudenki",
+      "type": "Special",
+      "tags": ["Shield", "Support"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$generic:shield", "$generic:chaff"]
+    },
+    {
+      "name": "Hypermetal Katana",
+      "type": "Left Arm",
+      "tags": ["Melee Weapon", "Armor Piercing"],
+      "hp": 2,
+      "armor": 1,
+      "actions": ["$generic:slash"],
+      "rules": ["$generic:power-surge"]
+    },
+    {
+      "name": "Neutrino Balancer",
+      "type": "Left Arm",
+      "tags": ["Utility"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$satsuma:balancer"]
+    },
+    {
+      "name": "Taiyo Tanto",
+      "type": "Left Arm",
+      "tags": ["Melee Weapon", "Heat"],
+      "restrictions": ["Neutrino Torso"],
+      "hp": 2,
+      "armor": 1,
+      "actions": ["$satsuma:sun-slash"],
+      "rules": ["$satsuma:heat-transfer"],
+      "disabledActions": ["$generic:overheat"]
+    },
+    {
+      "name": "Birdslayer",
+      "type": "Left Arm",
+      "tags": ["Shooting Weapon"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1"],
+        "accuracy": ["-", -1]
+      },
+      "actions": ["$generic:rocket", "$generic:aa-barrage"]
+    },
+    {
+      "name": "Taiyo Yari",
+      "type": "Right Arm",
+      "tags": ["Shooting Weapon", "Heat"],
+      "restrictions": ["Neutrino Torso"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$satsuma:sun-lance"],
+      "rules": ["$satsuma:heat-transfer"],
+      "disabledActions": ["$generic:overheat"]
+    },
+    {
+      "name": "Kaen Hosha-ki",
+      "type": "Right Arm",
+      "tags": ["Shooting Weapon", "Burning"],
+      "hp": 1,
+      "armor": 2,
+      "actions": ["$generic:flamethrower"],
+      "rules": ["$generic:rekindle"],
+      "disabledActions": ["$generic:burn"]
+    },
+    {
+      "name": "Accelerator Gatling",
+      "type": "Right Arm",
+      "tags": ["Shooting Weapon", "Slow"],
+      "restrictions": ["Non-neutrino Torso"],
+      "hp": 3,
+      "armor": 2,
+      "stats": {
+        "damage": [0, 1, 2],
+        "accuracy": ["-", -1, -2]
+      },
+      "actions": ["$generic:gatling"]
+    },
+    {
+      "name": "Repulsor Beam",
+      "type": "Right Arm",
+      "tags": ["Movement"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$generic:repulse"]
+    }
+  ]
+}

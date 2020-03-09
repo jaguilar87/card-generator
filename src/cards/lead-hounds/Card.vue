@@ -7,12 +7,16 @@
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" />
-        <span class="LHCard-restrictions" v-if="card.restrictions">
-          {{ card.restrictions.join('/') }} only.
-        </span>
+        <span
+          class="LHCard-restrictions"
+          v-if="card.restrictions"
+        >{{ card.restrictions.join('/') }} only.</span>
         <Action v-for="action in actions" :key="action.name" :action="action" />
         <Rule v-for="rule in rules" :key="rule.name" :rule="rule" />
-        <div class="LHCard-manufacturer">{{ catalog.name }}</div>
+        <div class="LHCard-keywords">
+          <div class="LHCard-tags">{{ card.tags.join(' · ') }}</div>
+          <div class="LHCard-manufacturer">{{ catalog.name }}</div>
+        </div>
       </div>
       <Footer
         class="LHCard-footer"
@@ -28,11 +32,11 @@
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" disabled />
-        <Action
-          v-for="action in disabledActions"
-          :key="action.name"
-          :action="action"
-        />
+        <Action v-for="action in disabledActions" :key="action.name" :action="action" />
+        <div class="LHCard-keywords">
+          <div class="LHCard-tags">{{ card.tags.join(' · ') }}</div>
+          <div class="LHCard-manufacturer">{{ catalog.name }}</div>
+        </div>
       </div>
       <Footer class="LHCard-footer" disabled />
     </div>
@@ -95,11 +99,17 @@ export default {
 <style lang="scss">
 $card-color: #000000;
 
+@media print {
+  .LHCard {
+    page-break-inside: avoid;
+  }
+}
+
 .LHCard {
   font-size: 7pt;
   margin-bottom: 12px;
-  display: flex;
-  flex-direction: wrap;
+  display: inline-flex;
+  margin: 10px;
 
   &-side {
     height: 64mm;
@@ -107,7 +117,7 @@ $card-color: #000000;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
   }
 
@@ -143,7 +153,8 @@ $card-color: #000000;
     font-style: italic;
   }
 
-  &-manufacturer {
+  &-keywords {
+    font-size: 90%;
     margin-top: auto;
     text-align: center;
     opacity: 0.7;

@@ -38,6 +38,7 @@ export default {
   justify-content: space-between;
 
   &-disabled {
+    line-height: 20px;
     height: 20px;
     width: 100%;
     text-align: center;

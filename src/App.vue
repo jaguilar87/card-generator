@@ -36,6 +36,17 @@ export default {
 </script>
 
 <style lang="scss">
+@page {
+  size: A4;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
 .Loading {
   text-align: center;
   margin: 48px;
