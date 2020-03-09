@@ -38,7 +38,17 @@ export default new Vuex.Store({
   },
   getters: {
     resolve: state => (systemId, libraryId, referenceId) => {
-      return state.data[systemId].references[libraryId][referenceId];
+      try {
+        const ref = state.data[systemId].references[libraryId][referenceId];
+
+        if (!ref) throw new Error();
+
+        return ref;
+      } catch (e) {
+        throw new Error(
+          `Cannot resolve ${systemId}:${libraryId}:${referenceId}`
+        );
+      }
     },
     getCatalog: state => (systemId, catalogId) => {
       return state.data[systemId].catalogs[catalogId];

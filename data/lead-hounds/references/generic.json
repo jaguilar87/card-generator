@@ -1,0 +1,70 @@
+{
+  "side-dash": {
+    "name": "Side Dash",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "This mecha is pushed 2\" in any direction."
+  },
+  "slam": {
+    "name": "Chasis Slam",
+    "apCost": 1,
+    "range": "0\"",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "_Enemy only_.The target takes *a hit* and is pushed this mecha's **speed** away."
+  },
+  "stabilizers": {
+    "name": "Stabilizers",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "3+",
+    "suits": [],
+    "result": "This mecha gains the **immobilized** condition. Until the end of the turn, this model receives **+1** value to all its action flips."
+  },
+  "vent-steam": {
+    "name": "Vent Steam",
+    "apCost": 3,
+    "range": "-",
+    "targetValue": "2+",
+    "suits": [],
+    "result": "his mecha discards **3 overheat cards** and gains **obscured** until the end of the turn."
+  },
+  "shield": {
+    "name": "Shield Up",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "7+",
+    "suits": ["D"],
+    "result": "_Overcharge 1._ This mecha gains the **shielded** condition."
+  },
+  "chaff": {
+    "name": "Chaff",
+    "apCost": 2,
+    "range": "2\"",
+    "targetValue": "9+",
+    "suits": [],
+    "result": "All targets remove the **marked** condition."
+  },
+  "feedback": {
+    "name": "Feedback",
+    "disabledResponse": true,
+    "range": "-",
+    "targetValue": "-",
+    "suits": [],
+    "result": "This mecha torso receives **1 damage**."
+  },
+  "cold-exhaust": {
+    "name": "Cold Exhaust",
+    "desc": "Discard one extra overheat card on reactor cooldown."
+  },
+  "inertia-dischargers": {
+    "name": "Inertia Dischargers",
+    "desc": "When this model performs an **assault action free action**, it receives **+1** value to its flip."
+  },
+  "hover": {
+    "name": "Hover",
+    "desc": "This mecha ignore terrain effects while moving and can move across (but not stop on top of) other mechas and terrain. If this model where to receive the **immobilized** condition, it will suffer **1 damage** on this system instead."
+  }
+}

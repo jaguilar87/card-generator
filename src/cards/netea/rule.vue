@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $card-color: #000000;
 $border-color: #dcdcdc;
 

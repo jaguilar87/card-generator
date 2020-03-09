@@ -2,39 +2,32 @@
   <div class="Action">
     <div class="Action-header">
       <div class="Action-name">
-        <ActionIcon v-for="i in action.apCost" :key="i" />
+        <span v-for="i in action.apCost" :key="i">➧</span>
+        <span v-if="action.disabledResponse">𝝮</span>
         {{ action.name }}
       </div>
       <div class="Action-range">{{ action.range }}</div>
       <div class="Action-targetValue">{{ action.targetValue }}</div>
       <div class="Action-suits">
         <Suit v-for="suit in action.suits" :key="suit" :type="suit" />
+        <span v-show="!action.suits.length">-</span>
       </div>
     </div>
-    <div class="Action-body" v-html="resultHtml"></div>
+    <EffectText :text="action.result" />
   </div>
 </template>
 
 <script>
-import Suit from '@/cards/lead-hounds/components/Suit.vue';
-import ActionIcon from '@/cards/lead-hounds/components/ActionIcon.vue';
-import showdown from 'showdown';
-
-const md = new showdown.Converter();
+import Suit from '@/cards/lead-hounds/other/Suit.vue';
+import EffectText from '@/cards/lead-hounds/other/EffectText.vue';
 
 export default {
   props: {
     action: Object
   },
-  computed: {
-    resultHtml() {
-      console.log(this.action.result);
-      return md.makeHtml(this.action.result);
-    }
-  },
   components: {
     Suit,
-    ActionIcon
+    EffectText
   }
 };
 </script>
@@ -45,29 +38,29 @@ export default {
 
   &-header {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
   }
 
   &-name {
+    text-align: left;
     width: 50%;
-    display: inline-block;
+    flex-grow: 100;
     font-weight: bold;
   }
 
   &-range {
     width: 16.6%;
-    display: inline-block;
   }
 
   &-targetValue {
     width: 16.6%;
-    display: inline-block;
     text-align: center;
   }
 
   &-suits {
     width: 16.6%;
-    display: inline-block;
     text-align: right;
   }
 }

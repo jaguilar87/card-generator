@@ -1,0 +1,148 @@
+{
+  "name": "Yamatogawa Gijutsu",
+  "style": {
+    "accent": "#30254a",
+    "inverted": "#ffffff"
+  },
+  "cards": [
+    {
+      "name": "Inazuma Class",
+      "type": "Light Torso",
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1-2"],
+        "cards": [2, 2],
+        "speed": [1, 0]
+      },
+      "connections": ["H", "S", "D", "C"],
+      "actions": ["$yamatogawa:eject-system"],
+      "disabledActions": ["$yamatogawa:glare"]
+    },
+    {
+      "name": "Asura Class",
+      "type": "Medium Torso",
+      "hp": 4,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2]
+      },
+      "connections": ["C", "S", "D", "H"],
+      "actions": ["$yamatogawa:eject-system"]
+    },
+    {
+      "name": "Samurai Class",
+      "type": "Medium Torso",
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2]
+      },
+      "connections": ["H", "C", "S", "D"],
+      "actions": ["$yamatogawa:eject-system"],
+      "rules": ["$generic:inertia-dischargers"],
+      "disabledActions": ["$yamatogawa:glare"]
+    },
+    {
+      "name": "Kabuto Class",
+      "type": "Heavy Torso",
+      "hp": 4,
+      "armor": 2,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2],
+        "speed": [-1, -1]
+      },
+      "connections": ["C", "H", "S", "D"],
+      "actions": ["$yamatogawa:eject-system", "$generic:slam"]
+    },
+    {
+      "name": "Batta Legs",
+      "type": "Propulsion",
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1"],
+        "speed": [6, 4],
+        "disabledSpeed": [2]
+      }
+    },
+    {
+      "name": "Hayai Legs",
+      "type": "Propulsion",
+      "hp": 3,
+      "armor": 0,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [5, 4],
+        "disabledSpeed": [3]
+      }
+    },
+    {
+      "name": "Yama Tripod",
+      "type": "Propulsion",
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2", "3"],
+        "speed": [4, 3, 2],
+        "disabledSpeed": [1]
+      },
+      "actions": ["$generic:stabilizers"]
+    },
+    {
+      "name": "Hachidori Hovercraft",
+      "type": "Propulsion",
+      "hp": 4,
+      "armor": 0,
+      "stats": {
+        "damage": ["0-3"],
+        "speed": [4]
+      },
+      "rules": ["$generic:hover"]
+    },
+    {
+      "name": "Neutrino Generator",
+      "type": "Special",
+      "restrictions": ["Inazuma", "Samurai"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1"],
+        "cards": [1]
+      },
+      "actions": ["$yamatogawa:seppuku"],
+      "disabledActions": ["$generic:feedback"]
+    },
+    {
+      "name": "Neutrino Thrusters",
+      "type": "Special",
+      "restrictions": ["Inazuma", "Samurai"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1"],
+        "speed": [1]
+      },
+      "actions": ["$generic:side-dash"],
+      "disabledActions": ["$generic:feedback"]
+    },
+    {
+      "name": "Nitrogen Refrigeration",
+      "type": "Special",
+      "hp": 2,
+      "armor": 3,
+      "actions": ["$generic:vent-steam"],
+      "rules": ["$generic:cold-exhaust"]
+    },
+    {
+      "name": "Tate",
+      "type": "Special",
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$generic:shield", "$generic:chaff"]
+    }
+  ]
+}

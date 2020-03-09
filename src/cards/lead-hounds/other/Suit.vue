@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import heartSuit from '@/assets/lead-hounds/suits/clubs.svg';
-import spadeSuit from '@/assets/lead-hounds/suits/clubs.svg';
+import heartSuit from '@/assets/lead-hounds/suits/hearts.svg';
+import spadeSuit from '@/assets/lead-hounds/suits/spades.svg';
 import clubSuit from '@/assets/lead-hounds/suits/clubs.svg';
-import diamondSuit from '@/assets/lead-hounds/suits/clubs.svg';
+import diamondSuit from '@/assets/lead-hounds/suits/diamonds.svg';
 
 export default {
   props: {
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .Suit {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 }
 </style>
