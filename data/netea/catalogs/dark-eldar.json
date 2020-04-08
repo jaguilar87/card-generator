@@ -1,5 +1,5 @@
 {
-  "name": "Dark Eldar",
+  "name": "Dark Eldar v1.1",
   "style": {
     "titleBg": "#4A235A",
     "titleText": "white"
@@ -13,11 +13,7 @@
       "cc": "n/a",
       "ff": "n/a",
       "weapons": [
-        {
-          "name": "Agonizer",
-          "range": "B2B",
-          "skills": ["MW EA+1"]
-        }
+        { "name": "Agonizer", "range": "B2B", "skills": ["MW EA+1"] }
       ],
       "skills": [
         "$skills:character",
@@ -34,11 +30,7 @@
       "cc": "n/a",
       "ff": "n/a",
       "weapons": [
-        {
-          "name": "Agonizer",
-          "range": "B2B",
-          "skills": ["MW EA+1"]
-        }
+        { "name": "Agonizer", "range": "B2B", "skills": ["MW EA+1"] }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
     },
@@ -50,16 +42,8 @@
       "cc": "n/a",
       "ff": "n/a",
       "weapons": [
-        {
-          "name": "Arcane Terrors",
-          "range": "(15cm)",
-          "skills": ["EA+1"]
-        },
-        {
-          "name": "Scissor Hands",
-          "range": "B2B",
-          "skills": ["EA+1"]
-        }
+        { "name": "Arcane Terrors", "range": "(15cm)", "skills": ["EA+1"] },
+        { "name": "Scissor Hands", "range": "B2B", "skills": ["EA+1"] }
       ],
       "skills": ["$skills:character", "$skills:inspiring", "$skills:leader"]
     },
@@ -71,15 +55,8 @@
       "cc": "3+",
       "ff": "6+",
       "weapons": [
-        {
-          "name": "Klaives",
-          "range": "B2B",
-          "skills": ["MW EA+1"]
-        },
-        {
-          "name": "Tormentors",
-          "range": "(15cm)"
-        }
+        { "name": "Klaives", "range": "B2B", "skills": ["MW EA+1"] },
+        { "name": "Tormentors", "range": "(15cm)" }
       ]
     },
     {
@@ -90,15 +67,8 @@
       "cc": "5+",
       "ff": "4+",
       "weapons": [
-        {
-          "name": "Splinter Cannon",
-          "range": "15cm",
-          "dmg": "AP5+"
-        },
-        {
-          "name": "Splinter Rifles",
-          "range": "(15cm)"
-        }
+        { "name": "Splinter Cannon", "range": "15cm", "dmg": "AP5+" },
+        { "name": "Splinter Rifles", "range": "(15cm)" }
       ]
     },
     {
@@ -140,15 +110,8 @@
           "dmg": "AT5+",
           "skills": ["$eldar:lance"]
         },
-        {
-          "name": "Splinter Cannon",
-          "range": "15cm",
-          "dmg": "AP5+"
-        },
-        {
-          "name": "Splinter Carabines",
-          "range": "(15cm)"
-        }
+        { "name": "Splinter Cannon", "range": "15cm", "dmg": "AP5+" },
+        { "name": "Splinter Carabines", "range": "(15cm)" }
       ],
       "skills": ["$skills:jump-pack", "$skills:teleport"]
     },
@@ -166,10 +129,7 @@
           "dmg": "AP3+",
           "skills": ["$weapons:disrupt"]
         },
-        {
-          "name": "Poison Blades",
-          "range": "B2B"
-        }
+        { "name": "Poison Blades", "range": "B2B" }
       ],
       "skills": ["$skills:fearless", "$skills:leader"]
     },
@@ -180,12 +140,7 @@
       "armour": "5+",
       "cc": "3+",
       "ff": "-",
-      "weapons": [
-        {
-          "name": "Poison Blades",
-          "range": "B2B"
-        }
-      ],
+      "weapons": [{ "name": "Poison Blades", "range": "B2B" }],
       "skills": ["$skills:fearless"]
     },
     {
@@ -196,11 +151,7 @@
       "cc": "4+",
       "ff": "-",
       "weapons": [
-        {
-          "name": "Heavy Blades",
-          "range": "B2B",
-          "skills": ["EA+1"]
-        }
+        { "name": "Heavy Blades", "range": "B2B", "skills": ["EA+1"] }
       ],
       "skills": ["$skills:fearless"]
     },
@@ -212,11 +163,7 @@
       "cc": "4+",
       "ff": "5+",
       "weapons": [
-        {
-          "name": "Massive Blades",
-          "range": "B2B",
-          "skills": ["MW EA+1"]
-        },
+        { "name": "Massive Blades", "range": "B2B", "skills": ["MW EA+1"] },
         {
           "name": "Paralyzer",
           "range": "15cm",
@@ -238,11 +185,7 @@
       "cc": "3+",
       "ff": "4+",
       "weapons": [
-        {
-          "name": "Perditor Claws",
-          "range": "B2B",
-          "skills": ["MW EA+1"]
-        },
+        { "name": "Perditor Claws", "range": "B2B", "skills": ["MW EA+1"] },
         {
           "name": "Widowmaker",
           "range": "30cm",
@@ -302,14 +245,8 @@
       "cc": "3+",
       "ff": "5+",
       "weapons": [
-        {
-          "name": "Hellglaives",
-          "range": "B2B"
-        },
-        {
-          "name": "Splinter Pods",
-          "range": "(15cm)"
-        }
+        { "name": "Hellglaives", "range": "B2B" },
+        { "name": "Splinter Pods", "range": "(15cm)" }
       ],
       "skills": ["$skills:jump-pack", "$skills:scout"]
     },
@@ -321,14 +258,8 @@
       "cc": "4+",
       "ff": "5+",
       "weapons": [
-        {
-          "name": "Blades",
-          "range": "B2B"
-        },
-        {
-          "name": "Splinter Rifles",
-          "range": "(15cm)"
-        }
+        { "name": "Blades", "range": "B2B" },
+        { "name": "Splinter Rifles", "range": "(15cm)" }
       ],
       "skills": ["$skills:mounted", "$skills:skimmer"]
     },
@@ -670,7 +601,8 @@
           "dmg": "3x AP4+/AT6+"
         },
         {
-          "name": "..",
+          "name": "and",
+          "right": true,
           "range": "(15cm)",
           "skills": ["EA +2"]
         },

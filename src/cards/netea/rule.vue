@@ -6,9 +6,7 @@
         <div class="Rule-name">{{ card.name }}</div>
         <div class="Rule-type">Rule</div>
       </div>
-      <div class="Rule-body">
-        {{ card.desc }}
-      </div>
+      <div class="Rule-body">{{ card.desc }}</div>
     </div>
     <div class="Rule-side Rule-side--reverse"></div>
   </div>
@@ -51,8 +49,11 @@ $border-color: #dcdcdc;
 }
 
 .Rule {
+  display: inline-flex;
+  flex-direction: column;
   font-size: 7pt;
   margin-bottom: 12px;
+  margin: 10px;
 
   &-side {
     height: 41mm;
@@ -60,9 +61,13 @@ $border-color: #dcdcdc;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;
+    display: inline-flex;
+    flex-direction: column;
 
-    &--reverse {
-      transform: rotate(-180deg);
+    @media print {
+      &--reverse {
+        transform: rotate(-180deg);
+      }
     }
   }
 

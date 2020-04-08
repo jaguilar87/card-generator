@@ -108,8 +108,8 @@ $card-color: #000000;
 .LHCard {
   font-size: 7pt;
   margin-bottom: 12px;
-  display: inline-flex;
   margin: 10px;
+  display: inline-flex;
 
   &-side {
     height: 64mm;

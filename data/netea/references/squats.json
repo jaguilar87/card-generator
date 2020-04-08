@@ -1,0 +1,14 @@
+{
+  "ancient-wisdom": {
+    "name": "Ancient Wisdom",
+    "desc": "ignore the -1 penalty to retain for any one formation once per turn"
+  },
+  "automaton": {
+    "name": "Automaton",
+    "desc": "see faction rule"
+  },
+  "spotter": {
+    "name": "Spotter",
+    "desc": "enemy units that are within 60cm and LoS to an unbroken spotter is considered to be Spotted."
+  }
+}

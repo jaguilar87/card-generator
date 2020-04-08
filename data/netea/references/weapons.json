@@ -10,7 +10,7 @@
     "ref": "2.2.4"
   },
   "ignore-cover": {
-    "name": "Ignore Cover",
+    "name": "IC",
     "desc": "Ignore cover modifiers and infantry cover saves",
     "ref": "2.2.5"
   },

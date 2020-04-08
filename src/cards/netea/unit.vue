@@ -24,14 +24,18 @@
             'Card-summary--compact': card.compact
           }"
         >
-          <table class="Card-weapons table is-narrow">
+          <table v-if="card.weapons" class="Card-weapons table is-narrow">
             <tr v-if="!card.compact">
               <th class="Card-weaponName">Weapon</th>
               <th>Range</th>
               <th>Stats</th>
             </tr>
             <tr v-for="weapon in card.weapons" :key="weapon.name">
-              <td class="Card-weaponName">{{ weapon.name }}</td>
+              <td 
+                :class="{'Card-weaponName': true, 'Card-weaponName--right': weapon.right}"
+              >
+                {{ weapon.name }}
+              </td>
               <td>{{ weapon.range }}</td>
               <td>{{ getWeaponStats(weapon) }}</td>
             </tr>
@@ -46,14 +50,8 @@
     </div>
 
     <div class="Card-side Card-side--reverse">
-      <div
-        :class="{ 'Card-skills': true, 'Card-skills--compact': card.compact }"
-      >
-        <p
-          v-for="skill in getExpandedSkills()"
-          :key="skill.name"
-          class="Card-skill"
-        >
+      <div :class="{ 'Card-skills': true, 'Card-skills--compact': card.compact }">
+        <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
           <span v-if="skill.desc">
             <strong>
               <span>{{ skill.name }}</span>
@@ -104,6 +102,8 @@ export default {
       const weapons = safeThis('$props.card.weapons');
       if (includeWeapons && weapons) {
         for (const weapon of this.$props.card.weapons) {
+          skills.push(weapon)
+
           if (weapon.skills) {
             skills.push(...weapon.skills);
           }
@@ -117,7 +117,7 @@ export default {
         .filter(skill => !skill.skipFromSummary)
         .map(skill => skill.name || skill);
 
-      return summ.join(', ') + '.';
+      return summ.length ? summ.join(', ') + '.' : '-';
     },
     getWeaponStats({ dmg, skills }) {
       const stats = [];
@@ -157,7 +157,10 @@ $border-color: #dcdcdc;
 }
 
 .Card {
+  display: inline-flex;
+  flex-direction: column;
   font-size: 7pt;
+  margin: 10px;
   margin-bottom: 12px;
 
   &-side {
@@ -166,9 +169,13 @@ $border-color: #dcdcdc;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;
+    display: inline-flex;
+    flex-direction: column;
 
-    &--reverse {
-      transform: rotate(-180deg);
+    @media print {
+      &--reverse {
+        transform: rotate(-180deg);
+      }
     }
   }
 
@@ -232,6 +239,10 @@ $border-color: #dcdcdc;
 
   &-weaponName {
     max-width: 75px;
+
+    &--right {
+      text-align: right !important;
+    }
   }
 
   &-stat {
