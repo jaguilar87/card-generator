@@ -5,7 +5,7 @@
     "range": "-",
     "targetValue": "5+",
     "suits": [],
-    "result": "Disable a non-disabled system, if you do, remove one condition from this mecha."
+    "result": "Disable a non-disabled system, if you do, remove one condition from this mech."
   },
   "sun-slash": {
     "name": "Sun Slash",
@@ -24,20 +24,20 @@
     "result": "Target takes **a hit**."
   },
   "balancer": {
-    "name": "Neutrino Balancer",
+    "name": "Heat Balancer",
     "apCost": 1,
     "range": "8\"",
     "targetValue": "6+",
     "suits": [],
-    "result": "_Friendly Neutrino Mecha only._ Transfer any ammount of overheat cards between this mecha and the target."
+    "result": "_Friendly Neutrino Mech only._ Transfer any ammount of overheat cards between this mech and the target."
   },
   "seppuku": {
-    "name": "Sepukku Protocol",
+    "name": "Sepukku",
     "apCost": 2,
     "range": "-",
     "targetValue": "-",
     "suits": [],
-    "result": "_Overcharge 2._ **Disable** this mecha's torso."
+    "result": "_Overcharge 2._ **Disable** this mech's torso."
   },
   "glare": {
     "name": "Neutrino Glare",
@@ -45,10 +45,10 @@
     "range": "X\"",
     "targetValue": "3+",
     "suits": ["C"],
-    "result": "All targets gain the **blinded** condition. This action range is equal to the **overheat value** of this mecha."
+    "result": "All mechs within range gain the **blinded** condition. This action range is equal to the **overheat value** of this mech."
   },
   "heat-transfer": {
     "name": "Heat Transfer",
-    "desc": "If a mecha receives damage from an action on this system, discard up to **2 overheat cards**, then the target **draws the same ammount of cards** (discard and replace jokers) and adds them to its **overheat pile**."
+    "desc": "If a mech receives damage from an action on this system, discard up to **2 overheat cards**, then the target **draws the same ammount of cards** (discard and replace jokers) and adds them to its **overheat pile**."
   }
 }

@@ -1,14 +1,14 @@
 {
   "name": "Sinclair's Robotic Warfare",
   "style": {
-    "accent": "darkgoldenrod",
+    "accent": "#70543E",
     "inverted": "#ffffff"
   },
   "cards": [
     {
-      "name": "Knight Class",
+      "name": "Scout Class",
       "type": "Torso",
-      "tags": ["Light Brawler Class"],
+      "tags": ["Light"],
       "hp": 3,
       "armor": 1,
       "stats": {
@@ -16,9 +16,234 @@
         "cards": [3, 2, 2],
         "speed": [1, 1, 0]
       },
-      "connections": ["H", "D", "C", "S"],
       "rules": ["$generic:inertia-dischargers"],
       "disabledActions": ["$srw:mine-response"]
+    },
+    {
+      "name": "Commando Class",
+      "type": "Torso",
+      "tags": ["Light"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1", "2"],
+        "cards": [3, 2, 1]
+      },
+      "rules": ["$generic:disruption-field"],
+      "disabledActions": ["$srw:mine-response"]
+    },
+    {
+      "name": "Mortar Carrier",
+      "type": "Torso",
+      "tags": ["Medium", "Mortar"],
+      "hp": 4,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2-3"],
+        "cards": [3, 2]
+      },
+      "disabledActions": ["$srw:mine-response"]
+    },
+    {
+      "name": "Breacher Class",
+      "type": "Torso",
+      "tags": ["Heavy"],
+      "hp": 4,
+      "armor": 3,
+      "stats": {
+        "damage": ["0", "1", "2"],
+        "cards": [3, 2, 1],
+        "speed": [-1, -1, -1]
+      },
+      "rules": ["$generic:inertia-dischargers"],
+      "disabledActions": ["$srw:mine-response"]
+    },
+    {
+      "name": "Tripod",
+      "type": "Propulsion",
+      "tags": ["Tipod", "Support"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [4, 3],
+        "disabledSpeed": [1]
+      },
+      "actions": ["$generic:stabilizers"]
+    },
+    {
+      "name": "Off-road Tracks",
+      "type": "Propulsion",
+      "tags": ["Tracks"],
+      "hp": 3,
+      "armor": 2,
+      "stats": {
+        "damage": ["0", "1-2"],
+        "speed": [5, 3],
+        "disabledSpeed": [1]
+      },
+      "rules": ["$generic:stable"],
+      "disabledRules": ["$generic:stable"]
+    },
+    {
+      "name": "Stalker",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "hp": 4,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1", "2-3"],
+        "speed": [5, 4, 3],
+        "disabledSpeed": [2]
+      },
+      "actions": ["$generic:kick"]
+    },
+    {
+      "name": "Grasshopper",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "restrictions": ["Light torso"],
+      "hp": 2,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1"],
+        "speed": [5, 3],
+        "disabledSpeed": [1]
+      },
+      "actions": ["$generic:jump"]
+    },
+    {
+      "name": "Mortar",
+      "type": "Special",
+      "tags": ["Ranged"],
+      "restrictions": ["Mortar Torso"],
+      "hp": 4,
+      "armor": 2,
+      "stats": {
+        "damage": ["0", "1", "2", "3"],
+        "accuracy": [0, -1, -2, -3]
+      },
+      "actions": ["$srw:he-shell"],
+      "rules": ["$generic:indirect"]
+    },
+    {
+      "name": "Smoke Launchers",
+      "type": "Special",
+      "tags": ["Support"],
+      "hp": 3,
+      "armor": 2,
+      "actions": ["$generic:launch-smoke", "$generic:fire-extinguisher"]
+    },
+    {
+      "name": "Acid Grenades Carrier",
+      "type": "Special",
+      "tags": ["Attachment"],
+      "restrictions": ["Mech with grenade launcher"],
+      "hp": 2,
+      "armor": 3,
+      "actions": ["$srw:acid-grenade"],
+      "disabledActions": ["$generic:corroded"],
+      "rules": ["$srw:attached-grenade-launcher"]
+    },
+    {
+      "name": "Signal Emitter",
+      "type": "Special",
+      "tags": ["Support"],
+      "hp": 3,
+      "armor": 2,
+      "actions": ["$srw:on-my-mark", "$srw:white-noise"],
+      "disabledActions": ["$generic:marked"]
+    },
+    {
+      "name": "Markerlight",
+      "type": "Left Arm",
+      "tags": ["Support"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$generic:mark", "$srw:blinding-flare"],
+      "disabledActions": ["$generic:marked"]
+    },
+    {
+      "name": "Assault Shield",
+      "type": "Left Arm",
+      "tags": ["Support"],
+      "hp": 1,
+      "armor": 4,
+      "stats": {
+        "disabledAccuracy": [-4]
+      },
+      "actions": [
+        "$generic:shield-bash",
+        "$generic:shield-up",
+        "$generic:protect"
+      ],
+      "disabledActions": ["$generic:shield-bash", "$generic:protect"]
+    },
+    {
+      "name": "Smoke Shells Carrier",
+      "type": "Left Arm",
+      "tags": ["Support", "Attachment"],
+      "restrictions": ["Mech with mortar"],
+      "hp": 2,
+      "armor": 3,
+      "rules": ["$srw:attached-mortar"],
+      "actions": ["$srw:smoke-barrage"]
+    },
+    {
+      "name": "Syke",
+      "type": "Left Arm",
+      "tags": ["Melee"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$generic:slash", "$generic:precise-strike"]
+    },
+    {
+      "name": "Burning Shells Carrier",
+      "type": "Right Arm",
+      "tags": ["Ranged", "Attachment"],
+      "restrictions": ["Mech with mortar"],
+      "hp": 2,
+      "armor": 3,
+      "rules": ["$srw:attached-mortar"],
+      "actions": ["$srw:fire-shell"],
+      "disabledActions": ["$generic:burn"]
+    },
+    {
+      "name": "Grenade Launcher",
+      "type": "Right Arm",
+      "tags": ["Ranged", "Support"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": [0, 1, 2],
+        "accuracy": [0, -1, -2]
+      },
+      "actions": ["$generic:grenade", "$srw:sticky-grenade"],
+      "disabledActions": ["$generic:immobilized"]
+    },
+    {
+      "name": "Combat Shotgun",
+      "type": "Right Arm",
+      "tags": ["Ranged"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", 2],
+        "accuracy": [0, -2]
+      },
+      "actions": ["$generic:shotgun", "$srw:sonic-shell"]
+    },
+    {
+      "name": "Anti Material Rifle",
+      "type": "Right Arm",
+      "tags": ["Ranged"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": [0, 1, 2],
+        "accuracy": [0, -1, -2]
+      },
+      "actions": ["$srw:armor-piercer", "$generic:sniper-shot"]
     }
   ]
 }

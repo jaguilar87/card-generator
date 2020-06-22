@@ -7,8 +7,8 @@
   "cards": [
     {
       "name": "Ronin Class",
-      "type": "Torso - Neutrino",
-      "tags": ["Light Class", "Neutrino"],
+      "type": "Torso",
+      "tags": ["Light", "Neutrino"],
       "hp": 3,
       "armor": 1,
       "stats": {
@@ -16,21 +16,19 @@
         "cards": [2, 2],
         "speed": [1, 0]
       },
-      "connections": ["H", "S", "D", "C"],
       "actions": ["$satsuma:eject-system"],
       "disabledActions": ["$satsuma:glare"]
     },
     {
       "name": "Samurai Class",
-      "type": "Torso - Neutrino",
-      "tags": ["Medium Brawler Class", "Neutrino"],
+      "type": "Torso",
+      "tags": ["Medium", "Neutrino"],
       "hp": 3,
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2-3"],
         "cards": [3, 2]
       },
-      "connections": ["H", "C", "S", "D"],
       "actions": ["$satsuma:eject-system"],
       "rules": ["$generic:inertia-dischargers"],
       "disabledActions": ["$satsuma:glare"]
@@ -38,20 +36,19 @@
     {
       "name": "Ashigaru Class",
       "type": "Torso",
-      "tags": ["Medium Class", "Slow"],
+      "tags": ["Medium"],
       "hp": 4,
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2-3"],
         "cards": [3, 2]
       },
-      "connections": ["C", "S", "D", "H"],
       "actions": ["$satsuma:eject-system"]
     },
     {
       "name": "Daimyo Class",
       "type": "Torso",
-      "tags": ["Heavy Class"],
+      "tags": ["Heavy"],
       "hp": 4,
       "armor": 2,
       "stats": {
@@ -59,20 +56,21 @@
         "cards": [3, 2],
         "speed": [-1, -1]
       },
-      "connections": ["C", "H", "S", "D"],
-      "actions": ["$satsuma:eject-system", "$generic:slam"]
+      "actions": ["$satsuma:eject-system", "$generic:shoulder-bash"]
     },
     {
       "name": "Batta",
       "type": "Propulsion",
       "tags": ["Legs"],
+      "restrictions": ["Non-heavy torso"],
       "hp": 2,
       "armor": 1,
       "stats": {
         "damage": ["0", "1"],
         "speed": [6, 4],
         "disabledSpeed": [2]
-      }
+      },
+      "actions": ["$generic:kick"]
     },
     {
       "name": "Hayai",
@@ -84,7 +82,8 @@
         "damage": ["0-1", "2"],
         "speed": [5, 4],
         "disabledSpeed": [3]
-      }
+      },
+      "actions": ["$generic:kick"]
     },
     {
       "name": "Yama",
@@ -93,8 +92,8 @@
       "hp": 3,
       "armor": 1,
       "stats": {
-        "damage": ["0-1", "2", "3"],
-        "speed": [4, 3, 2],
+        "damage": ["0-1", "2"],
+        "speed": [4, 3],
         "disabledSpeed": [1]
       },
       "actions": ["$generic:stabilizers"]
@@ -109,12 +108,12 @@
         "damage": ["0-3"],
         "speed": [4]
       },
-      "rules": ["$generic:hover"]
+      "rules": ["$generic:hover"],
+      "disabledRules": ["$generic:immobile"]
     },
     {
       "name": "Neutrino Engine",
       "type": "Special",
-      "tags": ["Neutrino", "Reactor"],
       "restrictions": ["Neutrino Torso"],
       "hp": 2,
       "armor": 1,
@@ -128,7 +127,7 @@
     {
       "name": "Neutrino Thrusters",
       "type": "Special",
-      "tags": ["Neutrino", "Fast", "Movement"],
+      "tags": ["Neutrino", "Movement"],
       "restrictions": ["Neutrino Torso"],
       "hp": 2,
       "armor": 1,
@@ -142,24 +141,24 @@
     {
       "name": "Chisso Reito",
       "type": "Special",
-      "tags": ["Refrigeration"],
+      "tags": ["Refrigeration", "Support"],
       "hp": 2,
       "armor": 3,
-      "actions": ["$generic:vent-steam"],
+      "actions": ["$generic:fire-extinguisher", "$generic:vent-steam"],
       "rules": ["$generic:cold-exhaust"]
     },
     {
       "name": "Tate Hatsudenki",
       "type": "Special",
-      "tags": ["Shield", "Support"],
+      "tags": ["Support"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$generic:shield", "$generic:chaff"]
+      "actions": ["$generic:shield-up", "$generic:chaff"]
     },
     {
       "name": "Hypermetal Katana",
       "type": "Left Arm",
-      "tags": ["Melee Weapon", "Armor Piercing"],
+      "tags": ["Melee"],
       "hp": 2,
       "armor": 1,
       "actions": ["$generic:slash"],
@@ -176,7 +175,7 @@
     {
       "name": "Taiyo Tanto",
       "type": "Left Arm",
-      "tags": ["Melee Weapon", "Heat"],
+      "tags": ["Melee", "Heat"],
       "restrictions": ["Neutrino Torso"],
       "hp": 2,
       "armor": 1,
@@ -187,19 +186,19 @@
     {
       "name": "Birdslayer",
       "type": "Left Arm",
-      "tags": ["Shooting Weapon"],
+      "tags": ["Ranged"],
       "hp": 2,
       "armor": 1,
       "stats": {
         "damage": ["0", "1"],
-        "accuracy": ["-", -1]
+        "accuracy": [0, -1]
       },
       "actions": ["$generic:rocket", "$generic:aa-barrage"]
     },
     {
       "name": "Taiyo Yari",
       "type": "Right Arm",
-      "tags": ["Shooting Weapon", "Heat"],
+      "tags": ["Ranged", "Heat"],
       "restrictions": ["Neutrino Torso"],
       "hp": 3,
       "armor": 1,
@@ -210,7 +209,7 @@
     {
       "name": "Kaen Hosha-ki",
       "type": "Right Arm",
-      "tags": ["Shooting Weapon", "Burning"],
+      "tags": ["Ranged"],
       "hp": 1,
       "armor": 2,
       "actions": ["$generic:flamethrower"],
@@ -220,15 +219,15 @@
     {
       "name": "Accelerator Gatling",
       "type": "Right Arm",
-      "tags": ["Shooting Weapon", "Slow"],
-      "restrictions": ["Non-neutrino Torso"],
+      "tags": ["Ranged"],
+      "restrictions": ["Non-light torso"],
       "hp": 3,
       "armor": 2,
       "stats": {
         "damage": [0, 1, 2],
-        "accuracy": ["-", -1, -2]
+        "accuracy": [0, -1, -2]
       },
-      "actions": ["$generic:gatling"]
+      "actions": ["$generic:chain-shot", "$generic:bullet-spray"]
     },
     {
       "name": "Repulsor Beam",

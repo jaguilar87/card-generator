@@ -11,8 +11,8 @@
 import Suit from '@/cards/lead-hounds/other/Suit.vue';
 
 export default {
-  props: {
-    connections: Array
+  computed: {
+    connections: () => ['H', 'C', 'D', 'S']
   },
   components: {
     Suit

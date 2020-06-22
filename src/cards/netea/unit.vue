@@ -42,7 +42,7 @@
           </table>
 
           <div class="Card-skills-summary">
-            <strong>Skills:</strong>
+            <strong>Rules:</strong>
             {{ getSkillsSummary(card.skills) }}
           </div>
         </div>

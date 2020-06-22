@@ -3,7 +3,7 @@
     <div class="LHCard-side">
       <div class="LHCard-header" :style="headerStyle">
         <div class="LHCard-name">{{ card.name }}</div>
-        <div class="LHCard-type">{{ card.type }}</div>
+        <div class="LHCard-type">{{ [card.type, ...card.tags || []].join(' · ') }}</div>
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" />
@@ -14,7 +14,6 @@
         <Action v-for="action in actions" :key="action.name" :action="action" />
         <Rule v-for="rule in rules" :key="rule.name" :rule="rule" />
         <div class="LHCard-keywords">
-          <div class="LHCard-tags">{{ card.tags.join(' · ') }}</div>
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
@@ -22,7 +21,7 @@
         class="LHCard-footer"
         :hp="card.hp"
         :armor="card.armor"
-        :connections="card.connections"
+        :isTorso="card.type === 'Torso'"
       />
     </div>
     <div class="LHCard-side LHCard--reverse">
@@ -33,8 +32,8 @@
       <div class="LHCard-body">
         <Stats :stats="card.stats" disabled />
         <Action v-for="action in disabledActions" :key="action.name" :action="action" />
+        <Rule v-for="rule in disabledRules" :key="rule.name" :rule="rule" />
         <div class="LHCard-keywords">
-          <div class="LHCard-tags">{{ card.tags.join(' · ') }}</div>
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
@@ -58,6 +57,11 @@ export default {
     disabledActions() {
       return (
         this.card.disabledActions && this.card.disabledActions.map(this.resolve)
+      );
+    },
+    disabledRules() {
+      return (
+        this.card.disabledRules && this.card.disabledRules.map(this.resolve)
       );
     },
     rules() {
@@ -178,6 +182,10 @@ $card-color: #000000;
   &-body {
     padding: 5px;
     text-align: justify;
+  }
+
+  &-manufacturer {
+    margin-bottom: -5px;
   }
 }
 </style>

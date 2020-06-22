@@ -26,7 +26,7 @@ export default {
       return this.disabled ? ['Disabled'] : this.stats.damage;
     },
     accuracyValues() {
-      return this.disabled ? null : this.stats.accuracy;
+      return this.disabled ? this.stats.disabledAccuracy : this.stats.accuracy;
     },
     speedValues() {
       return this.disabled ? this.stats.disabledSpeed : this.stats.speed;

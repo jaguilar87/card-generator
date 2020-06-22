@@ -1,0 +1,765 @@
+{
+  "name": "Squats - Grindel 1.7.1",
+  "style": {
+    "titleBg": "#2E1114",
+    "titleText": "white"
+  },
+  "units": [
+    {
+      "name": "Grand Warlord",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        { "name": "Power Weapon", "range": "B2B", "dmg": "EA(+1), MW" }
+      ],
+      "skills": ["$skills:supreme-commander"]
+    },
+    {
+      "name": "Living Ancestor",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "skills": [
+        "$squats:ancient-wisdom",
+        "$skills:inspiring",
+        "$skills:invulnerable-save",
+        "If added to an infantry unit the Living Ancestor have the invulnerable save ability."
+      ]
+    },
+    {
+      "name": "Warlord",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [
+        { "name": "Autocannon", "range": "45cm", "dmg": "AP5+/AT6+" },
+        { "name": "Power Axe", "range": "B2B", "dmg": "EA(+1), MW" }
+      ],
+      "skills": [
+        "$skills:commander",
+        "$skills:leader",
+        "$skills:reinforced-armour"
+      ]
+    },
+    {
+      "name": "Hearthguard",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "5+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [
+        { "name": "Heirloom Weapons", "range": "30cm", "dmg": "AP5+/AT5+" }
+      ],
+      "skills": ["$skills:inspiring", "$skills:leader"]
+    },
+    {
+      "name": "Warriors",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "6+",
+      "cc": "5+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Missile Launcher",
+          "range": "45cm",
+          "dmg": "AP5+/AT6+",
+          "skills": ["One unit in every two has a Missile Launcher."]
+        }
+      ]
+    },
+    {
+      "name": "Berserkers",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "6+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [{ "name": "Trench Pistols", "range": "(15cm)" }],
+      "skills": ["$skills:infiltrator"]
+    },
+    {
+      "name": "Thunderers",
+      "type": "Inf",
+      "speed": "15cm",
+      "armour": "6+",
+      "cc": "6+",
+      "ff": "4+",
+      "weapons": [
+        { "name": "Missile Launcher", "range": "45cm", "dmg": "AP5+/AT6+" },
+        { "name": "2x Twin Heavy Bolter", "range": "30cm", "dmg": "2x AP4+" }
+      ]
+    },
+    {
+      "name": "Guildmaster",
+      "type": "LV",
+      "speed": "35cm",
+      "armour": "4+",
+      "cc": "5+",
+      "ff": "6+",
+      "weapons": [
+        { "name": "Bolters", "range": "(15cm)" },
+        {
+          "name": "Power Lance",
+          "range": "B2B",
+          "dmg": "MW",
+          "skills": ["$weapons:first-strike"]
+        }
+      ],
+      "skills": ["$skills:commander", "$skills:leader"]
+    },
+    {
+      "name": "Guild Bikers",
+      "type": "Inf",
+      "speed": "35cm",
+      "armour": "5+",
+      "cc": "4+",
+      "ff": "5+",
+      "weapons": [{ "name": "Bolters", "range": "(15cm)" }],
+      "skills": ["$skills:mounted"]
+    },
+    {
+      "name": "Guild Trike",
+      "type": "LV",
+      "speed": "35cm",
+      "armour": "5+",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        { "name": "Multi-melta", "range": "15cm", "dmg": "MW5+" },
+        { "name": "and", "right": true, "range": "(15cm)", "dmg": "MW" }
+      ]
+    },
+    {
+      "name": "Mole Mortar",
+      "type": "Inf",
+      "speed": "10cm",
+      "armour": "-",
+      "cc": "6+",
+      "ff": "6+",
+      "weapons": [
+        {
+          "name": "Mole Mortar",
+          "range": "30cm",
+          "dmg": "1 BP",
+          "skills": ["$weapons:ignore-cover", "$weapons:indirect"]
+        }
+      ],
+      "skills": ["Counts as two units if transported"]
+    },
+    {
+      "name": "Thudd Gun",
+      "type": "Inf",
+      "speed": "10cm",
+      "armour": "-",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Thudd Gun",
+          "range": "45cm",
+          "dmg": "AP4+/AT6+",
+          "skills": ["$weapons:indirect"]
+        }
+      ],
+      "skills": ["Counts as two units if transported"]
+    },
+    {
+      "name": "Tarantula",
+      "type": "Inf",
+      "speed": "10cm",
+      "armour": "-",
+      "cc": "6+",
+      "ff": "6+",
+      "weapons": [{ "name": "2x Lascannon", "range": "45cm", "dmg": "AT5+" }],
+      "skills": ["Counts as two units if transported"]
+    },
+    {
+      "name": "Rapier",
+      "type": "Inf",
+      "speed": "10cm",
+      "armour": "-",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        { "name": "Laser Destroyer", "range": "45cm", "dmg": "AP6+/AT4+" }
+      ],
+      "skills": ["Counts as two units if transported"]
+    },
+    {
+      "name": "Colossus Class Robot",
+      "type": "AV",
+      "speed": "15cm",
+      "armour": "5+",
+      "cc": "5+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Heavy Bolter",
+          "range": "30cm",
+          "dmg": "AP5+"
+        },
+        {
+          "name": "Multi-melta",
+          "range": "15cm",
+          "dmg": "MW5+"
+        },
+        {
+          "name": "and",
+          "right": true,
+          "range": "(15cm)",
+          "dmg": "MW"
+        },
+        {
+          "name": "Power Fist",
+          "range": "B2B",
+          "dmg": "EA(+1), MW"
+        }
+      ],
+      "skills": ["$skills:fearless", "$skills:walker"]
+    },
+    {
+      "name": "Conqueror Class Robot",
+      "type": "AV",
+      "speed": "15cm",
+      "armour": "5+",
+      "cc": "5+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Autocannon",
+          "range": "45cm",
+          "dmg": "AP5+/AT6+"
+        },
+        {
+          "name": "Heavy Bolter",
+          "range": "30cm",
+          "dmg": "AP5+"
+        },
+        {
+          "name": "Power Fist",
+          "range": "B2B",
+          "dmg": "EA(+1), MW"
+        }
+      ],
+      "skills": ["$skills:fearless", "$skills:walker"]
+    },
+    {
+      "name": "Rhino",
+      "type": "AV",
+      "speed": "30cm",
+      "armour": "5+",
+      "cc": "6+",
+      "ff": "6+",
+      "weapons": [
+        {
+          "name": "Storm Bolter",
+          "range": "(15cm)"
+        }
+      ],
+      "skills": ["Transport (2)"]
+    },
+    {
+      "name": "Thunderfire",
+      "type": "AV",
+      "speed": "-",
+      "armour": "5+",
+      "cc": "6+",
+      "ff": "3+",
+      "weapons": [
+        {
+          "name": "Twin Battlecannon",
+          "range": "75cm",
+          "dmg": "AP3+/AT3+"
+        },
+        {
+          "name": "Thunderfire",
+          "range": "60cm",
+          "dmg": "AA4+"
+        }
+      ]
+    },
+    {
+      "name": "Steel Hawk",
+      "type": "AV",
+      "speed": "35cm",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Battlehammer Rockets",
+          "range": "15cm",
+          "dmg": "1BP"
+        },
+        { "name": "Multi-melta", "range": "15cm", "dmg": "MW5+" },
+        { "name": "and", "right": true, "range": "(15cm)", "dmg": "MW" }
+      ],
+      "skills": ["$skills:scout", "$skills:skimmer"]
+    },
+    {
+      "name": "War Hawk",
+      "type": "AV",
+      "speed": "35cm",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "5+",
+      "weapons": [
+        {
+          "name": "Doom Anvil Missiles",
+          "range": "45cm",
+          "dmg": "AT4+",
+          "skills": ["$eldar:lance"]
+        },
+        {
+          "name": "Heavy Bolter",
+          "range": "30cm",
+          "dmg": "AP5+"
+        }
+      ],
+      "skills": ["$skills:scout", "$skills:skimmer"]
+    },
+    {
+      "name": "Iron Eagle",
+      "type": "AV",
+      "speed": "35cm",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "4+",
+      "weapons": [
+        { "name": "Stub Battle Cannon", "range": "45cm", "dmg": "AP4+/AT4+" },
+        {
+          "name": "Rapidfire Autocannon",
+          "range": "45cm",
+          "dmg": "2x AP5+/AT6+"
+        }
+      ],
+      "skills": ["$skills:scout", "$skills:skimmer"]
+    },
+    {
+      "name": "Recon Iron Eagle",
+      "type": "AV",
+      "speed": "35cm",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "4+",
+      "weapons": [
+        { "name": "Stub Battle Cannon", "range": "45cm", "dmg": "AP4+/AT4+" },
+        {
+          "name": "Rapid Fire Autocannon",
+          "range": "45cm",
+          "dmg": "2x AP5+/AT6+"
+        }
+      ],
+      "skills": ["$skills:scout", "$skills:skimmer", "$squats:spotter17"]
+    },
+    {
+      "name": "Termite",
+      "type": "AV",
+      "speed": "-",
+      "armour": "5+",
+      "cc": "5+",
+      "ff": "-",
+      "skills": ["$skills:tunneler", "Transport (2)"]
+    },
+    {
+      "name": "Mole",
+      "type": "WE",
+      "speed": "20cm",
+      "armour": "5+",
+      "cc": "5+",
+      "ff": "-",
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Destroyed",
+          "skipFromSummary": true
+        },
+        "DC2",
+        "$skills:tunneler",
+        "Tranport (10)"
+      ]
+    },
+    {
+      "name": "Goliath",
+      "type": "WE",
+      "speed": "5cm",
+      "armour": "6+",
+      "cc": "6+",
+      "ff": "6+",
+      "weapons": [
+        {
+          "name": "Mega Cannon",
+          "range": "150cm",
+          "dmg": "3PB",
+          "skills": ["$weapons:ignore-cover", "weapons:indirect", "$facing:fxf"]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Destroyed. Units within 5cm take a hit on 4+",
+          "skipFromSummary": true
+        },
+        "DC2",
+        "This unit can only fire inderectly"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Overlord",
+      "type": "WE",
+      "speed": "20cm",
+      "armour": "4+",
+      "cc": "6+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "2x Battle Cannon",
+          "range": "75cm",
+          "dmg": "AP4+/AT4+",
+          "skills": ["$facing:fwa"]
+        },
+        {
+          "name": "Battle Cannon",
+          "range": "75cm",
+          "dmg": "AP4+/AT4+",
+          "skills": ["$facing:left"]
+        },
+        {
+          "name": "Battle Cannon",
+          "range": "75cm",
+          "dmg": "AP4+/AT4+",
+          "skills": ["$facing:right"]
+        },
+        {
+          "name": "2x Battle Cannon",
+          "range": "75cm",
+          "dmg": "AP4+/AT4+",
+          "skills": ["$facing:rra"]
+        },
+        {
+          "name": "2x Twin Autocannon",
+          "range": "45cm",
+          "dmg": "AP4+/AT5+",
+          "skills": ["$facing:fxf"]
+        },
+        {
+          "name": "Metla Bombs",
+          "range": "(15cm)",
+          "dmg": "MW"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Destroyed. Units within 5cm take a hit on 5+",
+          "skipFromSummary": true
+        },
+        "DC3",
+        "$skills:support-craft",
+        "$skills:reinforced-armour",
+        "$skills:invulnerable-save"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Leviathan",
+      "type": "WE",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "5+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Doomsday Cannon",
+          "range": "90cm",
+          "dmg": "3BP, MW",
+          "skills": ["$facing:fxf", "$squats:directed"]
+        },
+        { "name": "Battle Cannon", "range": "75 cm", "dmg": "AP4+/AT4+" },
+        {
+          "name": "3x T. Lascannon",
+          "range": "45cm",
+          "dmg": "AT4+",
+          "skills": ["$facing:left"]
+        },
+        {
+          "name": "3x T. Lascannon",
+          "range": "45cm",
+          "dmg": "AT4+",
+          "skills": ["$facing:right"]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "+1Dmg, d3 transported units destroyed. Further: Destroyed. Units within 5cm take a hit on 4+",
+          "skipFromSummary": true
+        },
+        "DC5",
+        "Void Shields 4",
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:thick-rear-armour",
+        "Transport (24)"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Colossus",
+      "type": "WE",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "5+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Doomsday Cannon",
+          "range": "90cm",
+          "dmg": "3BP, MW",
+          "skills": ["$facing:fxf", "$squats:directed"]
+        },
+        {
+          "name": "4x Battle C.",
+          "range": "75cm",
+          "dmg": "2x AP4+/AT4+",
+          "skills": ["$facing:fwa"]
+        },
+        {
+          "name": "Thunderer",
+          "range": "30cm",
+          "dmg": "AP3+/AT4+",
+          "skills": ["$weapons:ignore-cover", "$facing:fxf"]
+        },
+        {
+          "name": "4x Plasma Missiles",
+          "range": "45cm",
+          "dmg": "2BP",
+          "skills": ["$weapons:indirect", "$weapons:single-shot", "$facing:fwa"]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "+1 Dmg and immobilized. Further: Destroyed. Units within 5cm take a hit on 4+",
+          "skipFromSummary": true
+        },
+        "DC5",
+        "Void Shields 6",
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:thick-rear-armour"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Cyclops",
+      "type": "WE",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "5+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Hellfury C.",
+          "range": "90cm",
+          "dmg": "MW2+, TK (D6+1)",
+          "skills": ["$facing:fxf"]
+        },
+        {
+          "name": "Rapidfire Battle Cannon",
+          "range": "75cm",
+          "dmg": "2x AP4+/AT4+"
+        },
+        {
+          "name": "6x Doomstorm Missile",
+          "range": "90cm",
+          "dmg": "1BP",
+          "skills": ["$weapons:indirect", "$weapons:single-shot", "$facing:fwa"]
+        },
+        { "name": "Multi-melta", "range": "15cm", "dmg": "MW5+" },
+        { "name": "and", "right": true, "range": "(15cm)", "dmg": "MW, TK(D&)" }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "+1 Dmg and when missing with the Hellfury suffers 1 Dmg. Further: Destroyed. Units within 5cm take a hit on 4+",
+          "skipFromSummary": true
+        },
+        "DC5",
+        "Void Shields 5",
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:thick-rear-armour"
+      ]
+    },
+    {
+      "compact": true,
+      "name": "Land Train",
+      "type": "WE",
+      "speed": "15cm",
+      "armour": "4+",
+      "cc": "5+",
+      "ff": "4+",
+      "weapons": [
+        {
+          "name": "Doomsday C.",
+          "range": "90cm",
+          "dmg": "3BP, MW",
+          "skills": ["$squats:directed", "$facing:fxf"]
+        },
+        {
+          "name": "Rapidfire Battle Cannon",
+          "range": "75cm",
+          "dmg": "2x AP4+/AT4+"
+        },
+        {
+          "name": "Rapidfire Battle Cannon",
+          "range": "75cm",
+          "dmg": "2x AP4+/AT4+",
+          "skills": ["$facing:fxf"]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Critical Hit",
+          "desc": "Remove random Cha upgrade; destroyed otherwise. Immobilized for its next activation or withdrawal. ",
+          "skipFromSummary": true
+        },
+        {
+          "name": "Train",
+          "desc": "Must have 1-4 cars upgrades",
+          "skipFromSummary": true
+        },
+        "DC2",
+        "Void Shields 2",
+        "$skills:fearless",
+        "$skills:reinforced-armour",
+        "$skills:thick-rear-armour"
+      ]
+    },
+    {
+      "name": "Berserker Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Rapidfire Autocannon",
+          "range": "45cm",
+          "dmg": "2x AP5+/AT6+",
+          "skills": ["$facing:fwa"]
+        }
+      ],
+      "skills": ["DC +1", "Void Shields +1", "Transport (6)"]
+    },
+    {
+      "name": "Bomb Car",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Radiation Bomb",
+          "range": "Unl.",
+          "dmg": "6BP, MW",
+          "skills": ["$weapons:indirect", "$weapons:single-shot"]
+        }
+      ],
+      "skills": ["DC +1", "Void Shields +1"]
+    },
+    {
+      "name": "Dragon Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Firethrower",
+          "range": "30cm",
+          "dmg": "4x AP4+/AT5+",
+          "skills": ["$weapons:ignore-cover", "$facing:fwa"]
+        }
+      ],
+      "skills": ["DC +1", "Void Shields +1"]
+    },
+    {
+      "name": "Fire Shield Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Rapidfire Autocannon",
+          "range": "45cm",
+          "dmg": "2x AP5+/AT6+",
+          "skills": ["$facing:fwa"]
+        }
+      ],
+      "skills": [
+        "DC +1",
+        "Void Shields +3",
+        "The unit can repair one additional void shield in the end phase of each turn."
+      ]
+    },
+    {
+      "name": "Iron Eagle Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "skills": ["DC +1", "Void Shields +1"]
+    },
+    {
+      "name": "Mortar Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Siege Mortar",
+          "range": "45cm",
+          "dmg": "1BP, MW",
+          "skills": ["$weapons:indirect"]
+        }
+      ],
+      "skills": ["DC +1", "Void Shields +1"]
+    },
+    {
+      "name": "Skyhammer Battlecar",
+      "type": "Cha",
+      "speed": "n/a",
+      "armour": "n/a",
+      "cc": "n/a",
+      "ff": "n/a",
+      "weapons": [
+        {
+          "name": "Skyhammer Missiles",
+          "range": "45cm",
+          "dmg": "2x AA4+"
+        }
+      ],
+      "skills": ["DC +1", "Void Shields +1"]
+    }
+  ]
+}

@@ -2,9 +2,97 @@
   "mine-response": {
     "name": "Spite Launcher",
     "disabledResponse": true,
-    "range": "0\"",
+    "range": "-",
     "targetValue": "4+",
     "suits": [],
-    "result": "Place a **50mm plain hazard (1 point of damage propulsion system)** in base contact with this mecha"
+    "result": "Create a **hazard (1 point of damage propulsion system)** artificial terrain in base contact with this mech."
+  },
+  "he-shell": {
+    "name": "HE Shell",
+    "apCost": 2,
+    "range": "18\"",
+    "targetValue": "9+",
+    "suits": [],
+    "result": "Target takes **two hits**."
+  },
+  "fire-shell": {
+    "name": "Fire Shell",
+    "apCost": 2,
+    "range": "18\"",
+    "targetValue": "9+",
+    "suits": ["C"],
+    "result": "Target takes **a hit** and gains **burning**."
+  },
+  "smoke-barrage": {
+    "name": "S. Barrage",
+    "apCost": 2,
+    "range": "18\"",
+    "targetValue": "8+",
+    "suits": ["D"],
+    "result": "_Overcharge 1_. Create trhee **smoke** artificial terrain anywhere within range. Remove all the artificial terrains at the end of the round. "
+  },
+  "blinding-flare": {
+    "name": "Blinding Flare",
+    "apCost": 2,
+    "range": "6\"",
+    "targetValue": "8+",
+    "suits": ["C"],
+    "result": "Target gains **blinded**"
+  },
+  "attached-grenade-launcher": {
+    "name": "Attached (Grenade Launcher)",
+    "desc": "Actions printed on this system can only be used from a non-disabled Grenade Launcher system on this mech."
+  },
+  "attached-mortar": {
+    "name": "Attached (Mortar)",
+    "desc": "Actions printed on this system can only be used from a non-disabled Mortar system on this mech."
+  },
+  "acid-grenade": {
+    "name": "Acid Grenade",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "8+",
+    "suits": ["C"],
+    "result": "Target takes gains **corrosion**."
+  },
+  "on-my-mark": {
+    "name": "On My Mark",
+    "apCost": 2,
+    "range": "3\"",
+    "targetValue": "8+",
+    "suits": ["C", "D"],
+    "result": "All enemy mechs within range gain **marked**."
+  },
+  "white-noise": {
+    "name": "White Noise",
+    "apCost": 2,
+    "range": "3\"",
+    "targetValue": "10+",
+    "suits": ["C", "S"],
+    "result": "All enemy mechs within range gain **jammed**."
+  },
+  "sticky-grenade": {
+    "name": "Sticky Gren.",
+    "apCost": 2,
+    "range": "8\"",
+    "targetValue": "10+",
+    "suits": ["C"],
+    "result": "Target gains **immobilized**."
+  },
+  "sonic-shell": {
+    "name": "Sonic Shells",
+    "apCost": 2,
+    "range": "6\"",
+    "targetValue": "10+",
+    "suits": ["S"],
+    "result": "Target takes **three hits**, this action ignores **obscured**."
+  },
+  "armor-piercer": {
+    "name": "Armor Piercer",
+    "apCost": 1,
+    "range": "12\"",
+    "targetValue": "10+",
+    "suits": ["S", "D"],
+    "result": "_Overcharge 1_. Target takes **two hits**, ignoring **armor**."
   }
 }

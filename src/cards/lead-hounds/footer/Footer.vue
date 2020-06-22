@@ -6,7 +6,7 @@
     <span class="HitPoints-track">
       <span class="HitPoints-point" v-for="i of hp" :key="i">{{ i }}</span>
     </span>
-    <TorsoConnections :connections="connections" />
+    <TorsoConnections v-if="isTorso" />
     <span class="HitPoints-track">
       <shield class="HitPoints-icon" v-for="i of armor" :key="i" />
     </span>
@@ -21,7 +21,7 @@ export default {
   props: {
     hp: Number,
     armor: Number,
-    connections: Array,
+    isTorso: Boolean,
     disabled: Boolean
   },
   components: {

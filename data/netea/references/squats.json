@@ -10,5 +10,13 @@
   "spotter": {
     "name": "Spotter",
     "desc": "enemy units that are within 60cm and LoS to an unbroken spotter is considered to be Spotted."
+  },
+  "spotter17": {
+    "name": "Spotter",
+    "desc": "A Spotter allows Directed weapons on units in their formation to fire at enemy units that it has a line of fire to."
+  },
+  "directed": {
+    "name": "Directed",
+    "desc": "LoS from spotters on formation. Min range 30cm."
   }
 }
