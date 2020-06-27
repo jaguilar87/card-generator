@@ -147,8 +147,8 @@
     "name": "Bullet spray",
     "apCost": 3,
     "range": "12\"",
-    "targetValue": "8+",
-    "suits": ["C", "S"],
+    "targetValue": "10+",
+    "suits": [],
     "result": "_Overcharge 1_. The target takes **four hits**."
   },
   "disruption-field": {

@@ -21,6 +21,7 @@
         </div>
       </div>
       <Footer
+        v-if="!card.noFooter"
         class="LHCard-footer"
         :hp="card.hp"
         :armor="card.armor"
@@ -43,7 +44,7 @@
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
-      <Footer class="LHCard-footer" disabled />
+      <Footer v-if="!card.noFooter" class="LHCard-footer" disabled />
     </div>
   </div>
 </template>
