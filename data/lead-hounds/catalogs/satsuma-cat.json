@@ -159,7 +159,7 @@
       "type": "Special",
       "tags": ["Refrigeration", "Support"],
       "hp": 2,
-      "armor": 3,
+      "armor": 2,
       "actions": ["$support:fire-extinguisher", "$cool:vent-steam"],
       "rules": ["$cool:cold-exhaust"]
     },
