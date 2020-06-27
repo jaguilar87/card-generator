@@ -2,8 +2,11 @@
   <div class="LHCard">
     <div class="LHCard-side">
       <div class="LHCard-header" :style="headerStyle">
-        <div class="LHCard-name">{{ card.name }}</div>
-        <div class="LHCard-type">{{ [card.type, ...card.tags || []].join(' · ') }}</div>
+        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="white" />
+        <div class="LHCard-headerText">
+          <div class="LHCard-name">{{ card.name }}</div>
+          <div class="LHCard-type">{{ [card.type, ...card.tags || []].join(' · ') }}</div>
+        </div>
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" />
@@ -26,8 +29,11 @@
     </div>
     <div class="LHCard-side LHCard--reverse">
       <div class="LHCard-header">
-        <div class="LHCard-name">{{ card.name }}</div>
-        <div class="LHCard-type">{{ card.type }}</div>
+        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="#333" />
+        <div class="LHCard-headerText">
+          <div class="LHCard-name">{{ card.name }}</div>
+          <div class="LHCard-type">{{ card.type }}</div>
+        </div>
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" disabled />
@@ -48,6 +54,7 @@ import Action from '@/cards/lead-hounds/body/Action.vue';
 import Rule from '@/cards/lead-hounds/body/Rule.vue';
 import Stats from '@/cards/lead-hounds/body/Stats.vue';
 import Footer from '@/cards/lead-hounds/footer/Footer.vue';
+import TypeIcon from '@/cards/lead-hounds/other/TypeIcon.vue';
 
 export default {
   computed: {
@@ -95,7 +102,8 @@ export default {
     Action,
     Rule,
     Footer,
-    Stats
+    Stats,
+    TypeIcon
   }
 };
 </script>
@@ -116,7 +124,7 @@ $card-color: #000000;
   display: inline-flex;
 
   &-side {
-    height: 64mm;
+    height: 68mm;
     width: 45mm;
     overflow: hidden;
     border: 1px solid $card-color;
@@ -135,7 +143,7 @@ $card-color: #000000;
   &-header {
     padding: 1px 5px;
     border-bottom: 1px solid $card-color;
-    flex-direction: column;
+    flex-direction: row;
 
     .LHCard--reverse & {
       background-color: lightgray;
@@ -170,12 +178,23 @@ $card-color: #000000;
     border-top: 1px solid $card-color;
   }
 
+  &-typeIcon {
+    width: 12%;
+  }
+
+  &-headerText {
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 5px;
+  }
+
   &-name {
     font-size: 9pt;
+    overflow: hidden;
   }
 
   &-type {
-    font-size: 8pt;
+    font-size: 7pt;
     font-style: italic;
   }
 

@@ -45,10 +45,18 @@
     "range": "X\"",
     "targetValue": "3+",
     "suits": ["C"],
-    "result": "All mechs within range gain the **blinded** condition. This action range is equal to the **overheat value** of this mech."
+    "result": "All mechs within range gain **blinded**. This action range is equal to the **overheat value** of this mech."
   },
   "heat-transfer": {
     "name": "Heat Transfer",
     "desc": "If a mech receives damage from an action on this system, discard up to **2 overheat cards**, then the target **draws the same ammount of cards** (discard and replace jokers) and adds them to its **overheat pile**."
+  },
+  "gravity-well": {
+    "name": "Gravity Well",
+    "apCost": 1,
+    "range": "2\"",
+    "targetValue": "8+",
+    "suits": ["D"],
+    "result": "All mechs within range gain **immbolized**."
   }
 }

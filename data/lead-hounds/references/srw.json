@@ -3,7 +3,7 @@
     "name": "Spite Launcher",
     "disabledResponse": true,
     "range": "-",
-    "targetValue": "4+",
+    "targetValue": "-",
     "suits": [],
     "result": "Create a **hazard (1 point of damage propulsion system)** artificial terrain in base contact with this mech."
   },
@@ -28,8 +28,8 @@
     "apCost": 2,
     "range": "18\"",
     "targetValue": "8+",
-    "suits": ["D"],
-    "result": "_Overcharge 1_. Create trhee **smoke** artificial terrain anywhere within range. Remove all the artificial terrains at the end of the round. "
+    "suits": ["H"],
+    "result": "_Overcharge 1_. Create trhee **smoke** artificial terrain anywhere within range and LoS. Remove them all at the end of the round."
   },
   "blinding-flare": {
     "name": "Blinding Flare",
@@ -94,5 +94,21 @@
     "targetValue": "10+",
     "suits": ["S", "D"],
     "result": "_Overcharge 1_. Target takes **two hits**, ignoring **armor**."
+  },
+  "smoke-grenade": {
+    "name": "S. Grenade",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": ["H"],
+    "result": "Create a **smoke** artificial terrain anywhere within range and LoS. Remove it at the end of the round. "
+  },
+  "chaff-cloud": {
+    "name": "Chaff Cloud",
+    "apCost": 2,
+    "range": "18\"",
+    "targetValue": "8+",
+    "suits": ["C"],
+    "result": "Flip a card for the target and all mechas within 4\" of the target, if the flip is ♠ or ♣, that mech gains **Jammed**."
   }
 }

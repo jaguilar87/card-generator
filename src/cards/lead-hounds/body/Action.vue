@@ -45,23 +45,23 @@ export default {
 
   &-name {
     text-align: left;
-    width: 50%;
     flex-grow: 100;
     font-weight: bold;
   }
 
   &-range {
-    width: 16.6%;
+    width: 12%;
+    text-align: center;
   }
 
   &-targetValue {
-    width: 16.6%;
+    width: 12%;
     text-align: center;
   }
 
   &-suits {
-    width: 16.6%;
-    text-align: right;
+    width: 12%;
+    text-align: center;
   }
 }
 </style>

@@ -77,13 +77,28 @@
       "type": "Propulsion",
       "tags": ["Legs"],
       "hp": 3,
-      "armor": 0,
+      "armor": 1,
       "stats": {
         "damage": ["0-1", "2"],
         "speed": [5, 4],
         "disabledSpeed": [3]
       },
       "actions": ["$generic:kick"]
+    },
+    {
+      "name": "Neutrino Engine",
+      "type": "Propulsion",
+      "tags": ["Legs", "Neutrino"],
+      "restrictions": ["Neutrino Torso"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [4, 3],
+        "disabledSpeed": [2]
+      },
+      "actions": ["$generic:overdrive"],
+      "disabledActions": ["$generic:overheat"]
     },
     {
       "name": "Yama",
@@ -112,8 +127,9 @@
       "disabledRules": ["$generic:immobile"]
     },
     {
-      "name": "Neutrino Engine",
+      "name": "Supercapacitator",
       "type": "Special",
+      "tags": ["Neutrino", "Cards"],
       "restrictions": ["Neutrino Torso"],
       "hp": 2,
       "armor": 1,
@@ -153,7 +169,15 @@
       "tags": ["Support"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$generic:shield-up", "$generic:chaff"]
+      "actions": ["$generic:shield-up", "$generic:countermeasures"]
+    },
+    {
+      "name": "Satellite Uplink",
+      "type": "Special",
+      "tags": ["Support"],
+      "hp": 2,
+      "armor": 2,
+      "rules": ["$generic:remote-override", "$generic:supercomputer"]
     },
     {
       "name": "Hypermetal Katana",
@@ -167,10 +191,11 @@
     {
       "name": "Neutrino Balancer",
       "type": "Left Arm",
-      "tags": ["Utility"],
+      "tags": ["Utility", "Heat"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$satsuma:balancer"]
+      "actions": ["$satsuma:balancer", "$generic:heat-beam"],
+      "disabledActions": ["$generic:overheat"]
     },
     {
       "name": "Taiyo Tanto",
@@ -184,7 +209,7 @@
       "disabledActions": ["$generic:overheat"]
     },
     {
-      "name": "Birdslayer",
+      "name": "Ryoshi Launcher",
       "type": "Left Arm",
       "tags": ["Ranged"],
       "hp": 2,
@@ -194,6 +219,15 @@
         "accuracy": [0, -1]
       },
       "actions": ["$generic:rocket", "$generic:aa-barrage"]
+    },
+    {
+      "name": "Juryoku Generator",
+      "type": "Left Arm",
+      "tags": ["Control", "Movement"],
+      "hp": 3,
+      "armor": 1,
+      "actions": ["$satsuma:gravity-well", "$generic:pull"],
+      "disabledActions": ["$generic:immobilized"]
     },
     {
       "name": "Taiyo Yari",
@@ -230,12 +264,21 @@
       "actions": ["$generic:chain-shot", "$generic:bullet-spray"]
     },
     {
-      "name": "Repulsor Beam",
+      "name": "Juryoku Beam",
       "type": "Right Arm",
-      "tags": ["Movement"],
+      "tags": ["Control", "Movement"],
       "hp": 3,
-      "armor": 1,
-      "actions": ["$generic:repulse"]
+      "armor": 2,
+      "actions": ["$generic:repulse", "$generic:pull"]
+    },
+    {
+      "name": "Hypermetal Tedate",
+      "type": "Right Arm",
+      "tags": ["Support"],
+      "hp": 1,
+      "armor": 4,
+      "actions": ["$generic:shield-bash", "$generic:protect"],
+      "disabledActions": ["$generic:shield-bash", "$generic:protect"]
     }
   ]
 }

@@ -39,8 +39,8 @@
     "suits": ["D"],
     "result": "_Overcharge 1._ This mech gains **shielded**."
   },
-  "chaff": {
-    "name": "Chaff",
+  "countermeasures": {
+    "name": "Countermeasures",
     "apCost": 2,
     "range": "2\"",
     "targetValue": "9+",
@@ -193,7 +193,7 @@
     "range": "2\"",
     "targetValue": "6+",
     "suits": [],
-    "result": "Until the end of the round, if a friendly mech within 2\" is targeted by an attack, you can decide that this model will be targeted instead, ignoring LoS and range requirements."
+    "result": "_Overcharge 1._ Target gains **shielded**."
   },
   "shield-bash": {
     "name": "Shield Bash",
@@ -209,7 +209,7 @@
     "range": "3\"",
     "targetValue": "6+",
     "suits": ["D"],
-    "result": "Create a **smoke** artificial terrain anywhere within range. Remove the artificial terrain at the end of the round."
+    "result": "This mech is considered to be **behind smoke** until the end of the round."
   },
   "fire-extinguisher": {
     "name": "Extinguisher",
@@ -272,7 +272,47 @@
     "apCost": 1,
     "range": "1\"",
     "targetValue": "6+",
+    "suits": ["D", "H"],
+    "result": "_Obstacle only_. Target is **pushed** 6\" away from this mech."
+  },
+  "overdrive": {
+    "name": "Overdrive",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "_Overcharge 1_. This mech can move up to its **Speed+2** in any direction."
+  },
+  "pull": {
+    "name": "Pull",
+    "apCost": 1,
+    "range": "6\"",
+    "targetValue": "6+",
     "suits": ["D"],
-    "result": "_Obstacle only_. Target is **pushed** 4\" away from this mech."
+    "result": "Push the target **6\"** towards this mech."
+  },
+  "heat-beam": {
+    "name": "Heat Beam",
+    "apCost": 1,
+    "range": "12\"",
+    "targetValue": "4+",
+    "suits": ["H"],
+    "result": "Target draws a card (discard and replace any jokers) and adds it to its **overheat pile**."
+  },
+  "remote-override": {
+    "name": "Remote Override",
+    "desc": "This mech can not gain the **Jammed** condition."
+  },
+  "supercomputer": {
+    "name": "Supercomputer",
+    "desc": "_Once per round._ When this mech draws its reactor cards its owner can chose to discard the hand and draw it again"
+  },
+  "blow-up": {
+    "name": "Blow It Up",
+    "apCost": 2,
+    "range": "12\"",
+    "targetValue": "10+",
+    "suits": [],
+    "result": "Remove an artificial terrain within LoS and range."
   }
 }
