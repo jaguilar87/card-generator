@@ -227,7 +227,8 @@
         "damage": [0, 1, 2],
         "accuracy": [0, -1, -2]
       },
-      "actions": ["$ranged:rocket", "$control:blow-up"]
+      "actions": ["$ranged:rocket", "$control:blow-up"],
+      "disabledActions": ["$resp:explosion"]
     },
     {
       "name": "Burning Shells Carrier",

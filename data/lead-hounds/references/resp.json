@@ -1,4 +1,12 @@
 {
+  "explosion": {
+    "name": "Explosion",
+    "disabledResponse": true,
+    "range": "4\"",
+    "targetValue": "-",
+    "suits": [],
+    "result": "This mechs and all mechs within range receive **1 damage** on a random system."
+  },
   "damage": {
     "name": "Feedback",
     "disabledResponse": true,

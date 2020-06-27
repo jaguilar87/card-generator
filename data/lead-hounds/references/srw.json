@@ -56,7 +56,7 @@
     "result": "All enemy mechs within range gain **marked**."
   },
   "sticky-grenade": {
-    "name": "Sticky Gren.",
+    "name": "Sticky Grenade",
     "apCost": 2,
     "range": "8\"",
     "targetValue": "6+",

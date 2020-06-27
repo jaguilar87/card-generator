@@ -218,7 +218,8 @@
         "damage": ["0", "1"],
         "accuracy": [0, -1]
       },
-      "actions": ["$ranged:rocket", "$control:aa-barrage"]
+      "actions": ["$ranged:rocket", "$control:aa-barrage"],
+      "disabledActions": ["$resp:explosion"]
     },
     {
       "name": "Juryoku Generator",
