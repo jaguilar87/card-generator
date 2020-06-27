@@ -45,7 +45,7 @@
     "range": "X\"",
     "targetValue": "3+",
     "suits": ["C"],
-    "result": "All mechs within range gain **blinded**. This action range is equal to the **overheat value** of this mech."
+    "result": "All mechs within range gain **blinded** and **jammed**. This action range is equal to the **overheat value** of this mech."
   },
   "heat-transfer": {
     "name": "Heat Transfer",
