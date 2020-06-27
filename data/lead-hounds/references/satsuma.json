@@ -13,7 +13,7 @@
     "range": "1\"",
     "targetValue": "6+",
     "suits": [],
-    "result": "Target takes **a hit**."
+    "result": "Target takes **a hit** ignoring armor."
   },
   "sun-lance": {
     "name": "Sun Lance",
@@ -21,7 +21,7 @@
     "range": "8\"",
     "targetValue": "6+",
     "suits": [],
-    "result": "Target takes **a hit**."
+    "result": "Target takes **a hit** ignoring armor."
   },
   "balancer": {
     "name": "Heat Balancer",
@@ -31,9 +31,9 @@
     "suits": [],
     "result": "_Friendly Neutrino Mech only._ Transfer any ammount of overheat cards between this mech and the target."
   },
-  "seppuku": {
-    "name": "Sepukku",
-    "apCost": 2,
+  "banzai": {
+    "name": "Banzai Protocol",
+    "apCost": 1,
     "range": "-",
     "targetValue": "-",
     "suits": [],

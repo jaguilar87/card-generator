@@ -40,7 +40,6 @@
       "name": "Conditions 1/2",
       "type": "Reference",
       "rules": ["$reference:blinded", "$reference:corrosion"],
-
       "disabledRules": ["$reference:burning"]
     },
     {
@@ -48,7 +47,6 @@
       "name": "Conditions 1/2",
       "type": "Reference",
       "rules": ["$reference:blinded", "$reference:corrosion"],
-
       "disabledRules": ["$reference:burning"]
     },
     {
@@ -60,7 +58,6 @@
         "$reference:knocked-down",
         "$reference:immobilized"
       ],
-
       "disabledRules": ["$reference:marked", "$reference:shielded"]
     },
     {
@@ -72,8 +69,21 @@
         "$reference:knocked-down",
         "$reference:immobilized"
       ],
-
       "disabledRules": ["$reference:marked", "$reference:shielded"]
+    },
+    {
+      "noFooter": true,
+      "name": "Overheat",
+      "type": "Reference",
+      "rules": ["$reference:minor-consequence"],
+      "disabledRules": ["$reference:major-consequence"]
+    },
+    {
+      "noFooter": true,
+      "name": "Overheat",
+      "type": "Reference",
+      "rules": ["$reference:minor-consequence"],
+      "disabledRules": ["$reference:major-consequence"]
     }
   ]
 }

@@ -78,5 +78,13 @@
   "shielded": {
     "name": "Shielded",
     "desc": "When this mech receives a hit (or more), remove this condition to lower the **amount of hits taken to 0**."
+  },
+  "minor-consequence": {
+    "name": "Minor Consequence",
+    "desc": "If the overheat level is **equal or higher** than the value of the flip.<br />♥: Mech has **-2 Speed** and **-1 Reactor cards** until the end of the turn.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **one condition**.<br />♠: Suffer **1 damage** on a random system.<br />♣: Draw the top **three** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers."
+  },
+  "major-consequence": {
+    "name": "Major Consequence",
+    "desc": "If the overheat level is **equal or higher** than **twice** the value of the flip.<br />♥: Activation immediately **ends**.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **two conditions**.<br />♠: Torso suffers **1 damage**.<br />♣: Draw the top **six** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers."
   }
 }

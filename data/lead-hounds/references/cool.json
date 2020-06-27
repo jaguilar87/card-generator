@@ -1,0 +1,14 @@
+{
+  "vent-steam": {
+    "name": "Vent Steam",
+    "apCost": 3,
+    "range": "-",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "This mech discards **3 random overheat cards** and is considered to be **behind smoke** until the end of the round."
+  },
+  "cold-exhaust": {
+    "name": "Cold Exhaust",
+    "desc": "Discard one extra overheat card on reactor cooldown."
+  }
+}

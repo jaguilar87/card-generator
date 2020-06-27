@@ -1,0 +1,62 @@
+{
+  "rekindle": {
+    "name": "Rekindle",
+    "desc": "When an action of this system causes an already burning target to gain burning again, immediately **resolve the burning condition effect**, reflipping any ♥."
+  },
+  "aa-barrage": {
+    "name": "AA Barrage",
+    "apCost": 2,
+    "range": "6\"",
+    "targetValue": "8+",
+    "suits": ["S", "C"],
+    "result": "Until the end of the round, if an enemy mech is **placed** within 6\", it suffers **1 damage** on a random system."
+  },
+  "flamethrower": {
+    "name": "Flamethrower",
+    "apCost": 1,
+    "range": "4\"",
+    "targetValue": "7+",
+    "suits": [],
+    "result": "The target gains **burning**."
+  },
+  "mark": {
+    "name": "Mark",
+    "apCost": 1,
+    "range": "14\"",
+    "targetValue": "8+",
+    "suits": [],
+    "result": "Target gains **marked**."
+  },
+  "heat-beam": {
+    "name": "Heat Beam",
+    "apCost": 1,
+    "range": "12\"",
+    "targetValue": "4+",
+    "suits": ["C", "S"],
+    "result": "Target draws a card (discard and replace any jokers) and adds it to its **overheat pile**."
+  },
+  "white-noise": {
+    "name": "White Noise",
+    "apCost": 2,
+    "range": "3\"",
+    "targetValue": "10+",
+    "suits": ["C", "S"],
+    "result": "All enemy mechs within range gain **jammed**."
+  },
+  "blinding-flare": {
+    "name": "Blinding Flare",
+    "apCost": 2,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": ["C"],
+    "result": "Target gains **blinded**"
+  },
+  "blow-up": {
+    "name": "Blow It Up",
+    "apCost": 2,
+    "range": "12\"",
+    "targetValue": "10+",
+    "suits": [],
+    "result": "Remove an artificial terrain within LoS and range."
+  }
+}

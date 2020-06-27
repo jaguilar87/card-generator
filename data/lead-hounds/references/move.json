@@ -1,0 +1,54 @@
+{
+  "side-dash": {
+    "name": "Side Dash",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "6+",
+    "suits": ["D", "H"],
+    "result": "This mech is pushed 3\" in any direction."
+  },
+  "repulse": {
+    "name": "Repulse",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": ["C", "S"],
+    "result": "This mech is **pushed** 4\" away from the target. The target is then **push** the target 4\" away from this mech."
+  },
+  "jump": {
+    "name": "Jump",
+    "apCost": 1,
+    "range": "6\"",
+    "targetValue": "4+",
+    "suits": ["C"],
+    "result": "Place this mech anywhere within range. This system suffers **1 damage**."
+  },
+  "kick": {
+    "name": "Kick",
+    "apCost": 1,
+    "range": "1\"",
+    "targetValue": "5+",
+    "suits": ["D", "H"],
+    "result": "_Obstacle only_. Target is **pushed** 6\" away from this mech."
+  },
+  "overdrive": {
+    "name": "Overdrive",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "-",
+    "suits": [],
+    "result": "_Overcharge 1_. This mech can move up to its **Speed+2** in any direction."
+  },
+  "pull": {
+    "name": "Pull",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": ["C", "S"],
+    "result": "Push the target **6\"** towards this mech."
+  },
+  "hover": {
+    "name": "Hover",
+    "desc": "This mech ignore the **slow** terrain trait and can move across (but not stop on top of) other mechs. If this mech were to receive the **immobilized** condition, it will suffer **1 damage** on this system instead."
+  }
+}

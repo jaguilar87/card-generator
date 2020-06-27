@@ -1,0 +1,14 @@
+{
+  "jammed": {
+    "name": "Remote Override",
+    "desc": "This mech can never gain the **jammed** condition."
+  },
+  "immobilized-damage": {
+    "name": "Immobile",
+    "desc": "If this mech were to receive the **immobilized** condition, it will suffer **1 damage** on this system instead."
+  },
+  "knocked-down-damage": {
+    "name": "Stable",
+    "desc": "If this mech were to receive the **knocked down** condition, it will suffer **1 damage** on this system instead."
+  }
+}

@@ -16,7 +16,7 @@
         "cards": [2, 2],
         "speed": [1, 0]
       },
-      "rules": ["$generic:inertia-dischargers"],
+      "rules": ["$melee:inertia-dischargers"],
       "disabledActions": ["$srw:mine-response"]
     },
     {
@@ -29,7 +29,7 @@
         "damage": ["0", "1", "2"],
         "cards": [3, 2, 1]
       },
-      "rules": ["$generic:disruption-field"],
+      "rules": ["$other:disruption-field"],
       "disabledActions": ["$srw:mine-response"]
     },
     {
@@ -55,7 +55,7 @@
         "cards": [3, 2, 1],
         "speed": [-1, -1, -1]
       },
-      "rules": ["$generic:inertia-dischargers"],
+      "rules": ["$melee:inertia-dischargers"],
       "disabledActions": ["$srw:mine-response"]
     },
     {
@@ -66,10 +66,10 @@
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2"],
-        "speed": [4, 3],
+        "speed": [5, 3],
         "disabledSpeed": [1]
       },
-      "actions": ["$generic:stabilizers"]
+      "actions": ["$support:stabilizers"]
     },
     {
       "name": "Off-road Tracks",
@@ -79,11 +79,11 @@
       "armor": 2,
       "stats": {
         "damage": ["0", "1-2"],
-        "speed": [5, 3],
+        "speed": [6, 3],
         "disabledSpeed": [1]
       },
-      "rules": ["$generic:stable"],
-      "disabledRules": ["$generic:stable"]
+      "rules": ["$imm:knocked-down-damage"],
+      "disabledRules": ["$imm:knocked-down-damage"]
     },
     {
       "name": "Buggy Wheels",
@@ -94,7 +94,7 @@
       "armor": 1,
       "stats": {
         "damage": ["0", "1"],
-        "speed": [6, 5],
+        "speed": [7, 5],
         "disabledSpeed": [1]
       }
     },
@@ -106,10 +106,10 @@
       "armor": 1,
       "stats": {
         "damage": ["0", "1", "2-3"],
-        "speed": [5, 4, 3],
+        "speed": [6, 4, 3],
         "disabledSpeed": [2]
       },
-      "actions": ["$generic:kick"]
+      "actions": ["$move:kick"]
     },
     {
       "name": "Grasshopper",
@@ -120,10 +120,10 @@
       "armor": 0,
       "stats": {
         "damage": ["0", "1"],
-        "speed": [5, 3],
+        "speed": [6, 3],
         "disabledSpeed": [1]
       },
-      "actions": ["$generic:jump"]
+      "actions": ["$move:jump"]
     },
     {
       "name": "Ares Mortar",
@@ -137,7 +137,7 @@
         "accuracy": [0, -1, -2, -3]
       },
       "actions": ["$srw:he-shell"],
-      "rules": ["$generic:indirect"]
+      "rules": ["$ranged:indirect"]
     },
     {
       "name": "Smoke Launchers",
@@ -145,7 +145,7 @@
       "tags": ["Support"],
       "hp": 3,
       "armor": 2,
-      "actions": ["$generic:launch-smoke", "$generic:fire-extinguisher"]
+      "actions": ["$support:launch-smoke", "$support:fire-extinguisher"]
     },
     {
       "name": "Acid Grenades Carrier",
@@ -155,7 +155,7 @@
       "hp": 2,
       "armor": 3,
       "actions": ["$srw:acid-grenade"],
-      "disabledActions": ["$generic:corroded"],
+      "disabledActions": ["$resp:corrosion"],
       "rules": ["$srw:attached-grenade-launcher"]
     },
     {
@@ -166,26 +166,26 @@
       "hp": 2,
       "armor": 3,
       "actions": ["$srw:sticky-grenade"],
-      "disabledActions": ["$generic:immobilized"],
+      "disabledActions": ["$resp:immobilized"],
       "rules": ["$srw:attached-grenade-launcher"]
     },
     {
       "name": "Signal Emitter",
       "type": "Special",
-      "tags": ["Support"],
+      "tags": ["Control"],
       "hp": 3,
       "armor": 2,
-      "actions": ["$srw:on-my-mark", "$srw:white-noise"],
-      "disabledActions": ["$generic:marked"]
+      "actions": ["$srw:on-my-mark", "$control:white-noise"],
+      "disabledActions": ["$resp:marked"]
     },
     {
       "name": "Markerlight",
       "type": "Left Arm",
-      "tags": ["Support"],
+      "tags": ["Control"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$generic:mark", "$srw:blinding-flare"],
-      "disabledActions": ["$generic:marked"]
+      "actions": ["$control:mark", "$control:blinding-flare"],
+      "disabledActions": ["$resp:marked"]
     },
     {
       "name": "Assault Shield",
@@ -196,17 +196,13 @@
       "stats": {
         "disabledAccuracy": [-4]
       },
-      "actions": [
-        "$generic:shield-bash",
-        "$generic:shield-up",
-        "$generic:protect"
-      ],
-      "disabledActions": ["$generic:shield-bash", "$generic:protect"]
+      "actions": ["$melee:shield-bash", "$support:shield-up"],
+      "disabledActions": ["$melee:shield-bash"]
     },
     {
       "name": "Smoke Shells Carrier",
       "type": "Left Arm",
-      "tags": ["Support", "Attached"],
+      "tags": ["Terrain", "Attached"],
       "restrictions": ["Mech with mortar"],
       "hp": 2,
       "armor": 3,
@@ -219,7 +215,19 @@
       "tags": ["Melee"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$generic:slash", "$generic:precise-strike"]
+      "actions": ["$melee:slash", "$melee:precise-strike"]
+    },
+    {
+      "name": "Riot Rocket Launcher",
+      "type": "Left Arm",
+      "tags": ["Ranged", "Control"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": [0, 1, 2],
+        "accuracy": [0, -1, -2]
+      },
+      "actions": ["$ranged:rocket", "$control:blow-up"]
     },
     {
       "name": "Burning Shells Carrier",
@@ -230,7 +238,7 @@
       "armor": 3,
       "rules": ["$srw:attached-mortar"],
       "actions": ["$srw:fire-shell"],
-      "disabledActions": ["$generic:burn"]
+      "disabledActions": ["$resp:burning"]
     },
     {
       "name": "Chaff Shells Carrier",
@@ -245,14 +253,14 @@
     {
       "name": "Grenade Launcher",
       "type": "Right Arm",
-      "tags": ["Ranged", "Support"],
+      "tags": ["Ranged", "Terrain"],
       "hp": 3,
       "armor": 1,
       "stats": {
         "damage": [0, 1, 2],
         "accuracy": [0, -1, -2]
       },
-      "actions": ["$generic:grenade", "$srw:smoke-grenade"]
+      "actions": ["$ranged:grenade", "$srw:smoke-grenade"]
     },
     {
       "name": "Combat Shotgun",
@@ -264,7 +272,7 @@
         "damage": ["0-1", 2],
         "accuracy": [0, -2]
       },
-      "actions": ["$generic:shotgun", "$srw:sonic-shell"]
+      "actions": ["$ranged:shotgun", "$srw:sonic-shell"]
     },
     {
       "name": "Anti Material Rifle",
@@ -276,19 +284,7 @@
         "damage": [0, 1, 2],
         "accuracy": [0, -1, -2]
       },
-      "actions": ["$srw:armor-piercer", "$generic:sniper-shot"]
-    },
-    {
-      "name": "Riot Rocket Launcher",
-      "type": "Right Arm",
-      "tags": ["Ranged", "Control"],
-      "hp": 3,
-      "armor": 1,
-      "stats": {
-        "damage": [0, 1, 2],
-        "accuracy": [0, -1, -2]
-      },
-      "actions": ["$generic:rocket", "$generic:blow-up"]
+      "actions": ["$ranged:armor-piercer", "$ranged:sniper-shot"]
     }
   ]
 }

@@ -1,0 +1,62 @@
+{
+  "indirect": {
+    "name": "Indirect Fire",
+    "desc": "Actions on this system may remove the **marked** condition from an enemy mech to ignore the LoS requirement."
+  },
+  "rocket": {
+    "name": "Rocket",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target takes **two hits**."
+  },
+  "chain-shot": {
+    "name": "Chain shot",
+    "apCost": 1,
+    "range": "12\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "The target takes **a hit**. This action can be repeated without overcharging."
+  },
+  "bullet-spray": {
+    "name": "Bullet spray",
+    "apCost": 3,
+    "range": "12\"",
+    "targetValue": "10+",
+    "suits": [],
+    "result": "_Overcharge 1_. The target takes **four hits**."
+  },
+  "grenade": {
+    "name": "HE Grenade",
+    "apCost": 1,
+    "range": "8\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target takes **two hits**."
+  },
+  "shotgun": {
+    "name": "Shotgun Burst",
+    "apCost": 2,
+    "range": "6\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target takes **three hits**."
+  },
+  "sniper-shot": {
+    "name": "Sniper Shot",
+    "apCost": 3,
+    "range": "24\"",
+    "targetValue": "8+",
+    "suits": [],
+    "result": "Target takes **two hits**."
+  },
+  "armor-piercer": {
+    "name": "Armor Piercer",
+    "apCost": 1,
+    "range": "12\"",
+    "targetValue": "8+",
+    "suits": ["C", "S"],
+    "result": "_Overcharge 1_. Target takes **two hits**, ignoring **armor**."
+  }
+}

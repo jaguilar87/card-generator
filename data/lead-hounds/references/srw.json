@@ -19,25 +19,17 @@
     "name": "Fire Shell",
     "apCost": 2,
     "range": "18\"",
-    "targetValue": "9+",
+    "targetValue": "6+",
     "suits": ["C"],
     "result": "Target takes **a hit** and gains **burning**."
   },
   "smoke-barrage": {
-    "name": "S. Barrage",
+    "name": "Smoke Barrage",
     "apCost": 2,
     "range": "18\"",
-    "targetValue": "8+",
+    "targetValue": "4+",
     "suits": ["H"],
     "result": "_Overcharge 1_. Create trhee **smoke** artificial terrain anywhere within range and LoS. Remove them all at the end of the round."
-  },
-  "blinding-flare": {
-    "name": "Blinding Flare",
-    "apCost": 2,
-    "range": "6\"",
-    "targetValue": "8+",
-    "suits": ["C"],
-    "result": "Target gains **blinded**"
   },
   "attached-grenade-launcher": {
     "name": "Attached (Grenade Launcher)",
@@ -51,7 +43,7 @@
     "name": "Acid Grenade",
     "apCost": 1,
     "range": "8\"",
-    "targetValue": "8+",
+    "targetValue": "6+",
     "suits": ["C"],
     "result": "Target takes gains **corrosion**."
   },
@@ -63,19 +55,11 @@
     "suits": ["C", "D"],
     "result": "All enemy mechs within range gain **marked**."
   },
-  "white-noise": {
-    "name": "White Noise",
-    "apCost": 2,
-    "range": "3\"",
-    "targetValue": "10+",
-    "suits": ["C", "S"],
-    "result": "All enemy mechs within range gain **jammed**."
-  },
   "sticky-grenade": {
     "name": "Sticky Gren.",
     "apCost": 2,
     "range": "8\"",
-    "targetValue": "10+",
+    "targetValue": "6+",
     "suits": ["C"],
     "result": "Target gains **immobilized**."
   },
@@ -83,20 +67,12 @@
     "name": "Sonic Shells",
     "apCost": 2,
     "range": "6\"",
-    "targetValue": "10+",
+    "targetValue": "6+",
     "suits": ["S"],
     "result": "Target takes **three hits**, this action ignores **obscured**."
   },
-  "armor-piercer": {
-    "name": "Armor Piercer",
-    "apCost": 1,
-    "range": "12\"",
-    "targetValue": "10+",
-    "suits": ["S", "D"],
-    "result": "_Overcharge 1_. Target takes **two hits**, ignoring **armor**."
-  },
   "smoke-grenade": {
-    "name": "S. Grenade",
+    "name": "Smoke Grenade",
     "apCost": 1,
     "range": "8\"",
     "targetValue": "6+",

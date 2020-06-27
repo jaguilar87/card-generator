@@ -1,0 +1,38 @@
+{
+  "shoulder-bash": {
+    "name": "Shoulder Bash",
+    "apCost": 1,
+    "range": "0\"",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "_Enemy and obstacle only_. The target takes **a hit** and is pushed 2\" directly away."
+  },
+  "slash": {
+    "name": "Slash",
+    "apCost": 1,
+    "range": "2\"",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "Target takes **two hits** ignoring armor."
+  },
+  "shield-bash": {
+    "name": "Shield Bash",
+    "apCost": 1,
+    "range": "0\"",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "Target takes *a hit*."
+  },
+  "precise-strike": {
+    "name": "Precise Strike",
+    "apCost": 1,
+    "range": "1\"",
+    "targetValue": "4+",
+    "suits": ["S"],
+    "result": "_Overcharge 1_. Chose a system except torso. Target takes **two hits** on chosen system."
+  },
+  "inertia-dischargers": {
+    "name": "Inertia Dischargers",
+    "desc": "When resolving an assault action (and its free action), this mech receives **+1 value** to all action flips."
+  }
+}

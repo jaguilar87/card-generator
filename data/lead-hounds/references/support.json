@@ -1,0 +1,50 @@
+{
+  "stabilizers": {
+    "name": "Stabilizers",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "4+",
+    "suits": [],
+    "result": "This mech gains **immobilized**. Until the end of the activation, this mech receives **+1** value to all its action flips."
+  },
+  "shield-up": {
+    "name": "Shield Up",
+    "apCost": 1,
+    "range": "-",
+    "targetValue": "7+",
+    "suits": ["D", "H"],
+    "result": "_Overcharge 1._ This mech gains **shielded**."
+  },
+  "countermeasures": {
+    "name": "Countermeasures",
+    "apCost": 2,
+    "range": "2\"",
+    "targetValue": "6+",
+    "suits": ["H"],
+    "result": "All mechs within range remove the **marked** condition."
+  },
+  "protect": {
+    "name": "Protect",
+    "apCost": 1,
+    "range": "2\"",
+    "targetValue": "7+",
+    "suits": ["D"],
+    "result": "_Overcharge 1._ Target gains **shielded**."
+  },
+  "launch-smoke": {
+    "name": "Launch Smoke",
+    "apCost": 1,
+    "range": "3\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "This mech is considered to be **behind smoke** until the end of the round."
+  },
+  "fire-extinguisher": {
+    "name": "Extinguisher",
+    "apCost": 1,
+    "range": "3\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target removes the **burning** condition."
+  }
+}

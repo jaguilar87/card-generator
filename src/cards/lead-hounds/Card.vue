@@ -2,11 +2,11 @@
   <div class="LHCard">
     <div class="LHCard-side">
       <div class="LHCard-header" :style="headerStyle">
-        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="white" />
         <div class="LHCard-headerText">
           <div class="LHCard-name">{{ card.name }}</div>
           <div class="LHCard-type">{{ [card.type, ...card.tags || []].join(' · ') }}</div>
         </div>
+        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="white" />
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" />
@@ -30,11 +30,11 @@
     </div>
     <div class="LHCard-side LHCard--reverse">
       <div class="LHCard-header">
-        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="#333" />
         <div class="LHCard-headerText">
           <div class="LHCard-name">{{ card.name }}</div>
           <div class="LHCard-type">{{ card.type }}</div>
         </div>
+        <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="#333" />
       </div>
       <div class="LHCard-body">
         <Stats :stats="card.stats" disabled />
@@ -139,6 +139,7 @@ $card-color: #000000;
   &-footer {
     width: 100%;
     display: flex;
+    justify-content: space-between;
   }
 
   &-header {
@@ -186,7 +187,7 @@ $card-color: #000000;
   &-headerText {
     display: inline-flex;
     flex-direction: column;
-    padding-left: 5px;
+    padding-right: 5px;
   }
 
   &-name {

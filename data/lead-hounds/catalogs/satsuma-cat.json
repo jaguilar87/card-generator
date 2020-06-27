@@ -30,7 +30,7 @@
         "cards": [3, 2]
       },
       "actions": ["$satsuma:eject-system"],
-      "rules": ["$generic:inertia-dischargers"],
+      "rules": ["$melee:inertia-dischargers"],
       "disabledActions": ["$satsuma:glare"]
     },
     {
@@ -56,7 +56,7 @@
         "cards": [3, 2],
         "speed": [-1, -1]
       },
-      "actions": ["$satsuma:eject-system", "$generic:shoulder-bash"]
+      "actions": ["$satsuma:eject-system", "$melee:shoulder-bash"]
     },
     {
       "name": "Batta",
@@ -67,10 +67,10 @@
       "armor": 1,
       "stats": {
         "damage": ["0", "1"],
-        "speed": [6, 4],
+        "speed": [7, 4],
         "disabledSpeed": [2]
       },
-      "actions": ["$generic:kick"]
+      "actions": ["$move:kick"]
     },
     {
       "name": "Hayai",
@@ -80,10 +80,10 @@
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2"],
-        "speed": [5, 4],
+        "speed": [6, 4],
         "disabledSpeed": [3]
       },
-      "actions": ["$generic:kick"]
+      "actions": ["$move:kick"]
     },
     {
       "name": "Neutrino Engine",
@@ -94,11 +94,11 @@
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2"],
-        "speed": [4, 3],
+        "speed": [5, 3],
         "disabledSpeed": [2]
       },
-      "actions": ["$generic:overdrive"],
-      "disabledActions": ["$generic:overheat"]
+      "actions": ["$move:overdrive"],
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Yama",
@@ -108,10 +108,10 @@
       "armor": 1,
       "stats": {
         "damage": ["0-1", "2"],
-        "speed": [4, 3],
-        "disabledSpeed": [1]
+        "speed": [5, 3],
+        "disabledSpeed": [2]
       },
-      "actions": ["$generic:stabilizers"]
+      "actions": ["$support:stabilizers"]
     },
     {
       "name": "Hachidori",
@@ -121,10 +121,10 @@
       "armor": 0,
       "stats": {
         "damage": ["0-3"],
-        "speed": [4]
+        "speed": [5]
       },
-      "rules": ["$generic:hover"],
-      "disabledRules": ["$generic:immobile"]
+      "rules": ["$move:hover"],
+      "disabledRules": ["$imm:immobilized-damage"]
     },
     {
       "name": "Supercapacitator",
@@ -137,8 +137,8 @@
         "damage": ["0-1"],
         "cards": [1]
       },
-      "actions": ["$satsuma:seppuku"],
-      "disabledActions": ["$generic:overheat"]
+      "actions": ["$satsuma:banzai"],
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Neutrino Thrusters",
@@ -151,8 +151,8 @@
         "damage": ["0-1"],
         "speed": [1]
       },
-      "actions": ["$generic:side-dash"],
-      "disabledActions": ["$generic:overheat"]
+      "actions": ["$move:side-dash"],
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Chisso Reito",
@@ -160,8 +160,8 @@
       "tags": ["Refrigeration", "Support"],
       "hp": 2,
       "armor": 3,
-      "actions": ["$generic:fire-extinguisher", "$generic:vent-steam"],
-      "rules": ["$generic:cold-exhaust"]
+      "actions": ["$support:fire-extinguisher", "$cool:vent-steam"],
+      "rules": ["$cool:cold-exhaust"]
     },
     {
       "name": "Tate Hatsudenki",
@@ -169,33 +169,33 @@
       "tags": ["Support"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$generic:shield-up", "$generic:countermeasures"]
+      "actions": ["$support:shield-up", "$support:countermeasures"]
     },
     {
       "name": "Satellite Uplink",
       "type": "Special",
-      "tags": ["Support"],
+      "tags": ["Cards"],
       "hp": 2,
       "armor": 2,
-      "rules": ["$generic:remote-override", "$generic:supercomputer"]
+      "rules": ["$imm:jammed", "$cards:supercomputer"]
     },
     {
       "name": "Hypermetal Katana",
       "type": "Left Arm",
-      "tags": ["Melee"],
+      "tags": ["Melee", "Cards"],
       "hp": 2,
       "armor": 1,
-      "actions": ["$generic:slash"],
-      "rules": ["$generic:power-surge"]
+      "actions": ["$melee:slash"],
+      "rules": ["$other:power-surge"]
     },
     {
       "name": "Neutrino Balancer",
       "type": "Left Arm",
-      "tags": ["Utility", "Heat"],
+      "tags": ["Heat"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$satsuma:balancer", "$generic:heat-beam"],
-      "disabledActions": ["$generic:overheat"]
+      "actions": ["$satsuma:balancer", "$control:heat-beam"],
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Taiyo Tanto",
@@ -206,19 +206,19 @@
       "armor": 1,
       "actions": ["$satsuma:sun-slash"],
       "rules": ["$satsuma:heat-transfer"],
-      "disabledActions": ["$generic:overheat"]
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Ryoshi Launcher",
       "type": "Left Arm",
-      "tags": ["Ranged"],
+      "tags": ["Ranged", "Control"],
       "hp": 2,
       "armor": 1,
       "stats": {
         "damage": ["0", "1"],
         "accuracy": [0, -1]
       },
-      "actions": ["$generic:rocket", "$generic:aa-barrage"]
+      "actions": ["$ranged:rocket", "$control:aa-barrage"]
     },
     {
       "name": "Juryoku Generator",
@@ -226,8 +226,8 @@
       "tags": ["Control", "Movement"],
       "hp": 3,
       "armor": 1,
-      "actions": ["$satsuma:gravity-well", "$generic:pull"],
-      "disabledActions": ["$generic:immobilized"]
+      "actions": ["$satsuma:gravity-well", "$move:pull"],
+      "disabledActions": ["$resp:immobilized"]
     },
     {
       "name": "Taiyo Yari",
@@ -238,17 +238,17 @@
       "armor": 1,
       "actions": ["$satsuma:sun-lance"],
       "rules": ["$satsuma:heat-transfer"],
-      "disabledActions": ["$generic:overheat"]
+      "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Kaen Hosha-ki",
       "type": "Right Arm",
-      "tags": ["Ranged"],
+      "tags": ["Control"],
       "hp": 1,
       "armor": 2,
-      "actions": ["$generic:flamethrower"],
-      "rules": ["$generic:rekindle"],
-      "disabledActions": ["$generic:burn"]
+      "actions": ["$control:flamethrower"],
+      "rules": ["$control:rekindle"],
+      "disabledActions": ["$resp:burning"]
     },
     {
       "name": "Accelerator Gatling",
@@ -261,7 +261,7 @@
         "damage": [0, 1, 2],
         "accuracy": [0, -1, -2]
       },
-      "actions": ["$generic:chain-shot", "$generic:bullet-spray"]
+      "actions": ["$ranged:chain-shot", "$ranged:bullet-spray"]
     },
     {
       "name": "Juryoku Beam",
@@ -269,7 +269,7 @@
       "tags": ["Control", "Movement"],
       "hp": 3,
       "armor": 2,
-      "actions": ["$generic:repulse", "$generic:pull"]
+      "actions": ["$move:repulse", "$move:pull"]
     },
     {
       "name": "Hypermetal Tedate",
@@ -277,8 +277,11 @@
       "tags": ["Support"],
       "hp": 1,
       "armor": 4,
-      "actions": ["$generic:shield-bash", "$generic:protect"],
-      "disabledActions": ["$generic:shield-bash", "$generic:protect"]
+      "stats": {
+        "disabledAccuracy": [-2]
+      },
+      "actions": ["$melee:shield-bash", "$support:protect"],
+      "disabledActions": ["$melee:shield-bash"]
     }
   ]
 }
