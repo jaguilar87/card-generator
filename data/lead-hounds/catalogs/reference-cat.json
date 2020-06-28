@@ -12,12 +12,13 @@
       "actions": [
         "$reference:advance",
         "$reference:assault",
-        "$reference:vent-out"
+        "$reference:optimize"
       ],
       "disabledActions": [
         "$reference:slam",
         "$reference:ram",
-        "$reference:toss"
+        "$reference:toss",
+        "$reference:vent-out"
       ]
     },
     {
@@ -27,12 +28,13 @@
       "actions": [
         "$reference:advance",
         "$reference:assault",
-        "$reference:vent-out"
+        "$reference:optimize"
       ],
       "disabledActions": [
         "$reference:slam",
         "$reference:ram",
-        "$reference:toss"
+        "$reference:toss",
+        "$reference:vent-out"
       ]
     },
     {

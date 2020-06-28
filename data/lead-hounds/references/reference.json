@@ -13,15 +13,15 @@
     "range": "-",
     "targetValue": "-",
     "suits": [],
-    "result": "_Overcharge 1_. This mech pushes up to its **Speed** in any direction, then it can perform any one action with **range 2” or less** that costs **1 Action Point** for free (not spending the action point)."
+    "result": "_Overcharge 1_. This mech moves up to its **Speed** in any direction in a **straight line**. Then it can perform any one action with **range 2” or less** that costs **1 Action Point** for free (not spending the action point)."
   },
-  "slam": {
-    "name": "Slam",
+  "optimize": {
+    "name": "Optimize",
     "apCost": 1,
-    "range": "0\"",
-    "targetValue": "6+",
+    "range": "-",
+    "targetValue": "-",
     "suits": [],
-    "result": "This mech suffers **1 torso damage** whether or not the action is successful. The target **takes a hit**."
+    "result": "**Draw** two cards, then **discard** two cards."
   },
   "ram": {
     "name": "Ram",
@@ -29,7 +29,15 @@
     "range": "1\"",
     "targetValue": "8+",
     "suits": ["C", "S"],
-    "result": "This mech suffers **1 torso damage** whether or not the action is successful. The target is pushed **3” directly away** from this mech."
+    "result": "_This mech suffers 1 damage on the torso._ The target takes **a hit** and is pushed up to **4”** directly away from this mech."
+  },
+  "slam": {
+    "name": "Slam",
+    "apCost": 1,
+    "range": "1\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "_This mech suffers 1 damage on the torso._ The target takes **a hit**."
   },
   "toss": {
     "name": "Toss",

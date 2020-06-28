@@ -16,7 +16,7 @@
         >{{ card.restrictions.join('/') }} only.</span>
         <Action v-for="action in actions" :key="action.name" :action="action" />
         <Rule v-for="rule in rules" :key="rule.name" :rule="rule" />
-        <div class="LHCard-keywords">
+        <div v-if="!card.noFooter" class="LHCard-keywords">
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
@@ -40,7 +40,7 @@
         <Stats :stats="card.stats" disabled />
         <Action v-for="action in disabledActions" :key="action.name" :action="action" />
         <Rule v-for="rule in disabledRules" :key="rule.name" :rule="rule" />
-        <div class="LHCard-keywords">
+        <div v-if="!card.noFooter" class="LHCard-keywords">
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
