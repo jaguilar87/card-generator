@@ -29,7 +29,7 @@
     "range": "1\"",
     "targetValue": "8+",
     "suits": ["C", "S"],
-    "result": "_This mech suffers 1 damage on the torso._ The target takes **a hit** and is pushed up to **4”** directly away from this mech."
+    "result": "_This mech suffers 1 torso damage._ The target takes **a hit** and is pushed up to **4”** directly away from this mech."
   },
   "slam": {
     "name": "Slam",
@@ -37,7 +37,7 @@
     "range": "1\"",
     "targetValue": "6+",
     "suits": [],
-    "result": "_This mech suffers 1 damage on the torso._ The target takes **a hit**."
+    "result": "_This mech suffers 1 torso damage._ The target takes **a hit**."
   },
   "toss": {
     "name": "Toss",
