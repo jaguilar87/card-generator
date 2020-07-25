@@ -1,0 +1,14 @@
+{
+  "panzerfaust": {
+    "name": "Panzerfaust",
+    "disabledResponse": true,
+    "range": "8\"",
+    "targetValue": "3+",
+    "suits": [],
+    "result": "Target takes **2 hits**. Mechs damaged by this action gain **knocked down**."
+  },
+  "zimmerit": {
+    "name": "Ablative Zimmerit",
+    "desc": "This system is not affected by the **corrosion** condition."
+  }
+}

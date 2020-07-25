@@ -1,0 +1,63 @@
+{
+  "name": "RKT · Rhinekriegstechnik",
+  "style": {
+    "accent": "#4D5D53",
+    "inverted": "#ffffff"
+  },
+  "cards": [
+    {
+      "name": "Eidechse Class",
+      "type": "Torso",
+      "tags": ["Light"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "cards": [2, 2],
+        "speed": [1, 0]
+      },
+      "disabledActions": ["$rkt:panzerfaust"],
+      "rules": ["$rkt:zimmerit"]
+    },
+    {
+      "name": "Lowe Class",
+      "type": "Torso",
+      "tags": ["Medium"],
+      "hp": 3,
+      "armor": 2,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "cards": [3, 2]
+      },
+      "disabledActions": ["$rkt:panzerfaust"],
+      "rules": ["$rkt:zimmerit"]
+    },
+    {
+      "name": "Gurteltier Class",
+      "type": "Torso",
+      "tags": ["Heavy"],
+      "hp": 3,
+      "armor": 3,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "cards": [3, 2]
+      },
+      "disabledActions": ["$rkt:panzerfaust"],
+      "rules": ["$rkt:zimmerit"]
+    },
+    {
+      "name": "Mammut Class",
+      "type": "Torso",
+      "tags": ["Heavy"],
+      "hp": 3,
+      "armor": 3,
+      "stats": {
+        "damage": ["0-2"],
+        "cards": [3],
+        "speed": [-1]
+      },
+      "disabledActions": ["$rkt:panzerfaust"],
+      "rules": ["$rkt:zimmerit", "$melee:juggernaut"]
+    }
+  ]
+}

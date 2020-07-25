@@ -3,9 +3,9 @@
     "name": "Eject System",
     "apCost": 1,
     "range": "-",
-    "targetValue": "5+",
+    "targetValue": "-",
     "suits": [],
-    "result": "Disable a non-disabled system, if you do, remove one condition from this mech."
+    "result": "Disable a non-disabled system, if you do, **remove one condition** and discard up to **2 random overheat cards** from this mech."
   },
   "sun-slash": {
     "name": "Sun Slash",
@@ -45,11 +45,11 @@
     "range": "X\"",
     "targetValue": "3+",
     "suits": ["C"],
-    "result": "All mechs within range gain **blinded** and **jammed**. This action range is equal to the **overheat value** of this mech."
+    "result": "All other mechs within range gain **blinded** and **jammed**. This action range is equal to the **overheat value** of this mech."
   },
   "heat-transfer": {
     "name": "Heat Transfer",
-    "desc": "If a mech receives damage from an action on this system, discard up to **2 overheat cards**, then the target **draws the same ammount of cards** (discard and replace jokers) and adds them to its **overheat pile**."
+    "desc": "If a mech receives damage from an action on this system, discard up to **2 random overheat cards**, then the target **draws the same ammount of cards** (discard and replace jokers) and adds them to its **overheat pile**."
   },
   "gravity-well": {
     "name": "Gravity Well",
