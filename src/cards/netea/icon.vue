@@ -24,7 +24,7 @@ import ruleIcon from '../../assets/netea/rule.svg';
 
 export default {
   props: {
-    type: String
+    type: String,
   },
   components: {
     acIcon,
@@ -35,7 +35,15 @@ export default {
     scIcon,
     weIcon,
     infIcon,
-    ruleIcon
-  }
+    ruleIcon,
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.NeteaIcon {
+  svg {
+    fill: white;
+  }
+}
+</style>

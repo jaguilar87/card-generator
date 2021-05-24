@@ -28,19 +28,11 @@ export default {
     },
     catalog() {
       return this.system.catalogs[this.$route.params.catalog];
-    }
+    },
   },
   components: {
     NetEAUnitCard,
-    NetEARuleCard
-  }
+    NetEARuleCard,
+  },
 };
 </script>
-
-<style lang="scss">
-.CardReader {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-</style>

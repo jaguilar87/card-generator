@@ -23,30 +23,24 @@ export default {
 
       return {
         background: safeThis('$props.catalog.style.titleBg') || 'darkblue',
-        color: safeThis('$props.catalog.style.titleText') || 'white'
+        color: safeThis('$props.catalog.style.titleText') || 'white',
       };
-    }
+    },
   },
   props: {
     card: Object,
     catalog: Object,
-    system: Object
+    system: Object,
   },
   components: {
-    Icon: NeteaIcon
-  }
+    Icon: NeteaIcon,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 $card-color: #000000;
 $border-color: #dcdcdc;
-
-@media print {
-  .Rule:nth-child(9n):not(:last-child) {
-    margin-bottom: 100px;
-  }
-}
 
 .Rule {
   display: inline-flex;
@@ -55,9 +49,15 @@ $border-color: #dcdcdc;
   margin-bottom: 12px;
   margin: 10px;
 
+  @media print {
+    margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+  }
+
   &-side {
-    height: 41mm;
-    width: 63mm;
+    height: 45mm;
+    width: 68mm;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;

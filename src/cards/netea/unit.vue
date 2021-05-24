@@ -21,7 +21,7 @@
         <div
           :class="{
             'Card-summary': true,
-            'Card-summary--compact': card.compact
+            'Card-summary--compact': card.compact,
           }"
         >
           <table v-if="card.weapons" class="Card-weapons table is-narrow">
@@ -31,8 +31,11 @@
               <th>Stats</th>
             </tr>
             <tr v-for="weapon in card.weapons" :key="weapon.name">
-              <td 
-                :class="{'Card-weaponName': true, 'Card-weaponName--right': weapon.right}"
+              <td
+                :class="{
+                  'Card-weaponName': true,
+                  'Card-weaponName--right': weapon.right,
+                }"
               >
                 {{ weapon.name }}
               </td>
@@ -50,8 +53,14 @@
     </div>
 
     <div class="Card-side Card-side--reverse">
-      <div :class="{ 'Card-skills': true, 'Card-skills--compact': card.compact }">
-        <p v-for="skill in getExpandedSkills()" :key="skill.name" class="Card-skill">
+      <div
+        :class="{ 'Card-skills': true, 'Card-skills--compact': card.compact }"
+      >
+        <p
+          v-for="skill in getExpandedSkills()"
+          :key="skill.name"
+          class="Card-skill"
+        >
           <span v-if="skill.desc">
             <strong>
               <span>{{ skill.name }}</span>
@@ -77,14 +86,14 @@ export default {
 
       return {
         background: safeThis('$props.catalog.style.titleBg') || 'darkblue',
-        color: safeThis('$props.catalog.style.titleText') || 'white'
+        color: safeThis('$props.catalog.style.titleText') || 'white',
       };
-    }
+    },
   },
   props: {
     card: Object,
     catalog: Object,
-    system: Object
+    system: Object,
   },
   methods: {
     getExpandedSkills({ includeSkills = true, includeWeapons = true } = {}) {
@@ -102,7 +111,7 @@ export default {
       const weapons = safeThis('$props.card.weapons');
       if (includeWeapons && weapons) {
         for (const weapon of this.$props.card.weapons) {
-          skills.push(weapon)
+          skills.push(weapon);
 
           if (weapon.skills) {
             skills.push(...weapon.skills);
@@ -114,8 +123,8 @@ export default {
     },
     getSkillsSummary() {
       const summ = this.getExpandedSkills({ includeWeapons: false })
-        .filter(skill => !skill.skipFromSummary)
-        .map(skill => skill.name || skill);
+        .filter((skill) => !skill.skipFromSummary)
+        .map((skill) => skill.name || skill);
 
       return summ.length ? summ.join(', ') + '.' : '-';
     },
@@ -131,30 +140,24 @@ export default {
           this.$props.system.references,
           skills
         )
-          .filter(skill => !skill.skipFromSummary)
-          .map(skill => skill.name || skill);
+          .filter((skill) => !skill.skipFromSummary)
+          .map((skill) => skill.name || skill);
 
         stats.push(...skillNames);
       }
 
-      return stats.filter(item => item).join(', ') || '-';
-    }
+      return stats.filter((item) => item).join(', ') || '-';
+    },
   },
   components: {
-    Icon: NeteaIcon
-  }
+    Icon: NeteaIcon,
+  },
 };
 </script>
 
 <style lang="scss">
 $card-color: #000000;
 $border-color: #dcdcdc;
-
-@media print {
-  .Card:nth-child(9n):not(:last-child) {
-    margin-bottom: 100px;
-  }
-}
 
 .Card {
   display: inline-flex;
@@ -163,9 +166,15 @@ $border-color: #dcdcdc;
   margin: 10px;
   margin-bottom: 12px;
 
+  @media print {
+    margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+  }
+
   &-side {
-    height: 41mm;
-    width: 63mm;
+    height: 45mm;
+    width: 68mm;
     overflow: hidden;
     border: 1px solid $card-color;
     border-radius: 6px;
@@ -247,13 +256,13 @@ $border-color: #dcdcdc;
 
   &-stat {
     width: 100%;
-    height: 16px;
+    height: 18px;
     text-align: center;
     border-right: 1px solid $border-color;
 
     &--header {
+      line-height: 24px;
       font-weight: bold;
-      line-height: 20px;
     }
 
     &:nth-child(even):not(:last-child) {

@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 @page {
-  size: A4;
+  size: portrait;
 }
 
 @media print {
@@ -68,6 +68,10 @@ export default {
   &-content {
     width: 100%;
     margin-top: 12px;
+
+    @media print {
+      margin-top: 0;
+    }
   }
 
   &-spinner {
