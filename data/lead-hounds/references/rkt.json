@@ -10,5 +10,37 @@
   "zimmerit": {
     "name": "Ablative Zimmerit",
     "desc": "This system is not affected by the **corrosion** condition."
+  },
+  "akrylat-igniter": {
+    "name": "Acrylat Igniter",
+    "apCost": 1,
+    "range": "1\"",
+    "targetValue": "5+",
+    "suits": ["C", "S"],
+    "result": "Immobilized enemy models within range gain **burning**."
+  },
+  "deploy-autoturret": {
+    "name": "Deploy Auto-turret",
+    "apCost": 1,
+    "range": "1\"",
+    "targetValue": "8+",
+    "suits": [],
+    "result": "Create an **auto-turret artificial terrain (see terrain card)** anywhere within range. You cannot use this action while there is a friendly auto-turret present on the board."
+  },
+  "wash-chemicals": {
+    "name": "Wash Chemicals",
+    "apCost": 1,
+    "range": "3\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target removes the **corrosive** condition."
+  },
+  "wasserkanone": {
+    "name": "Wasserkanone",
+    "apCost": 1,
+    "range": "6\"",
+    "targetValue": "6+",
+    "suits": [],
+    "result": "Target is **pushed 2\"** away from this mech."
   }
 }

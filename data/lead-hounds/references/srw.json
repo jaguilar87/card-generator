@@ -5,7 +5,7 @@
     "range": "-",
     "targetValue": "-",
     "suits": [],
-    "result": "Create a **hazard (1 point of damage propulsion system)** artificial terrain in base contact with this mech."
+    "result": "Create a **Dangerous (1 damage on propulsion system), Destroyable (10+)** obstacle in base contact with this mech."
   },
   "he-shell": {
     "name": "HE Shell",
@@ -13,7 +13,7 @@
     "range": "18\"",
     "targetValue": "9+",
     "suits": [],
-    "result": "Target takes **two hits**."
+    "result": "Target takes **three hits**."
   },
   "fire-shell": {
     "name": "Fire Shell",
@@ -21,7 +21,7 @@
     "range": "18\"",
     "targetValue": "6+",
     "suits": ["C"],
-    "result": "Target takes **a hit** and gains **burning**."
+    "result": "Target takes **two hits** and gains **burning**."
   },
   "smoke-barrage": {
     "name": "Smoke Barrage",
@@ -29,7 +29,7 @@
     "range": "18\"",
     "targetValue": "4+",
     "suits": ["H"],
-    "result": "_Overcharge 1_. Create trhee **smoke** artificial terrain anywhere within range and LoS. Remove them all at the end of the round."
+    "result": "_Overcharge 1_. Create three **Smoking** obstacles anywhere within range and LoS. Remove them all at the end of the round."
   },
   "attached-grenade-launcher": {
     "name": "Attached (Grenade Launcher)",

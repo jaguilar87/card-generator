@@ -6,6 +6,15 @@
   },
   "cards": [
     {
+      "name": "Auto-turret",
+      "type": "Terrain",
+      "hp": 3,
+      "armor": 3,
+      "rules": ["$terrain:damageable", "$terrain:remote-control"],
+      "actions": ["$ranged:rocket"],
+      "disabledActions": ["$terrain:remove"]
+    },
+    {
       "name": "Eidechse Class",
       "type": "Torso",
       "tags": ["Light"],
@@ -39,8 +48,9 @@
       "hp": 3,
       "armor": 3,
       "stats": {
-        "damage": ["0-1", "2"],
-        "cards": [3, 2]
+        "damage": ["0-2"],
+        "cards": [3],
+        "speed": [-1]
       },
       "disabledActions": ["$rkt:panzerfaust"],
       "rules": ["$rkt:zimmerit"]
@@ -52,12 +62,132 @@
       "hp": 3,
       "armor": 3,
       "stats": {
-        "damage": ["0-2"],
-        "cards": [3],
-        "speed": [-1]
+        "damage": ["0", "1-2"],
+        "cards": [3, 2],
+        "speed": [-1, -1]
       },
       "disabledActions": ["$rkt:panzerfaust"],
       "rules": ["$rkt:zimmerit", "$melee:juggernaut"]
+    },
+    {
+      "name": "Schnell",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "restrictions": ["Non-heavy torso"],
+      "hp": 3,
+      "armor": 1,
+      "stats": {
+        "damage": ["0", "1", "2"],
+        "speed": [6, 5, 4],
+        "disabledSpeed": [3]
+      },
+      "disabledActions": ["$resp:immobilized"]
+    },
+    {
+      "name": "Uberquerung",
+      "type": "Propulsion",
+      "tags": ["Legs"],
+      "hp": 3,
+      "armor": 2,
+      "stats": {
+        "damage": ["0", "1-2"],
+        "speed": [5, 4],
+        "disabledSpeed": [3]
+      },
+      "disabledActions": ["$resp:immobilized"],
+      "actions": ["$move:kick"]
+    },
+    {
+      "name": "Biene",
+      "type": "Propulsion",
+      "tags": ["Hovercraft"],
+      "hp": 2,
+      "armor": 3,
+      "stats": {
+        "damage": ["0", "1"],
+        "speed": [4, 3]
+      },
+      "rules": ["$move:hover"],
+      "disabledRules": ["$imm:immobilized-damage"]
+    },
+    {
+      "name": "Raupenkette",
+      "type": "Propulsion",
+      "tags": ["Tracks"],
+      "hp": 4,
+      "armor": 2,
+      "stats": {
+        "damage": ["0", "1", "2", "3"],
+        "speed": [5, 4, 3, 2],
+        "disabledSpeed": [1]
+      },
+      "rules": ["$imm:knocked-down-damage"],
+      "disabledRules": ["$imm:knocked-down-damage"]
+    },
+    {
+      "name": "Stachel",
+      "type": "Propulsion",
+      "tags": ["Tracks"],
+      "hp": 3,
+      "armor": 3,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [5, 3],
+        "disabledSpeed": [1]
+      },
+      "rules": ["$move:all-terrain"],
+      "disabledActions": ["$resp:immobilized"]
+    },
+    {
+      "name": "Nachbrenner",
+      "type": "Special",
+      "tags": ["Move", "Support"],
+      "restrictions": ["Hovercraft or track legs"],
+      "hp": 2,
+      "armor": 2,
+      "stats": {
+        "damage": ["0-1", "2"],
+        "speed": [1, 0]
+      },
+      "actions": ["$support:launch-smoke", "$move:side-dash"],
+      "disabledActions": ["$resp:burning"]
+    },
+    {
+      "name": "Klebstoff Launcher",
+      "type": "Special",
+      "tags": ["Control"],
+      "hp": 2,
+      "armor": 3,
+      "actions": ["$control:launch-adhesive", "$rkt:akrylat-igniter"],
+      "disabledActions": ["$resp:immobilized"]
+    },
+    {
+      "name": "Launch Rail",
+      "type": "Special",
+      "tags": ["Movement"],
+      "hp": 4,
+      "armor": 3,
+      "actions": ["$move:launch-mech", "$terrain:launch-mine"]
+    },
+    {
+      "name": "Auto-turret Carrier",
+      "type": "Special",
+      "tags": ["Terrain"],
+      "hp": 2,
+      "armor": 4,
+      "actions": ["$rkt:deploy-autoturret"]
+    },
+    {
+      "name": "Notfallkasten",
+      "type": "Special",
+      "tags": ["Support"],
+      "hp": 3,
+      "armor": 2,
+      "actions": [
+        "$support:fire-extinguisher",
+        "$rkt:wash-chemicals",
+        "$rkt:wasserkanone"
+      ]
     }
   ]
 }

@@ -86,7 +86,7 @@
       "actions": ["$move:kick"]
     },
     {
-      "name": "Neutrino Engine",
+      "name": "Neutrino Striders",
       "type": "Propulsion",
       "tags": ["Legs", "Neutrino"],
       "restrictions": ["Neutrino Torso"],
@@ -121,7 +121,7 @@
       "armor": 0,
       "stats": {
         "damage": ["0-3"],
-        "speed": [5]
+        "speed": [4]
       },
       "rules": ["$move:hover"],
       "disabledRules": ["$imm:immobilized-damage"]
@@ -138,12 +138,13 @@
         "cards": [1]
       },
       "actions": ["$satsuma:banzai"],
+      "rules": ["$cards:afterburner"],
       "disabledActions": ["$resp:heat"]
     },
     {
       "name": "Neutrino Thrusters",
       "type": "Special",
-      "tags": ["Neutrino", "Movement"],
+      "tags": ["Neutrino", "Move"],
       "restrictions": ["Neutrino Torso"],
       "hp": 2,
       "armor": 1,
@@ -224,7 +225,7 @@
     {
       "name": "Juryoku Generator",
       "type": "Left Arm",
-      "tags": ["Control", "Movement"],
+      "tags": ["Control", "Move"],
       "hp": 3,
       "armor": 1,
       "actions": ["$satsuma:gravity-well", "$move:pull"],
@@ -267,7 +268,7 @@
     {
       "name": "Juryoku Beam",
       "type": "Right Arm",
-      "tags": ["Control", "Movement"],
+      "tags": ["Control", "Move"],
       "hp": 3,
       "armor": 2,
       "actions": ["$move:repulse", "$move:pull"]

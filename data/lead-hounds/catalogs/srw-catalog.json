@@ -9,13 +9,7 @@
       "name": "Scout Class",
       "type": "Torso",
       "tags": ["Light"],
-      "hp": 3,
-      "armor": 1,
-      "stats": {
-        "damage": ["0-1", "2"],
-        "cards": [2, 2],
-        "speed": [1, 0]
-      },
+      "speed": 1,
       "rules": ["$melee:inertia-dischargers"],
       "disabledActions": ["$srw:mine-response"]
     },
@@ -23,12 +17,6 @@
       "name": "Commando Class",
       "type": "Torso",
       "tags": ["Light"],
-      "hp": 3,
-      "armor": 1,
-      "stats": {
-        "damage": ["0", "1", "2"],
-        "cards": [3, 2, 1]
-      },
       "rules": ["$other:disruption-field"],
       "disabledActions": ["$srw:mine-response"]
     },
@@ -36,25 +24,14 @@
       "name": "Mortar Carrier Class",
       "type": "Torso",
       "tags": ["Medium", "Mortar"],
-      "hp": 4,
-      "armor": 1,
-      "stats": {
-        "damage": ["0-1", "2-3"],
-        "cards": [3, 2]
-      },
       "disabledActions": ["$srw:mine-response"]
     },
     {
       "name": "Breacher Class",
       "type": "Torso",
       "tags": ["Heavy"],
-      "hp": 4,
-      "armor": 3,
-      "stats": {
-        "damage": ["0", "1", "2"],
-        "cards": [3, 2, 1],
-        "speed": [-1, -1, -1]
-      },
+      "armor": 2,
+      "speed": -1,
       "rules": ["$melee:inertia-dischargers"],
       "disabledActions": ["$srw:mine-response"]
     },
@@ -62,27 +39,18 @@
       "name": "Tripod",
       "type": "Propulsion",
       "tags": ["Tipod", "Support"],
-      "hp": 3,
-      "armor": 1,
-      "stats": {
-        "damage": ["0-1", "2"],
-        "speed": [5, 3],
-        "disabledSpeed": [1]
-      },
+      "speed": 5,
+      "disabledSpeed": 2,
       "actions": ["$support:stabilizers"]
     },
     {
       "name": "Off-road Tracks",
       "type": "Propulsion",
       "tags": ["Tracks"],
-      "hp": 3,
-      "armor": 2,
-      "stats": {
-        "damage": ["0", "1-2"],
-        "speed": [6, 3],
-        "disabledSpeed": [1]
-      },
-      "rules": ["$imm:knocked-down-damage"],
+      "armor": 1,
+      "speed": 6,
+      "disabledSpeed": 1,
+      "rules": ["$imm:knocked-down-damage", "$move:all-terrain"],
       "disabledRules": ["$imm:knocked-down-damage"]
     },
     {
@@ -90,25 +58,18 @@
       "type": "Propulsion",
       "tags": ["Wheels"],
       "restrictions": ["Light torso"],
-      "hp": 2,
-      "armor": 1,
-      "stats": {
-        "damage": ["0", "1"],
-        "speed": [7, 5],
-        "disabledSpeed": [1]
-      }
+      "hp": -1,
+      "speed": 7,
+      "disabledSpeed": 1,
+      "rules": ["$move:all-terrain"]
     },
     {
       "name": "Stalker",
       "type": "Propulsion",
       "tags": ["Legs"],
-      "hp": 4,
-      "armor": 1,
-      "stats": {
-        "damage": ["0", "1", "2-3"],
-        "speed": [6, 4, 3],
-        "disabledSpeed": [2]
-      },
+      "hp": 1,
+      "speed": 6,
+      "disabledSpeed": 2,
       "actions": ["$move:kick"]
     },
     {
@@ -116,13 +77,9 @@
       "type": "Propulsion",
       "tags": ["Legs"],
       "restrictions": ["Light torso"],
-      "hp": 3,
-      "armor": 0,
-      "stats": {
-        "damage": ["0", "1"],
-        "speed": [6, 3],
-        "disabledSpeed": [1]
-      },
+      "armor": -1,
+      "speed": 6,
+      "disabledSpeed": 1,
       "actions": ["$move:jump"]
     },
     {

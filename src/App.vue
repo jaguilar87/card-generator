@@ -24,14 +24,14 @@ export default {
     },
     error() {
       return this.$store.state.dataError;
-    }
+    },
   },
   created() {
     this.$store.dispatch('fetchData');
   },
   components: {
-    Nav
-  }
+    Nav,
+  },
 };
 </script>
 
@@ -41,7 +41,8 @@ export default {
 }
 
 @media print {
-  html, body {
+  html,
+  body {
     width: 210mm;
     height: 297mm;
   }

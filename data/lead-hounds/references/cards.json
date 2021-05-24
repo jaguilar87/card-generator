@@ -1,6 +1,10 @@
 {
+  "afterburner": {
+    "name": "Afterburner",
+    "desc": "This model draws **1 extra** reactor card."
+  },
   "supercomputer": {
     "name": "Supercomputer",
-    "desc": "_Once per round._ When this mech draws its reactor cards its owner can chose to discard the hand and draw it again"
+    "desc": "_Once per round._ When this mech draws its reactor cards its owner can chose to discard the hand and draw it again."
   }
 }

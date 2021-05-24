@@ -49,6 +49,18 @@
   },
   "hover": {
     "name": "Hover",
-    "desc": "This mech ignore the **slow** terrain trait and can move across (but not stop on top of) other mechs. If this mech were to receive the **immobilized** condition, it will suffer **1 damage** on this system instead."
+    "desc": "When this mech takes the walk action, it may **place** instead of move. If this mech were to receive the **immobilized** condition, it will suffer **1 damage** on this system instead."
+  },
+  "all-terrain": {
+    "name": "All Terrain",
+    "desc": "This mech ignore the **slow** terrain trait."
+  },
+  "launch-mech": {
+    "name": "Launch Mech",
+    "apCost": 2,
+    "range": "2\"",
+    "targetValue": "6+",
+    "suits": ["D", "H"],
+    "result": "_Friendly mech with hovercraft propulsion only._ Target receives **1 damage** on its propulsion system and is placed **8\"**."
   }
 }

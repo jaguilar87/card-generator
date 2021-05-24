@@ -55,8 +55,16 @@
     "name": "Blow It Up",
     "apCost": 2,
     "range": "12\"",
-    "targetValue": "10+",
+    "targetValue": "4+",
     "suits": [],
     "result": "Remove an artificial terrain within LoS and range."
+  },
+  "launch-adhesive": {
+    "name": "Lunch Adhesive",
+    "apCost": 1,
+    "range": "2\"",
+    "targetValue": "6+",
+    "suits": ["C"],
+    "result": "All mechs within range gain **immobilized**."
   }
 }

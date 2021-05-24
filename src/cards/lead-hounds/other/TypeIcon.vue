@@ -6,6 +6,7 @@
     <armLeft class="TypeIcon-icon" v-if="type === 'Left Arm'" :style="iconStyle" />
     <armRight class="TypeIcon-icon" v-if="type === 'Right Arm'" :style="iconStyle" />
     <info class="TypeIcon-icon" v-if="type === 'Reference'" :style="iconStyle" />
+    <terrain class="TypeIcon-icon" v-if="type === 'Terrain'" :style="iconStyle" />
   </span>
 </template>
 
@@ -16,6 +17,7 @@ import propulsion from '@/assets/lead-hounds/types/jetpack.svg';
 import armLeft from '@/assets/lead-hounds/types/hand-left.svg';
 import armRight from '@/assets/lead-hounds/types/hand-right.svg';
 import info from '@/assets/lead-hounds/types/info.svg';
+import terrain from '@/assets/lead-hounds/types/terrain.svg';
 
 export default {
   props: {
@@ -33,7 +35,8 @@ export default {
     propulsion,
     armLeft,
     armRight,
-    info
+    info,
+    terrain
   }
 };
 </script>

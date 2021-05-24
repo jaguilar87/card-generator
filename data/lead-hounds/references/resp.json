@@ -24,20 +24,20 @@
     "result": "This mech draws a card (discard and replace any jokers) and adds it to its **overheat pile**."
   },
   "blinded": {
-    "name": "Burning Fuel",
-    "disabledResponse": true,
-    "range": "-",
-    "targetValue": "-",
-    "suits": [],
-    "result": "This mech gains **burning**."
-  },
-  "burning": {
     "name": "Blinded",
     "disabledResponse": true,
     "range": "-",
     "targetValue": "-",
     "suits": [],
     "result": "This mech gains **blinded**."
+  },
+  "burning": {
+    "name": "Burning Fuel",
+    "disabledResponse": true,
+    "range": "-",
+    "targetValue": "-",
+    "suits": [],
+    "result": "This mech gains **burning**."
   },
   "marked": {
     "name": "Marked",

@@ -4,11 +4,11 @@
   </div>
   <div class="HitPoints" v-else>
     <span class="HitPoints-track">
-      <span class="HitPoints-point" v-for="i of hp" :key="i">{{ i }}</span>
+      <span class="HitPoints-point" v-for="i of totalHP" :key="i">{{ i }}</span>
     </span>
     <TorsoConnections v-if="isTorso" />
     <span class="HitPoints-track">
-      <shield class="HitPoints-icon" v-for="i of armor" :key="i" />
+      <shield class="HitPoints-icon" v-for="i of totalArmor" :key="i" />
     </span>
   </div>
 </template>
@@ -23,6 +23,14 @@ export default {
     armor: Number,
     isTorso: Boolean,
     disabled: Boolean
+  },
+  computed: {
+    totalArmor() {
+      return (this.armor || 0) + 1
+    },
+    totalHP() {
+      return (this.hp || 0) + 2 + (this.isTorso ? 1 : 0)
+    }
   },
   components: {
     shield,

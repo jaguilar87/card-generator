@@ -4,19 +4,19 @@
       <div class="LHCard-header" :style="headerStyle">
         <div class="LHCard-headerText">
           <div class="LHCard-name">{{ card.name }}</div>
-          <div class="LHCard-type">{{ [card.type, ...card.tags || []].join(' · ') }}</div>
+          <div class="LHCard-type">{{ subName }}</div>
         </div>
         <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="white" />
       </div>
       <div class="LHCard-body">
-        <Stats :stats="card.stats" />
         <span
           class="LHCard-restrictions"
           v-if="card.restrictions"
         >{{ card.restrictions.join('/') }} only.</span>
         <Action v-for="action in actions" :key="action.name" :action="action" />
         <Rule v-for="rule in rules" :key="rule.name" :rule="rule" />
-        <div v-if="!card.noFooter" class="LHCard-keywords">
+        <div v-if="!card.noFooter" class="LHCard-end">
+          <Speed v-if="card.speed" :speed="card.speed" />
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
@@ -32,15 +32,15 @@
       <div class="LHCard-header">
         <div class="LHCard-headerText">
           <div class="LHCard-name">{{ card.name }}</div>
-          <div class="LHCard-type">{{ card.type }}</div>
+          <div class="LHCard-type">{{ subName}}</div>
         </div>
         <TypeIcon class="LHCard-typeIcon" :type="card.type" iconColor="#333" />
       </div>
       <div class="LHCard-body">
-        <Stats :stats="card.stats" disabled />
         <Action v-for="action in disabledActions" :key="action.name" :action="action" />
         <Rule v-for="rule in disabledRules" :key="rule.name" :rule="rule" />
-        <div v-if="!card.noFooter" class="LHCard-keywords">
+        <div v-if="!card.noFooter" class="LHCard-end">
+          <Speed v-if="card.disabledSpeed" :speed="card.disabledSpeed" />
           <div class="LHCard-manufacturer">{{ catalog.name }}</div>
         </div>
       </div>
@@ -53,7 +53,7 @@
 import parseReferenceExpression from '@/utils/parse-reference-expression';
 import Action from '@/cards/lead-hounds/body/Action.vue';
 import Rule from '@/cards/lead-hounds/body/Rule.vue';
-import Stats from '@/cards/lead-hounds/body/Stats.vue';
+import Speed from '@/cards/lead-hounds/body/Speed.vue';
 import Footer from '@/cards/lead-hounds/footer/Footer.vue';
 import TypeIcon from '@/cards/lead-hounds/other/TypeIcon.vue';
 
@@ -85,7 +85,11 @@ export default {
         backgroundColor: catalog.style.accent,
         color: catalog.style.inverted
       };
+    },
+    subName() {
+      return [this.card.type, ...this.card.tags || []].join(' · ')
     }
+
   },
   methods: {
     resolve(expression) {
@@ -103,7 +107,7 @@ export default {
     Action,
     Rule,
     Footer,
-    Stats,
+    Speed,
     TypeIcon
   }
 };
@@ -167,14 +171,6 @@ $card-color: #000000;
     font-style: italic;
   }
 
-  &-keywords {
-    font-size: 90%;
-    margin-top: auto;
-    text-align: center;
-    opacity: 0.7;
-    font-style: italic;
-  }
-
   &-footer {
     height: 20px;
     border-top: 1px solid $card-color;
@@ -205,8 +201,17 @@ $card-color: #000000;
     text-align: justify;
   }
 
+  &-end{
+    margin-top: auto;
+  }
+
   &-manufacturer {
     margin-bottom: -5px;
+    font-size: 90%;
+    text-align: center;
+    opacity: 0.7;
+    font-style: italic;
   }
+
 }
 </style>

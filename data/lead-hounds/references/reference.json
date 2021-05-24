@@ -5,7 +5,7 @@
     "range": "-",
     "targetValue": "-",
     "suits": [],
-    "result": "This mech can move up to its **Speed** in any direction."
+    "result": "This mech can move up to its **Speed**."
   },
   "assault": {
     "name": "Assault",
@@ -13,7 +13,7 @@
     "range": "-",
     "targetValue": "-",
     "suits": [],
-    "result": "_Overcharge 1_. This mech moves up to its **Speed** in any direction in a **straight line**. Then it can perform any one action with **range 2” or less** that costs **1 Action Point** for free (not spending the action point)."
+    "result": "_Overcharge 1_. This mech moves up to its **Speed** in a **straight line**. Then it can perform any one action with **range 2” or less** that costs **1 Action Point** for free (not spending the action point)."
   },
   "optimize": {
     "name": "Optimize",
@@ -49,7 +49,7 @@
   },
   "vent-out": {
     "name": "Vent Out",
-    "apCost": 3,
+    "apCost": 2,
     "range": "-",
     "targetValue": "-",
     "suits": [],
@@ -61,11 +61,11 @@
   },
   "burning": {
     "name": "Burning",
-    "desc": "When this mech activates, **flip a card** and resolve the effects corresponding with its suits:<br />♥: **Remove** the burning condition.<br />♦: Nothing happens.<br />♠: Suffer **1 damage on a random system**.<br />♣: Draw the top card of the deck and add it to your **overheat pile**. Discard and replace any jokers."
+    "desc": "When this mech activates, **flip a card** and resolve the effects corresponding with its suits:<br />♥: **Remove** the burning condition.<br />♦: Until the end of its activation, this mech suffers **-1 to all action flips**.<br />♠: Suffer **1 damage on a random system**.<br />♣: Draw the top card of the deck and add it to your **overheat pile**. Discard and replace any jokers."
   },
   "corrosion": {
     "name": "Corrosion",
-    "desc": "This mech **can not add the armor value** of its systems to armor flips. Remove this condition at the end of the round."
+    "desc": "This mech **does not add the armor** of its systems to armor flips. Remove this condition at the end of the round."
   },
   "jammed": {
     "name": "Jammed",
@@ -81,18 +81,18 @@
   },
   "marked": {
     "name": "Marked",
-    "desc": "When targeting a model with marked with an action, the opponent may **remove the marked condition** from the target to gain a **+2 bonus to that action flip**."
+    "desc": "When this mech is targeted by an enemy mech action action, the opponent may **remove the marked condition** to gain a **+2** bonus to the **action flip**."
   },
   "shielded": {
     "name": "Shielded",
-    "desc": "When this mech receives a hit (or more), remove this condition to lower the **amount of hits taken to 0**."
+    "desc": "When this mech receives a hit (or more), remove this condition and lower the **amount of hits taken to 0**."
   },
   "minor-consequence": {
     "name": "Minor Consequence",
-    "desc": "If the overheat level is **equal or higher** than the value of the flip.<br />♥: Mech has **-2 Speed** and **-1 Reactor cards** until the end of the turn.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **one condition**.<br />♠: Suffer **1 damage** on a random system.<br />♣: Draw the top **three** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers."
+    "desc": "If the overheat level is **equal or higher** than the value of the flip.<br />♥: Mech has **-2 Speed** and **-1 Reactor cards** until the end of the turn.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **one condition**.<br />♠: Suffer **1 damage** on a random system.<br />♣: Draw the top **three** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers. Then perform an overheat flip again."
   },
   "major-consequence": {
     "name": "Major Consequence",
-    "desc": "If the overheat level is **equal or higher** than **twice** the value of the flip.<br />♥: Activation immediately **ends**.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **two conditions**.<br />♠: Torso suffers **1 damage**.<br />♣: Draw the top **six** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers."
+    "desc": "If the overheat level is **equal or higher** than **twice** the value of the flip.<br />♥: Activation immediately **ends**.<br />♦: Mech **gains** (or **removes**) the opponent’s choice of any **two conditions**.<br />♠: Torso suffers **1 damage**.<br />♣: Draw the top **six** cards of the deck and add it to your **overheat pile**. Discard and replace any jokers. Then perform an overheat flip again."
   }
 }
